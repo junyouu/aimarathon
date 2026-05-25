@@ -5,7 +5,7 @@ export default function Chatbot() {
     {
       id: 0,
       type: 'bot',
-      content: "Hello! I'm your CCTV security consultant. Tell me about your property and what you're looking to protect — I'll help you figure out the right system.",
+      content: "Hello! I'm your CCTV security consultant. To get started, please upload a floor plan of your property using the camera button below — this helps me give you accurate camera placement recommendations.",
       timestamp: new Date(),
     },
   ]);
@@ -20,6 +20,7 @@ export default function Chatbot() {
   const [progress, setProgress] = useState(0);
   const [summaryLoading, setSummaryLoading] = useState(false);
   const summaryFetched = useRef(false);
+  const conversationComplete = useRef(false); // stays true once stage hits complete
 
   // Firebase session state
   const [projectId, setProjectId] = useState(null);
@@ -112,6 +113,8 @@ export default function Chatbot() {
 
       if (projectId) body.project_id = projectId;
       if (conversationId) body.conversation_id = conversationId;
+      // Pass last known requirements so backend can keep stage stable on skipped extraction turns
+      if (requirements) body.cached_requirements = requirements;
 
       if (floorPlanData) {
         body.floor_plan = {
@@ -142,22 +145,53 @@ export default function Chatbot() {
     }
   };
 
-  const fetchSummary = async (history, projId) => {
-    if (summaryFetched.current) return;
+  const fetchSummary = async (history, projId, latestRequirements) => {
+    if (summaryFetched.current) {
+      console.log('[fetchSummary] Skipped — already fetched (summaryFetched.current = true)');
+      return;
+    }
+    console.log('[fetchSummary] Starting summary generation', {
+      historyLength: history?.length,
+      projectId: projId,
+      hasRequirements: !!latestRequirements,
+    });
     summaryFetched.current = true;
     setSummaryLoading(true);
     try {
       const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      console.log('[fetchSummary] POST', `${backendURL}/generate-summary`);
       const res = await fetch(`${backendURL}/generate-summary`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           conversation_history: history,
           project_id: projId || null,
+          cached_requirements: latestRequirements || null,
         }),
       });
+      console.log('[fetchSummary] HTTP status:', res.status, res.statusText);
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        console.error('[fetchSummary] Server error:', res.status, err.detail ?? err);
+        summaryFetched.current = false;
+        setSummaryLoading(false);
+        setMessages((prev) => [...prev, {
+          id: prev.length,
+          type: 'bot',
+          content: "I had trouble generating your brief. Send any message to try again.",
+          timestamp: new Date(),
+        }]);
+        return;
+      }
       const data = await res.json();
+      console.log('[fetchSummary] Response data:', {
+        hasSummary: !!data.summary,
+        summaryLength: data.summary?.length ?? 0,
+        error: data.error ?? null,
+        hasRequirements: !!data.requirements,
+      });
       if (data.summary) {
+        console.log('[fetchSummary] Summary received successfully');
         setSummary(data.summary);
         setMessages((prev) => [...prev, {
           id: prev.length,
@@ -166,6 +200,7 @@ export default function Chatbot() {
           timestamp: new Date(),
         }]);
       } else {
+        console.warn('[fetchSummary] No summary in response — will allow retry. Backend error:', data.error);
         summaryFetched.current = false; // allow retry
         setMessages((prev) => [...prev, {
           id: prev.length,
@@ -175,6 +210,7 @@ export default function Chatbot() {
         }]);
       }
     } catch (err) {
+      console.error('[fetchSummary] Network/fetch error:', err);
       summaryFetched.current = false;
       setMessages((prev) => [...prev, {
         id: prev.length,
@@ -184,6 +220,7 @@ export default function Chatbot() {
       }]);
     }
     setSummaryLoading(false);
+    console.log('[fetchSummary] Done. summaryFetched.current =', summaryFetched.current);
   };
 
   const handleResponse = (response, userMessage, history) => {
@@ -193,9 +230,13 @@ export default function Chatbot() {
     if (response.clarifying_question) {
       addMessage('bot', response.clarifying_question);
     }
-    if (response.requirements && Object.keys(response.requirements).length > 0) {
-      setRequirements(response.requirements);
-    }
+    // Capture fresh requirements from this response before any async state update
+    const freshRequirements =
+      response.requirements && Object.keys(response.requirements).length > 0
+        ? response.requirements
+        : null;
+
+    if (freshRequirements) setRequirements(freshRequirements);
     if (response.stage) setStage(response.stage);
     if (typeof response.progress === 'number') setProgress(response.progress);
 
@@ -210,9 +251,18 @@ export default function Chatbot() {
     ];
     setConversationHistory(updatedHistory);
 
-    // Auto-generate summary in a separate call when stage hits complete
-    if (response.stage === 'complete' && !summaryFetched.current) {
-      fetchSummary(updatedHistory, projectId);
+    // Mark conversation complete permanently once stage first hits complete
+    if (response.stage === 'complete') conversationComplete.current = true;
+
+    console.log('[handleResponse] stage:', response.stage, '| progress:', response.progress, '| historyLen:', updatedHistory.length, '| conversationComplete:', conversationComplete.current, '| summaryFetched:', summaryFetched.current);
+
+    // Trigger summary if conversation is complete (now or was previously) and not yet fetched.
+    // Pass freshRequirements directly — avoids reading stale React state inside fetchSummary.
+    if (conversationComplete.current && !summaryFetched.current) {
+      console.log('[handleResponse] Conversation complete — triggering fetchSummary');
+      fetchSummary(updatedHistory, projectId, freshRequirements);
+    } else if (conversationComplete.current && summaryFetched.current) {
+      console.log('[handleResponse] Conversation complete but summary already fetched — skipping');
     }
   };
 
@@ -540,12 +590,13 @@ export default function Chatbot() {
           <button
             onClick={() => floorPlanInputRef.current?.click()}
             disabled={isLoading}
-            title="Upload floor plan"
+            title="Upload floor plan (required to start)"
             style={{
-              padding: '0.75rem', background: 'var(--color-background-secondary)',
-              border: '0.5px solid var(--color-border-tertiary)', borderRadius: 'var(--border-radius-md)',
+              padding: '0.75rem', borderRadius: 'var(--border-radius-md)',
               cursor: isLoading ? 'default' : 'pointer', fontSize: '16px', lineHeight: 1,
-              color: 'var(--color-text-secondary)',
+              background: conversationHistory.length === 0 ? 'var(--color-background-info)' : 'var(--color-background-secondary)',
+              border: conversationHistory.length === 0 ? '1.5px solid var(--color-border-secondary)' : '0.5px solid var(--color-border-tertiary)',
+              color: conversationHistory.length === 0 ? 'var(--color-text-info)' : 'var(--color-text-secondary)',
             }}
           >&#128247;</button>
 
@@ -553,8 +604,8 @@ export default function Chatbot() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Describe your property or ask anything..."
-            disabled={isLoading}
+            placeholder={conversationHistory.length === 0 ? "Upload a floor plan to start the conversation..." : "Describe your property or ask anything..."}
+            disabled={isLoading || conversationHistory.length === 0}
             style={{
               flex: 1, padding: '0.75rem',
               border: '0.5px solid var(--color-border-tertiary)',
@@ -567,7 +618,7 @@ export default function Chatbot() {
 
           <button
             onClick={handleSend}
-            disabled={!input.trim() || isLoading}
+            disabled={!input.trim() || isLoading || conversationHistory.length === 0}
             style={{
               padding: '0.75rem 1.25rem',
               background: input.trim() && !isLoading ? 'var(--color-background-info)' : 'var(--color-background-secondary)',

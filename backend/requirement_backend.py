@@ -5,6 +5,7 @@ from typing import Optional, List, Dict, Any
 import json
 import re
 import os
+import time
 from dotenv import load_dotenv
 from openai import OpenAI
 from firebase_service import FirebaseService
@@ -41,13 +42,15 @@ TEXT_MODEL            = "Qwen/Qwen3-32B-TEE"
 VISION_MODEL          = "google/gemma-4-31B-turbo-TEE"
 EXTRACT_EVERY_N_TURNS = 2   # extract more frequently so progress updates quickly
 
-# Fields we track for progress — user intent only, no recommendation outputs
+# Fields we track for progress — user intent only, no recommendation outputs.
+# camera_count / camera_arrangement are floor-plan outputs passed to the
+# optimisation model; they don't count toward conversation completion.
 TRACKED_FIELDS = [
     "site_type", "location", "size",
     "coverage_areas", "resolution",
     "night_vision", "retention_days", "remote_viewing",
     "budget", "installation", "connectivity",
-]
+]  # 11 fields — 72% threshold = 8 fields needed
 
 # ============================================================================
 # Data Models
@@ -64,10 +67,12 @@ class RequirementRequest(BaseModel):
     floor_plan: Optional[FloorPlanData] = None
     project_id: Optional[str] = None
     conversation_id: Optional[str] = None
+    cached_requirements: Optional[Dict] = None  # last known requirements from frontend
 
 class GenerateSummaryRequest(BaseModel):
     conversation_history: List[Dict]
     project_id: Optional[str] = None
+    cached_requirements: Optional[Dict] = None  # skip re-extraction if provided
 
 class RequirementResponse(BaseModel):
     bot_response: str
@@ -100,7 +105,9 @@ Cover what you can see, in a natural flow:
 - Where the entry and exit points are (doors, gates, windows, staircases)
 - Which areas are highest priority for security coverage
 - Any blind spots or tricky angles that are hard to cover
-- A rough estimate of how many cameras would be needed and why
+- A rough estimate of how many cameras would be needed and why, with specific placement locations based on the floor plan (e.g. "one in the top-left corner of the living room facing the main entrance")
+
+After giving the estimate, ask the client whether they are happy with that suggested quantity or if they have a different number in mind.
 
 You do NOT need to use bullet points or a fixed format. Write like a consultant giving a verbal walkthrough — clear, confident, and helpful. If the floor plan is unclear or partial, say so and work with what you can see.
 
@@ -135,11 +142,21 @@ STRICT LIMITS — never do any of these:
 - Do not offer to arrange, source, book, or reach out to anyone.
 - Do not make any promise the system cannot fulfil.
 
-CLOSING: When requirements are sufficiently complete, say exactly:
+CLOSING: Only use the closing message when ALL of the following have been collected:
+(1) property type
+(2) coverage areas
+(3) budget range in RM
+(4) location / state in Malaysia
+(5) at least one feature preference — resolution, night vision, OR remote viewing
+(6) confirmed camera quantity (how many cameras the client wants)
+(7) connectivity preference — wired OR wireless
+
+If any of these are still missing, ask for the missing one instead of closing. Priority order to ask: budget → location → features → camera quantity → connectivity. When all are present, say exactly:
 "Thank you — I've captured your requirements. A consultant will follow up with suitable recommendations for your budget and location."
 Then stop asking questions."""
 
-PARSE_PROMPT = """Extract CCTV security requirements from the conversation into one JSON object.
+PARSE_PROMPT = """/no_think
+Extract CCTV security requirements from the conversation into one JSON object.
 
 SOURCE RULE: Extract ONLY what the USER stated, asked for, or clearly accepted.
 Do not include features the assistant suggested unless the user explicitly confirmed them.
@@ -164,6 +181,7 @@ USER PREFERENCES (include if discussed):
   night_vision   : true | false
   remote_viewing : true | false
   retention_days : number
+  camera_count   : confirmed number of cameras the user wants (integer)
 
 FLOOR PLAN FIELDS (only when a floor plan image was shared in the conversation):
   has_floor_plan   : true
@@ -171,6 +189,17 @@ FLOOR PLAN FIELDS (only when a floor plan image was shared in the conversation):
   identified_zones : list of rooms visible in the floor plan
   entry_points     : list of doors or exits identified
   blind_spots      : coverage gaps or tricky angles noted
+  camera_arrangement : list of camera placement objects derived from the floor plan analysis.
+                       Each object must include:
+                         "id"       : integer, starting at 1
+                         "zone"     : room or area name (e.g. "living room", "front entrance")
+                         "position" : descriptive placement (e.g. "top-left corner facing the main door")
+                         "purpose"  : what this camera monitors (e.g. "monitor entry and exit traffic")
+                       Example:
+                       [
+                         {"id": 1, "zone": "living room", "position": "top-left corner", "purpose": "monitor main entrance"},
+                         {"id": 2, "zone": "hallway",     "position": "ceiling mid-point facing bedroom wing", "purpose": "track movement between zones"}
+                       ]
 
 ALWAYS INCLUDE THESE TWO ARRAYS:
   features : enabled requirement tags
@@ -182,15 +211,16 @@ ALWAYS INCLUDE THESE TWO ARRAYS:
 
 Return ONLY valid JSON. Omit any field not discussed. No nulls."""
 
-SUMMARY_PROMPT = """You are a CCTV Technical Sales Consultant writing a Requirements Brief for a client.
+SUMMARY_PROMPT = """You are a CCTV Technical Sales Consultant writing a Requirements Brief used to match the client with the right products and packages.
 
-Based on the conversation and extracted requirements, write a complete, professional CCTV Requirements Summary.
+PURPOSE: This summary will be used by a matching model to select suitable CCTV products. Include EVERY detail collected — nothing should be omitted or assumed.
 
 RULES:
+- Include every single field that was discussed, even if the value is a default or inferred.
 - If a value was not specified, use a sensible default and mark it "(recommended default)".
-- If the user said "tight" budget, recommend cost-effective options.
+- If the user said "tight" budget, flag it and recommend cost-effective options.
 - Ensure all recommendations are compatible with each other (cameras, NVR, storage, cabling).
-- Act as a Sales Engineer: flag any compatibility issues or missing info.
+- Flag any compatibility issues, missing info, or constraints explicitly.
 - Do NOT include a Next Steps section.
 
 Use this format:
@@ -200,21 +230,34 @@ Use this format:
 ### Client & Property
 - Building Type:
 - Location:
-- Size/Area:
+- Size / Layout:
+- Site Description:
 
-### Floor Plan Analysis
-(If floor plan was provided) List every identified room, entry/exit point, high-priority zone, and estimated camera positions.
+### Coverage Requirements
+- Coverage Focus (interior / exterior / both):
+- Coverage Areas (list every zone):
+- Priority Zone:
+- Entry & Exit Points:
 
-### Coverage Plan
-For each area, state: recommended camera placement, camera type, and mounting position.
-
-### System Specifications
+### Camera Specifications
+- Camera Count:
 - Camera Type:
 - Resolution:
 - Night Vision:
-- Estimated Camera Count:
-- NVR/DVR Recommendation:
+- Field of View Requirements:
+
+### Floor Plan Details
+(Include even if partial — list every room, zone, entry/exit, blind spot identified)
+- Identified Zones:
+- Entry Points:
+- Blind Spots:
+- Camera Arrangement (list each camera with zone and position):
+
+### System Specifications
+- NVR / DVR Recommendation:
 - Storage Required:
+- Connectivity (wired / wireless):
+- Installation Type:
 
 ### Recording & Access
 - Retention Period:
@@ -222,12 +265,26 @@ For each area, state: recommended camera placement, camera type, and mounting po
 - Mobile App:
 
 ### Budget & Timeline
-- Estimated Budget:
-- Recommended Package:
+- Budget:
+- Budget Tier:
 - Installation Timeline:
 
-### Compatibility Notes
-Note any compatibility considerations and budget-fit recommendations."""
+### Compatibility & Flags
+Note every compatibility consideration, inferred value, missing field, or constraint the matching model should be aware of."""
+
+OPTIMIZATION_PROMPT = """/no_think
+You are preparing a plain-text description for a CCTV camera placement optimisation model.
+
+PURPOSE: This paragraph will be used to optimise camera positions and coverage. Focus ONLY on physical placement — zones, positions, entry/exit points, blind spots, and what each camera should cover.
+
+Given the extracted requirements JSON, write ONE paragraph (4–6 sentences) that describes:
+- Each camera's position and the zone it covers
+- All entry and exit points that must be monitored
+- Any blind spots or coverage gaps that need to be addressed
+- The total camera count and coverage focus (interior / exterior / both)
+
+Do NOT mention budget, brand, resolution, retention, or any non-spatial detail.
+Write in plain prose. No bullet points, no headers. Output only the paragraph."""
 
 # ============================================================================
 # Helpers
@@ -307,14 +364,25 @@ def _strip_thinking(text: str) -> str:
 
 
 def _complete(messages: List[Dict], model: str = TEXT_MODEL,
-              temperature: float = 0.7, max_tokens: int = 1500) -> str:
-    response = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=temperature,
-        max_tokens=max_tokens,
-    )
-    return _strip_thinking(response.choices[0].message.content)
+              temperature: float = 0.7, max_tokens: int = 1500,
+              retries: int = 2) -> str:
+    last_exc: Exception = RuntimeError("no attempts made")
+    for attempt in range(retries + 1):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+            return _strip_thinking(response.choices[0].message.content)
+        except Exception as e:
+            last_exc = e
+            if attempt < retries:
+                wait = 2 ** attempt
+                print(f"[_complete] attempt {attempt + 1} failed ({type(e).__name__}: {e}) — retrying in {wait}s")
+                time.sleep(wait)
+    raise last_exc
 
 
 # ── NEW: Infer fields from conversation text before asking ────────────────────
@@ -404,6 +472,7 @@ def extract_requirements(history: List[Dict]) -> Dict:
     if floor_plan_shared:
         conversation_text = "[A floor plan image was shared in this conversation]\n\n" + conversation_text
 
+    json_str = ""
     try:
         json_str = _complete(
             [
@@ -411,7 +480,7 @@ def extract_requirements(history: List[Dict]) -> Dict:
                 {"role": "user", "content": conversation_text},
             ],
             temperature=0.1,
-            max_tokens=1800,
+            max_tokens=4000,
         )
         if "```json" in json_str:
             json_str = json_str.split("```json")[1].split("```")[0]
@@ -420,13 +489,17 @@ def extract_requirements(history: List[Dict]) -> Dict:
         result = json.loads(json_str.strip())
         if floor_plan_shared:
             result["has_floor_plan"] = True
+        tracked_filled = [f for f in TRACKED_FIELDS if result.get(f)]
+        print(f"[extract_requirements] OK — {len(tracked_filled)} tracked fields: {tracked_filled}")
         return result
     except Exception as e:
-        print(f"Warning: could not extract requirements: {e}")
+        print(f"Warning: [extract_requirements] failed — {type(e).__name__}: {e}")
+        print(f"[extract_requirements] Raw output (first 500 chars): {json_str[:500] if json_str else 'empty'}")
         return {}
 
 
 def generate_summary(history: List[Dict], requirements: Dict) -> str:
+    print(f"[generate_summary] Called with {len(history)} history messages, {len(requirements)} requirement fields")
     conversation_text = ""
     for msg in history:
         role = "User" if msg.get("role") == "user" else "Assistant"
@@ -440,6 +513,7 @@ def generate_summary(history: List[Dict], requirements: Dict) -> str:
         f"Extracted requirements JSON:\n{json.dumps(requirements, indent=2)}\n\n"
         f"Now write the full requirements summary."
     )
+    print(f"[generate_summary] Prompt length: {len(prompt)} chars. Calling LLM...")
     try:
         result = _complete(
             [
@@ -449,11 +523,31 @@ def generate_summary(history: List[Dict], requirements: Dict) -> str:
             temperature=0.3,
             max_tokens=3000,
         )
+        print(f"[generate_summary] LLM returned {len(result)} chars")
         if not result.strip():
-            print("Warning: summary generation returned empty content")
+            print("Warning: [generate_summary] LLM returned empty/whitespace-only content")
         return result
     except Exception as e:
-        print(f"Warning: could not generate summary: {e}")
+        print(f"Warning: [generate_summary] LLM call failed — {type(e).__name__}: {e}")
+        return ""
+
+
+def generate_optimization_summary(requirements: Dict) -> str:
+    """Generate a one-paragraph plain-text description for the CCTV placement optimisation model."""
+    print(f"[generate_optimization_summary] Building optimisation paragraph from {len(requirements)} fields")
+    try:
+        result = _complete(
+            [
+                {"role": "system", "content": OPTIMIZATION_PROMPT},
+                {"role": "user", "content": f"Requirements JSON:\n{json.dumps(requirements, indent=2)}"},
+            ],
+            temperature=0.1,
+            max_tokens=400,
+        )
+        print(f"[generate_optimization_summary] OK — {len(result)} chars")
+        return result.strip()
+    except Exception as e:
+        print(f"Warning: [generate_optimization_summary] failed — {type(e).__name__}: {e}")
         return ""
 
 
@@ -467,22 +561,46 @@ def identify_missing_fields(requirements: Dict) -> List[str]:
         missing.append("Coverage areas")
     if not requirements.get("budget"):
         missing.append("Budget")
+    has_feature = (
+        requirements.get("resolution") or
+        requirements.get("night_vision") is not None or
+        requirements.get("remote_viewing") is not None
+    )
+    if not has_feature:
+        missing.append("Feature preferences (resolution / night vision / remote viewing)")
+    if not requirements.get("camera_count"):
+        missing.append("Camera quantity")
+    if not requirements.get("connectivity"):
+        missing.append("Connectivity (wired / wireless)")
     return missing
 
 
-# Fields that must be explicitly present before a conversation can be "complete"
+# Fields that must be explicitly present before a conversation can be "complete".
+# Feature gate: at least one of resolution/night_vision/remote_viewing must be set.
 REQUIRED_FIELDS = {"location", "budget", "coverage_areas", "site_type"}
+REQUIRED_FEATURES = {"resolution", "night_vision", "remote_viewing"}
 
 def determine_stage(requirements: Dict, user_turns: int = 0) -> str:
     if not requirements:
         return "gathering"
     progress = get_progress(requirements)
     has_required = all(requirements.get(f) for f in REQUIRED_FIELDS)
-    # Complete when all critical fields are present + enough info collected + enough turns
-    # 72% = ~8/11 fields — camera_type and timeline are optional so this is achievable
-    if has_required and progress >= 72 and user_turns >= 8:
+    has_feature = any(requirements.get(f) is not None for f in REQUIRED_FEATURES)
+    has_quantity = bool(requirements.get("camera_count"))
+    has_connectivity = bool(requirements.get("connectivity"))
+    print(f"[determine_stage] turn={user_turns} has_required={has_required} has_feature={has_feature} has_quantity={has_quantity} has_connectivity={has_connectivity} progress={progress}%")
+
+    # Tier 1 — ideal: all gates + good coverage + enough turns
+    if has_required and has_feature and has_quantity and has_connectivity and progress >= 72 and user_turns >= 8:
         return "complete"
-    elif progress >= 40 or has_required:
+    # Tier 2 — flexible: all gates met, conversation long enough
+    if has_required and has_feature and has_quantity and has_connectivity and user_turns >= 10:
+        return "complete"
+    # Tier 3 — last resort: enough turns and info even if some fields still missing
+    if progress >= 55 and user_turns >= 12:
+        return "complete"
+
+    if progress >= 40 or has_required:
         return "clarifying"
     return "gathering"
 
@@ -535,15 +653,34 @@ async def chat(request: RequirementRequest) -> RequirementResponse:
         {"role": "assistant", "content": bot_response},
     ]
 
-    # Extract then infer — use only user turns for pattern matching so bot
-    # phrasing doesn't falsely populate fields like night_vision/remote_viewing
-    requirements = extract_requirements(full_history) if should_extract else {}
     inferred_fields: List[str] = []
-    if requirements is not None:
+    if should_extract:
+        requirements = extract_requirements(full_history)
+        # If extraction failed, fall back to cached requirements from frontend
+        if not requirements and request.cached_requirements:
+            print(f"[chat] Extraction returned empty — using cached_requirements from frontend")
+            requirements = request.cached_requirements
         requirements, inferred_fields = infer_missing(requirements, _user_text(full_history))
+    else:
+        # Skip LLM extraction this turn; use cached requirements to keep stage stable
+        requirements = request.cached_requirements or {}
+        if requirements:
+            requirements, inferred_fields = infer_missing(requirements, _user_text(full_history))
+            print(f"[chat] Skipped extraction (turn {user_turn_count}) — using cached requirements")
+        else:
+            print(f"[chat] Skipped extraction (turn {user_turn_count}) — no cache available")
 
     progress = get_progress(requirements)
     stage = determine_stage(requirements, user_turns=user_turn_count)
+
+    # If the bot said the closing message, force complete regardless of field checks.
+    # The LLM's judgment that it has enough info takes priority over the structured gate.
+    CLOSING_PHRASE = "A consultant will follow up with suitable recommendations"
+    if CLOSING_PHRASE in bot_response and stage != "complete":
+        print(f"[chat] Bot said closing message but stage={stage} — forcing complete")
+        stage = "complete"
+
+    print(f"[chat] turn={user_turn_count} extracted={should_extract} stage={stage} progress={progress}% fields={list(requirements.keys())}")
 
     # Save to Firebase
     if firebase and request.project_id and request.conversation_id:
@@ -651,15 +788,30 @@ async def generate_summary_endpoint(request: GenerateSummaryRequest) -> Dict:
     Called by the frontend after stage reaches 'complete' so the chat response
     stays fast and the summary loads independently.
     """
-    if not request.conversation_history:
-        return {"summary": "", "error": "No conversation history provided"}
+    print(f"[/generate-summary] Request received — history messages: {len(request.conversation_history) if request.conversation_history else 0}, project_id: {request.project_id}")
 
-    requirements = extract_requirements(request.conversation_history)
-    requirements, inferred = infer_missing(requirements, _user_text(request.conversation_history))
+    if not request.conversation_history:
+        print("[/generate-summary] FAIL: No conversation history provided")
+        raise HTTPException(status_code=400, detail="No conversation history provided")
+
+    if request.cached_requirements:
+        requirements = request.cached_requirements
+        requirements, inferred = infer_missing(requirements, _user_text(request.conversation_history))
+        print(f"[/generate-summary] Using cached requirements — {list(requirements.keys())}")
+    else:
+        requirements = extract_requirements(request.conversation_history)
+        requirements, inferred = infer_missing(requirements, _user_text(request.conversation_history))
+        print(f"[/generate-summary] Re-extracted requirements — {list(requirements.keys())}")
 
     summary = generate_summary(request.conversation_history, requirements)
     if not summary:
-        return {"summary": "", "requirements": requirements, "error": "Summary generation failed"}
+        print("[/generate-summary] FAIL: generate_summary() returned empty string")
+        raise HTTPException(status_code=500, detail="Summary generation failed — LLM returned empty response")
+
+    print(f"[/generate-summary] Summary generated OK ({len(summary)} chars)")
+
+    optimization_summary = generate_optimization_summary(requirements)
+    print(f"[/generate-summary] Optimisation summary generated OK — {len(optimization_summary)} chars")
 
     # Persist to Firebase if we have a project
     # Store as paragraph prose — structured markdown stays in the API response for display
@@ -672,14 +824,18 @@ async def generate_summary_endpoint(request: GenerateSummaryRequest) -> Dict:
                 requirements=merged_reqs,
                 stage="complete",
                 summary=_to_storage_summary(summary),
+                optimization_summary=optimization_summary,
                 progress=existing.get("progress", get_progress(requirements)) if existing else get_progress(requirements),
                 inferred_fields=existing.get("inferred_fields", inferred) if existing else inferred,
             )
+            print(f"[/generate-summary] Saved to Firebase for project {request.project_id}")
         except Exception as e:
-            print(f"Warning: Could not save summary to Firebase: {e}")
+            print(f"Warning: [/generate-summary] Could not save summary to Firebase — {type(e).__name__}: {e}")
+    elif request.project_id and not firebase:
+        print("[/generate-summary] Skipped Firebase save — firebase client not initialized")
 
     # Return full structured markdown to frontend for display
-    return {"summary": summary, "requirements": requirements}
+    return {"summary": summary, "optimization_summary": optimization_summary, "requirements": requirements}
 
 # ============================================================================
 # Endpoints: Projects (Firebase)

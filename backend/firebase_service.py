@@ -172,6 +172,7 @@ class FirebaseService:
         requirements: Dict,
         stage: str,
         summary: Optional[str] = None,
+        optimization_summary: Optional[str] = None,
         progress: int = 0,
         inferred_fields: Optional[List[str]] = None,
     ) -> bool:
@@ -205,6 +206,8 @@ class FirebaseService:
             }
             if summary:
                 update["summary"] = summary
+            if optimization_summary:
+                update["optimization_summary"] = optimization_summary
 
             for key, value in requirements.items():
                 # Skip empty / null values — don't overwrite a real value with nothing
