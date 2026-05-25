@@ -1,0 +1,1375 @@
+[
+  {
+    "name": "BELCO Siamese RG59 Coaxial + VDE Power cable (100m)",
+    "id": "CCC003",
+    "price": "70",
+    "description": "100m roll of 2-in-1 RG59 coaxial and copper-clad aluminium power cable, ideal for DIY CCTV installations.",
+    "specification": {
+      "length": "100m Roll",
+      "vde_material": "Copper Clad Aluminium (CCA)",
+      "resistance": "9.3ohm per 100m",
+      "weight": "6.2kg"
+    },
+    "features": [
+      "2-in-1 (coax + power)",
+      "Suitable for D-I-Y"
+    ]
+  },
+  {
+    "name": "BELCO Siamese RG59 Coaxial + VDE Power cable (250m)",
+    "id": "CCC004",
+    "price": "160",
+    "description": "250m roll of 2-in-1 RG59 coaxial and aluminium power cable for extending CCTV connections.",
+    "specification": {
+      "length": "250m Roll",
+      "vde_material": "Aluminium (LC)",
+      "resistance": "9.3ohm per 100m",
+      "weight": "15.5kg"
+    },
+    "features": [
+      "2-in-1 (coax + power)",
+      "Suitable for D-I-Y"
+    ]
+  },
+  {
+    "name": "BELCO RG59 Coaxial cable (305m)",
+    "id": "S112",
+    "price": "150",
+    "description": "305m drum of indoor-rated RG59 coaxial cable, supporting video signals up to 300m.",
+    "specification": {
+      "length": "305m Drum",
+      "conductor": "CCS Inner Conductor",
+      "shield": "LC 95% Braiding",
+      "distance": "300m signal, Indoor use",
+      "impedance": "75ohm",
+      "insulation": "PE",
+      "weight": "11.8kg"
+    },
+    "features": [
+      "Indoor RG59"
+    ]
+  },
+  {
+    "name": "BELCO RG59 Coaxial cable (500m)",
+    "id": "A128",
+    "price": "280",
+    "description": "500m drum of premium indoor RG59 coaxial cable with a bare copper conductor for longer range transmission.",
+    "specification": {
+      "length": "500m Drum",
+      "conductor": "Bare Copper 0.75mm",
+      "shield": "LC 95% Braiding",
+      "distance": "700m signal, Indoor use",
+      "impedance": "75ohm",
+      "insulation": "Foam PE",
+      "weight": "19.1kg"
+    },
+    "features": [
+      "Indoor RG59, longer range"
+    ]
+  },
+  {
+    "name": "BELCO RG6 Coaxial cable",
+    "id": "A112",
+    "price": "320",
+    "description": "500m drum of indoor RG6 coaxial cable, suitable for long-distance high-definition video transmission.",
+    "specification": {
+      "length": "500m Drum",
+      "conductor": "Bare Copper 1.0mm",
+      "shield": "LC 95% Braiding",
+      "distance": "900m for 960H, 500m for 720P",
+      "impedance": "75ohm",
+      "weight": "22kg"
+    },
+    "features": [
+      "Tested with HDCVI 4MP @ 500m",
+      "Indoor use only"
+    ]
+  },
+  {
+    "name": "All-Link RG59 Outdoor Coaxial cable",
+    "id": "D112PE",
+    "price": "450",
+    "description": "500m drum of outdoor jelly-filled RG59 coaxial cable designed for superior water resistance.",
+    "specification": {
+      "length": "500m Drum",
+      "conductor": "Bare Copper 0.65mm",
+      "shield": "Bare copper Braiding 95%",
+      "distance": "700m signal, Outdoor use",
+      "impedance": "75ohm",
+      "insulation": "Jelly-Filled PE",
+      "weight": "23.6kg"
+    },
+    "features": [
+      "Outdoor RG59",
+      "Jelly-filled for water resistance"
+    ]
+  },
+  {
+    "name": "All-Link RG6 Outdoor Coaxial cable",
+    "id": "A112PE",
+    "price": "550",
+    "description": "500m drum of heavy-duty outdoor jelly-filled RG6 coaxial cable for long-distance weather-resistant runs.",
+    "specification": {
+      "length": "500m Drum",
+      "conductor": "Bare Copper 1.0mm",
+      "shield": "LC 95% Braiding",
+      "distance": "900m signal, Outdoor use",
+      "impedance": "75ohm",
+      "insulation": "Jelly-Filled PE",
+      "weight": "25.5kg"
+    },
+    "features": [
+      "Outdoor RG6",
+      "Jelly-filled for water resistance"
+    ]
+  },
+  {
+    "name": "All-Link Cat6 Jelly-Filled UTP Outdoor cable",
+    "id": "C6-PE",
+    "price": "700",
+    "description": "500m drum of outdoor Cat6 UTP cable featuring a jelly-filled PE tape jacket to protect against moisture.",
+    "specification": {
+      "length": "500m Drum",
+      "conductor": "23AWG Solid Bare Copper",
+      "outer_jacket": "PE Tape + LLDPE with Jelly-Filled",
+      "inner_jacket": "PVC",
+      "resistance": "9.38Ω/100m"
+    },
+    "features": [
+      "Outdoor Cat6",
+      "Jelly-filled for water resistance"
+    ]
+  },
+  {
+    "name": "Lapp Kabel RG59 Flexible Coaxial cable",
+    "id": "LAP-59FLEX",
+    "price": "380",
+    "description": "305m drum of highly flexible RG59 coaxial cable specifically designed for elevator use and dynamic movement.",
+    "specification": {
+      "length": "305m Drum",
+      "conductor": "22 AWG Stranded (7 x 0.254mm) Bare copper",
+      "shield": "Bare copper braid 95%",
+      "weight": "16.1kg",
+      "jacket": "Black"
+    },
+    "features": [
+      "For Elevator use",
+      "Equivalent to Belden 9259",
+      "Flexible cable"
+    ]
+  },
+  {
+    "name": "Dahua Cat6 UTP Cable (100m)",
+    "id": "PFM920I-6U-100",
+    "price": "120",
+    "description": "100m box of premium high-purity oxygen-free copper Cat6 UTP cable for reliable networking.",
+    "specification": {
+      "length": "100m Box",
+      "conductor": "High purity Oxygen-free copper",
+      "resistance": "7.35Ω/100m",
+      "jacket": "Orange/Grey PVC"
+    },
+    "features": [
+      "Premium Cat6",
+      "Lower resistance for longer runs"
+    ]
+  },
+  {
+    "name": "Dahua Cat6 UTP Cable (305m)",
+    "id": "PFM920I-6UN-C",
+    "price": "350",
+    "description": "305m bulk box of full solid oxygen-free copper Cat6 UTP cable suitable for large networking projects.",
+    "specification": {
+      "length": "305m Box",
+      "conductor": "Full solid Oxygen-free copper",
+      "resistance": "9.38Ω/100m",
+      "jacket": "White/Grey/Orange PVC",
+      "weight": "12.8kg"
+    },
+    "features": [
+      "Premium Cat6 bulk roll"
+    ]
+  },
+  {
+    "name": "Belden Cat5e UTP Cable",
+    "id": "1583A",
+    "price": "350",
+    "description": "305m box of industry-standard Belden Cat5e UTP cable with solid copper 24AWG conductors.",
+    "specification": {
+      "length": "305m Box",
+      "conductor": "Full solid copper 24AWG",
+      "resistance": "9.4Ω/100m",
+      "jacket": "Blue PVC",
+      "weight": "9.4kg"
+    },
+    "features": [
+      "Premium Belden Cat5e"
+    ]
+  },
+  {
+    "name": "Belden Cat6 UTP Cable",
+    "id": "BEL602",
+    "price": "500",
+    "description": "305m box of high-quality Belden Cat6 UTP cable featuring a Low Smoke Zero Halogen (LSZH) jacket.",
+    "specification": {
+      "length": "305m Box",
+      "conductor": "Full solid copper 24AWG",
+      "resistance": "7.5Ω/100m",
+      "jacket": "LSZH Blue",
+      "cable_diameter": "5.7mm",
+      "weight": "11.2kg"
+    },
+    "features": [
+      "Premium Belden Cat6",
+      "Low Smoke Zero Halogen"
+    ]
+  },
+  {
+    "name": "Belden RG6 Coaxial cable",
+    "id": "YJ52818",
+    "price": "250",
+    "description": "305m drum of premium 3GHz-supported Belden RG6 coaxial cable for professional video installations.",
+    "specification": {
+      "length": "305m Drum",
+      "conductor": "Solid Bare Copper Covered Steel",
+      "shield": "Aluminium Braid Shield 60%",
+      "gauge": "18AWG",
+      "insulation": "Foam PE",
+      "weight": "14.2kg",
+      "jacket": "Black/white PVC",
+      "distance": "> 350m professional"
+    },
+    "features": [
+      "3GHz support",
+      "Premium Belden RG6"
+    ]
+  },
+  {
+    "name": "Alantek Cat6 Jelly-Filled UTP Outdoor Cable",
+    "id": "ALJ6-305",
+    "price": "650",
+    "description": "305m box of durable outdoor jelly-filled Cat6 UTP cable with double jacket (PVC + PE) protection.",
+    "specification": {
+      "length": "305m Box",
+      "conductor": "Solid Bare Copper 23AWG x 4 pairs",
+      "jacket": "Inner PVC + Outer PE",
+      "color": "Black",
+      "resistance": "9.5Ω/100m",
+      "weight": "14.1kg"
+    },
+    "features": [
+      "Outdoor jelly-filled Cat6"
+    ]
+  },
+  {
+    "name": "All-Link VDE 2-core Power Cable (Aluminium)",
+    "id": "VDE100LC",
+    "price": "40",
+    "description": "100m roll of cost-effective 2-core aluminium power cable for basic electrical and low-voltage applications.",
+    "specification": {
+      "length": "100m Roll",
+      "conductor": "30/0.15mm Aluminium (LC)",
+      "insulation": "PE inner",
+      "jacket": "Black PVC outer",
+      "resistance": "11.5ohm per 100m",
+      "weight": "1.9kg"
+    },
+    "features": [
+      "Cost-effective LC power cable"
+    ]
+  },
+  {
+    "name": "FAJAR VDE 2-core Power Cable (Bare Copper)",
+    "id": "VDE100BC",
+    "price": "80",
+    "description": "100m roll of high-quality 2-core bare copper power cable offering lower resistance and better conductivity.",
+    "specification": {
+      "length": "100m Roll",
+      "conductor": "23/0.15mm Bare Copper (BC)",
+      "jacket": "Black PVC outer",
+      "resistance": "5.6ohm per 100m",
+      "weight": "2.7kg"
+    },
+    "features": [
+      "Lower resistance bare copper"
+    ]
+  },
+  {
+    "name": "FAJAR 4-core Alarm cable (Bare Copper)",
+    "id": "AL100BC",
+    "price": "60",
+    "description": "100m roll of standard 4-core bare copper alarm cable for security and sensor wiring.",
+    "specification": {
+      "length": "100m Roll",
+      "conductor": "7/0.20mm Bare Copper (BC)",
+      "jacket": "White PVC",
+      "resistance": "8.8ohm per 100m",
+      "weight": "2.4kg"
+    },
+    "features": [
+      "Bare copper alarm cable"
+    ]
+  },
+  {
+    "name": "FAJAR 4-core Alarm cable (Tinned Copper)",
+    "id": "AL100TC",
+    "price": "70",
+    "description": "100m roll of 4-core tinned pure copper alarm cable providing enhanced corrosion resistance.",
+    "specification": {
+      "length": "100m Roll",
+      "conductor": "7/0.20mm Tinned Pure Copper (TC)",
+      "jacket": "White PVC",
+      "resistance": "8.8ohm per 100m",
+      "weight": "2.4kg"
+    },
+    "features": [
+      "Tinned copper for corrosion resistance"
+    ]
+  },
+  {
+    "name": "Xpro Telephone cable 4-core (CCA)",
+    "id": "TL250CCA",
+    "price": "50",
+    "description": "250m roll of affordable 4-core copper-clad aluminium telephone cable for indoor voice lines.",
+    "specification": {
+      "length": "250m Roll",
+      "conductor": "0.50mm Copper Clad Aluminium",
+      "jacket": "Grey"
+    },
+    "features": [
+      "Cost-effective telephone cable"
+    ]
+  },
+  {
+    "name": "All-Link Telephone cable 4-core (Bare Copper)",
+    "id": "TL250BC",
+    "price": "130",
+    "description": "250m roll of premium 4-core full bare copper telephone cable for superior voice clarity and durability.",
+    "specification": {
+      "length": "250m Roll",
+      "conductor": "0.50mm Full Bare Copper",
+      "jacket": "Grey",
+      "resistance": "27.3ohm over 250m"
+    },
+    "features": [
+      "Premium bare copper telephone cable"
+    ]
+  },
+  {
+    "name": "RGB (VGA) Cable with 2-core (Multiple Lengths)",
+    "id": "RGB",
+    "price": "30",
+    "description": "Shielded male-to-male VGA cable with embedded 2-core audio line, available in various lengths.",
+    "specification": {
+      "connection": "Male-Male",
+      "available_lengths": "1.5m, 5m, 10m, 15m, 20m",
+      "shielding": "Shielded"
+    },
+    "features": [
+      "VGA cable with embedded audio"
+    ]
+  },
+  {
+    "name": "1080P HDMI to HDMI cable (Multiple Lengths)",
+    "id": "HDMI-Standard",
+    "price": "25",
+    "description": "Standard v1.4 HDMI cable for 1080P video transmission, featuring full copper conductors.",
+    "specification": {
+      "version": "Version 1.4",
+      "conductor": "Full copper",
+      "available_lengths": "2m, 5m, 10m, 15m, 20m, 25m",
+      "directional": "25m model is directional"
+    },
+    "features": [
+      "Standard 1080P HDMI cable"
+    ]
+  },
+  {
+    "name": "4K*2K HDMI to HDMI cable (Multiple Lengths)",
+    "id": "HDMI-4K",
+    "price": "40",
+    "description": "High-quality 4K-capable HDMI cable with a durable nylon net jacket for high-resolution displays.",
+    "specification": {
+      "jacket": "Nylon Net",
+      "available_lengths": "2m, 3m, 5m, 10m, 15m, 20m",
+      "directional": "20m model is directional"
+    },
+    "features": [
+      "4K-capable HDMI"
+    ]
+  },
+  {
+    "name": "4K @ 30Hz HDMI Fiber Optic cable (Long Length)",
+    "id": "HDMI-FB",
+    "price": "350",
+    "description": "Long-haul fiber optic HDMI cable capable of 4K@30Hz transmission over extended distances up to 50m.",
+    "specification": {
+      "available_lengths": "30m, 40m, 50m",
+      "directional": "Source & Display"
+    },
+    "features": [
+      "Detachable connector for conduit",
+      "Long-haul HDMI"
+    ]
+  },
+  {
+    "name": "UK Power Cord",
+    "id": "UKCORD",
+    "price": "10",
+    "description": "Standard 1.5m UK 3-pin to IEC C13 power cord for computers, monitors, and power supplies.",
+    "specification": {
+      "length": "1.5m",
+      "connectors": "3-pin UK plug to IEC C13"
+    },
+    "features": [
+      "Standard UK kettle/PC cord"
+    ]
+  },
+  {
+    "name": "Dahua Cat6 Patch Cord (Multiple Lengths)",
+    "id": "PFM972-6U",
+    "price": "15",
+    "description": "Premium yellow Cat6 UTP patch cord with gold-plated RJ45 connectors for stable network links.",
+    "specification": {
+      "available_lengths": "1m, 2m, 3m",
+      "jacket": "Yellow",
+      "conductor": "UTP 24AWG stranded, 99.99% OFC",
+      "connectors": "RJ45-Male, 50 micron gold-plated"
+    },
+    "features": [
+      "Premium patch cord"
+    ]
+  },
+  {
+    "name": "Cat6 RJ45 Connector Plugs (Pack of 100)",
+    "id": "PFM976-631",
+    "price": "45",
+    "description": "Bulk pack of 100 high-quality Cat6 RJ45 connector plugs with 15-micron gold plating.",
+    "specification": {
+      "pack": "100 pcs",
+      "cycles": "Up to 750 insertions",
+      "plating": "15 micron gold"
+    },
+    "features": [
+      "Bulk RJ45 plugs"
+    ]
+  },
+  {
+    "name": "Cat6 RJ45 Keystone Modular Jack (Pack of 30)",
+    "id": "PFM970-6U",
+    "price": "150",
+    "description": "Pack of 30 Cat6 keystone modular jacks designed for patch panels and wall plates.",
+    "specification": {
+      "pack": "30 pcs",
+      "plating": "50 micron gold-plated"
+    },
+    "features": [
+      "Patch panel/wall plate jacks"
+    ]
+  },
+  {
+    "name": "Network Wall Plate 1-port",
+    "id": "PFM971-1",
+    "price": "5",
+    "description": "Single-port network faceplate designed to house standard keystone jack inserts.",
+    "specification": {
+      "ports": "1-port",
+      "pack": "10 pcs"
+    },
+    "features": [
+      "For keystone jack inserts"
+    ]
+  },
+  {
+    "name": "Network Wall Plate 2-port",
+    "id": "PFM971-2",
+    "price": "8",
+    "description": "Dual-port network faceplate to accommodate two standard keystone jack inserts.",
+    "specification": {
+      "ports": "2-port",
+      "pack": "10 pcs"
+    },
+    "features": [
+      "For keystone jack inserts"
+    ]
+  },
+  {
+    "name": "24-port UTP Cat6 Rackmount Patch Panel",
+    "id": "PFM973M-6U-24",
+    "price": "180",
+    "description": "Fully loaded 24-port Cat6 UTP rackmount patch panel with gold-plated contacts and cable management.",
+    "specification": {
+      "ports": "24",
+      "plating": "50 micron gold-plated"
+    },
+    "features": [
+      "Complete with keystone jack inserts",
+      "Cable management bar included"
+    ]
+  },
+  {
+    "name": "RG59 BNC Connector (Male, Twist-On)",
+    "id": "BNC-TO59",
+    "price": "2",
+    "description": "Tool-less twist-on male BNC connector for terminating RG59 coaxial cables quickly.",
+    "specification": {
+      "inner": "Full Copper",
+      "body": "Zinc Alloy",
+      "weight": "14g"
+    },
+    "features": [
+      "Twist-On for RG59"
+    ]
+  },
+  {
+    "name": "RG6 BNC Connector (Male, Twist-On)",
+    "id": "BNC-TO6",
+    "price": "2",
+    "description": "Tool-less twist-on male BNC connector specifically sized for RG6 coaxial cables.",
+    "specification": {
+      "inner": "Full Copper",
+      "body": "Zinc Alloy",
+      "weight": "14g"
+    },
+    "features": [
+      "Twist-On for RG6"
+    ]
+  },
+  {
+    "name": "RG59 BNC Connector (Male, Crimp Type)",
+    "id": "BNC-CR59",
+    "price": "2",
+    "description": "Professional crimp-on male BNC connector for secure terminations on RG59 cables.",
+    "specification": {
+      "origin": "Taiwan",
+      "inner": "Full Copper",
+      "weight": "10g"
+    },
+    "features": [
+      "Crimp-on for RG59",
+      "Requires crimper"
+    ]
+  },
+  {
+    "name": "RG6 BNC Connector (Male, Crimp Type)",
+    "id": "BNC-CR6",
+    "price": "2",
+    "description": "Professional crimp-on male BNC connector designed for securing connections on RG6 cables.",
+    "specification": {
+      "origin": "Taiwan",
+      "inner": "Full Copper",
+      "weight": "10g"
+    },
+    "features": [
+      "Crimp-on for RG6",
+      "Requires crimper"
+    ]
+  },
+  {
+    "name": "BNC Female to Female Connector (Coupler)",
+    "id": "BNC001",
+    "price": "3",
+    "description": "Straight female-to-female BNC coupler for joining two male BNC cables together.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "BNC F-F joiner"
+    ]
+  },
+  {
+    "name": "RCA (Female) to BNC (Male) Connector",
+    "id": "BNC002",
+    "price": "3",
+    "description": "Handy adapter for converting a female RCA connection into a male BNC connection.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "Adapter for RCA-BNC conversion"
+    ]
+  },
+  {
+    "name": "BNC (Female) to RCA (Male) Connector",
+    "id": "RCA003",
+    "price": "3",
+    "description": "Useful adapter plug that converts a female BNC connection into a male RCA output.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "Adapter for BNC-RCA conversion"
+    ]
+  },
+  {
+    "name": "RG59 F Connector (Twist-On)",
+    "id": "RCA001",
+    "price": "2",
+    "description": "Simple twist-on F-type connector designed to terminate RG59 coaxial cables.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "F-type connector for RG59"
+    ]
+  },
+  {
+    "name": "RG6 F Connector (Twist-On)",
+    "id": "RCA002",
+    "price": "2",
+    "description": "Quick-install twist-on F-type connector sized appropriately for RG6 coaxial cables.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "F-type connector for RG6"
+    ]
+  },
+  {
+    "name": "RCA (Male) Connector (F-type base)",
+    "id": "RCA004",
+    "price": "2",
+    "description": "Male RCA connector utilizing a standard F-type threaded base for versatile terminations.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "RCA on F-type base"
+    ]
+  },
+  {
+    "name": "F Connector joint",
+    "id": "FC001",
+    "price": "2",
+    "description": "Standard female-to-female F-type barrel coupler for joining two coaxial cables.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "F-F joiner"
+    ]
+  },
+  {
+    "name": "BNC T-Joint Connector",
+    "id": "BNC003",
+    "price": "5",
+    "description": "T-shaped BNC splitter with one male and two female ends for distributing video signals.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "BNC Male to 2 x BNC Female",
+      "Signal splitting"
+    ]
+  },
+  {
+    "name": "RCA (Male) Screw on Terminal",
+    "id": "RCA006",
+    "price": "3",
+    "description": "Solderless male RCA connector with a screw terminal block for easy wire attachment.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "No-solder RCA terminal"
+    ]
+  },
+  {
+    "name": "BNC (Male) Screw on Terminal",
+    "id": "BNC006",
+    "price": "3",
+    "description": "Solderless male BNC connector with a built-in screw terminal block for quick field wiring.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "No-solder BNC terminal"
+    ]
+  },
+  {
+    "name": "BNC (Male) Connector with F-type base",
+    "id": "BNC007",
+    "price": "3",
+    "description": "Male BNC connector featuring an F-type base thread, ideal for adapting existing F-connectors.",
+    "specification": {
+      "weight": "10g"
+    },
+    "features": [
+      "BNC on F-type base"
+    ]
+  },
+  {
+    "name": "BNC Crimper",
+    "id": "BNC004",
+    "price": "45",
+    "description": "Heavy-duty hand crimping tool designed for installing crimp-on BNC connectors on RG59 and RG6.",
+    "specification": {
+      "compatible": "RG59 and RG6 Coaxial cables",
+      "weight": "510g"
+    },
+    "features": [
+      "Crimping tool for BNC connectors"
+    ]
+  },
+  {
+    "name": "VGA Faceplate",
+    "id": "FP-VGA2",
+    "price": "15",
+    "description": "Wall-mountable VGA faceplate featuring screw terminals for custom audio/visual cable runs.",
+    "specification": {
+      "connection_type": "Screw terminal"
+    },
+    "features": [
+      "VGA wall faceplate"
+    ]
+  },
+  {
+    "name": "HDMI Faceplate (with cable)",
+    "id": "FP-HDMI",
+    "price": "25",
+    "description": "Standard HDMI wall faceplate incorporating a short 16cm cable pigtail for easy in-wall connections.",
+    "specification": {
+      "cable": "16cm Cable",
+      "resolution_limit": "Does not support 4K"
+    },
+    "features": [
+      "HDMI wall faceplate"
+    ]
+  },
+  {
+    "name": "HDMI Faceplate with L-joint",
+    "id": "FP-HDMI2",
+    "price": "30",
+    "description": "HDMI wall faceplate with a right-angle L-joint back connector, perfect for low-clearance wall boxes.",
+    "specification": {
+      "connector": "L-joint",
+      "resolution_limit": "Does not support 4K"
+    },
+    "features": [
+      "HDMI wall faceplate, L-shape for low-clearance"
+    ]
+  },
+  {
+    "name": "Cat5e Modular Jack (Keystone)",
+    "id": "MJ(Cat5e)",
+    "price": "5",
+    "description": "Standard 8P8C Cat5e keystone modular jack for inserting into patch panels and faceplates.",
+    "specification": {
+      "format": "8P8C"
+    },
+    "features": [
+      "Standard Cat5e keystone"
+    ]
+  },
+  {
+    "name": "RJ11 Cat3 Modular Jack (Keystone)",
+    "id": "MJ(Cat3)",
+    "price": "4",
+    "description": "Standard 6P4C RJ11 Cat3 keystone module, ideal for terminating telecom and voice lines.",
+    "specification": {
+      "format": "6P4C"
+    },
+    "features": [
+      "Telephone keystone"
+    ]
+  },
+  {
+    "name": "Cat5e RJ45 Module (Slim type)",
+    "id": "D15K",
+    "price": "6",
+    "description": "Slim-profile Cat5e RJ45 keystone jack specifically designed for high-density patch panels.",
+    "specification": {
+      "format": "8P8C",
+      "use_case": "Patch Panel"
+    },
+    "features": [
+      "Slim profile keystone"
+    ]
+  },
+  {
+    "name": "Cat6 RJ45 Module (Slim type)",
+    "id": "D16K",
+    "price": "8",
+    "description": "Space-saving slim Cat6 RJ45 keystone module to fit crowded networking patch panels.",
+    "specification": {
+      "format": "8P8C",
+      "use_case": "Patch Panel"
+    },
+    "features": [
+      "Slim profile keystone"
+    ]
+  },
+  {
+    "name": "24-port Patch Panel (Frame only)",
+    "id": "PP24M",
+    "price": "50",
+    "description": "Unloaded 24-port 19-inch rackmount patch panel frame for customizing network connections.",
+    "specification": {
+      "format": "19\" Standard Rack",
+      "material": "Full Steel",
+      "note": "Modular Jacks not included; use D16K or D15K"
+    },
+    "features": [
+      "Customizable patch panel frame"
+    ]
+  },
+  {
+    "name": "Single-gang Modular Jack Faceplate",
+    "id": "FP1MJ",
+    "price": "3",
+    "description": "Standard single-gang wall faceplate with one port for a keystone modular jack.",
+    "features": [
+      "1-port faceplate"
+    ]
+  },
+  {
+    "name": "Double-gang Modular Jack Faceplate",
+    "id": "FP2MJ",
+    "price": "4",
+    "description": "Standard single-gang wall faceplate with two cutouts for keystone modular jacks.",
+    "features": [
+      "2-port faceplate"
+    ]
+  },
+  {
+    "name": "RJ11 Plug (6P4C)",
+    "id": "RJ11-6P4C",
+    "price": "1",
+    "description": "Standard 6-position 4-contact RJ11 connector plug for terminating telephone cables.",
+    "specification": {
+      "format": "6P4C",
+      "minimum_order": "10pcs",
+      "weight": "2g"
+    },
+    "features": [
+      "Telephone plug"
+    ]
+  },
+  {
+    "name": "Cat5e RJ45 Modular Plug (8P8C)",
+    "id": "RJ45(Cat5e)",
+    "price": "1",
+    "description": "Clear plastic 8P8C Cat5e RJ45 modular plug for terminating telecom, data, and video wiring.",
+    "specification": {
+      "minimum_order": "10pcs",
+      "weight": "2g"
+    },
+    "features": [
+      "For Telecom, Data & Video"
+    ]
+  },
+  {
+    "name": "Cat6 RJ45 Modular Plug (8P8C)",
+    "id": "RJ45(Cat6)",
+    "price": "1",
+    "description": "Clear plastic 8P8C Cat6 RJ45 modular plug designed for high-speed data and network terminations.",
+    "specification": {
+      "minimum_order": "10pcs",
+      "weight": "2g"
+    },
+    "features": [
+      "For Telecom, Data & Video"
+    ]
+  },
+  {
+    "name": "RJ45 Inline Coupler",
+    "id": "RJ45COUP",
+    "price": "3",
+    "description": "Simple 8-pin female-to-female RJ45 coupler used for extending or joining Ethernet cables.",
+    "features": [
+      "8-pins Female to Female socket"
+    ]
+  },
+  {
+    "name": "Coloured Rubber Boots for Cat5e",
+    "id": "RBC5",
+    "price": "1",
+    "description": "Protective rubber strain-relief boots for Cat5e plugs, available in various colors to color-code cables.",
+    "specification": {
+      "minimum_order": "10pcs",
+      "colours": "Clear, Red, Yellow"
+    },
+    "features": [
+      "Strain relief boots"
+    ]
+  },
+  {
+    "name": "Coloured Rubber Boots for Cat6",
+    "id": "RBC6",
+    "price": "1",
+    "description": "Protective strain-relief boots designed for Cat6 RJ45 plugs, offering multiple color options.",
+    "specification": {
+      "minimum_order": "10pcs",
+      "colours": "Clear, Blue, Green, Grey, Red, Yellow, Black"
+    },
+    "features": [
+      "Strain relief boots"
+    ]
+  },
+  {
+    "name": "High Quality Crimper",
+    "id": "RJC001",
+    "price": "35",
+    "description": "Versatile multi-modular hand crimping tool supporting 8P8C, 6P6C, and 4P4C (RJ45/RJ11) connectors.",
+    "features": [
+      "For RJ45 and RJ11",
+      "Supports 8P8C, 6P6C, 4P4C"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor (UK plug) 2A",
+    "id": "PSA004",
+    "price": "15",
+    "description": "Standard 12V DC 2A switching power adapter with a UK plug, suitable for basic CCTV cameras and DVRs.",
+    "specification": {
+      "output": "12V DC 2000mA",
+      "plug": "UK"
+    },
+    "features": [
+      "Standard camera/DVR power adaptor"
+    ]
+  },
+  {
+    "name": "Dahua 12V DC Desktop Switching Power Adaptor (UK plug)",
+    "id": "PFM320D-BS",
+    "price": "25",
+    "description": "Genuine Dahua-branded 12V DC 2A desktop switching power adapter for secure surveillance installations.",
+    "specification": {
+      "output": "12V DC 2000mA",
+      "plug": "UK"
+    },
+    "features": [
+      "Dahua-branded desktop adaptor"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor (UK plug) 2A",
+    "id": "PSA12V2A",
+    "price": "12",
+    "description": "Generic 12V 2A power adapter with a UK plug, providing reliable direct current for electronic equipment.",
+    "specification": {
+      "output": "12V DC 2000mA",
+      "plug": "UK"
+    },
+    "features": [
+      "Generic 2A adaptor"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor (UK plug) 3A",
+    "id": "PSA12V3A",
+    "price": "18",
+    "description": "Generic 12V 3A switching power adapter with a UK plug for devices needing slightly higher current.",
+    "specification": {
+      "output": "12V DC 3000mA",
+      "plug": "UK"
+    },
+    "features": [
+      "Generic 3A adaptor"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor 4A",
+    "id": "PSA12V4A",
+    "price": "25",
+    "description": "High-capacity 12V 4A (48W) switching power block, ideal for multi-camera setups or larger appliances.",
+    "specification": {
+      "output": "12V DC 4000mA (48W)",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "High current 4A adaptor"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor 5A",
+    "id": "PSA12V5A",
+    "price": "30",
+    "description": "High-current 12V 5A (60W) power supply designed for powering heavy-load CCTV systems or multiple devices.",
+    "specification": {
+      "output": "12V DC 5000mA (60W)",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "High current 5A adaptor"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor (Water-proof)",
+    "id": "PFM300",
+    "price": "40",
+    "description": "Outdoor-rated, water-proof 12V 2A power adapter that doubles as a junction box for camera wiring.",
+    "specification": {
+      "output": "12V DC 2000mA"
+    },
+    "features": [
+      "Wall mount easy installation",
+      "Junction box for camera wiring",
+      "Outdoor-rated"
+    ]
+  },
+  {
+    "name": "12V DC Switching Power Adaptor (Junction box type)",
+    "id": "PFM320D-015",
+    "price": "35",
+    "description": "Compact 12V 1.5A power adapter designed to fit cleanly inside junction boxes with screw terminal IO.",
+    "specification": {
+      "output": "12V DC 1500mA"
+    },
+    "features": [
+      "Installs in junction boxes",
+      "Screw terminals input/output",
+      "Basic surge protection"
+    ]
+  },
+  {
+    "name": "24V DC Switching Power Adaptor",
+    "id": "ADS-65LSI-19-1",
+    "price": "55",
+    "description": "24V DC 2.5A switching power supply unit designed for heavier industrial or specialized security equipment.",
+    "specification": {
+      "output": "24V DC 2500mA",
+      "input": "AC85~264V",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "24V supply for AC24V-rated devices"
+    ]
+  },
+  {
+    "name": "53VDC Switching Power Adaptor for PoE Switch 60W",
+    "id": "PSA53V60W",
+    "price": "80",
+    "description": "53V 60W power adapter designed to supply sufficient voltage for unmanaged Power-over-Ethernet (PoE) switches.",
+    "specification": {
+      "output": "53V 1.13A (60W)",
+      "input": "AC100-240V",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "PSU for unmanaged PoE switches"
+    ]
+  },
+  {
+    "name": "53VDC Switching Power Adaptor for PoE Switch 96W",
+    "id": "PSA53V96W",
+    "price": "120",
+    "description": "Robust 53V 96W power block tailored for medium-load PoE switches requiring sustained high output.",
+    "specification": {
+      "output": "53V 1.812A (96W)",
+      "input": "AC100-240V",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "PSU for medium-load PoE switches"
+    ]
+  },
+  {
+    "name": "54VDC Switching Power Adaptor for PoE Switch 120W",
+    "id": "PSA53V120W",
+    "price": "150",
+    "description": "High-capacity 54V 120W adapter for medium-large PoE switch systems driving multiple cameras or APs.",
+    "specification": {
+      "output": "54V 2.22A (120W)",
+      "input": "AC100-240V",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "PSU for medium-large PoE switches"
+    ]
+  },
+  {
+    "name": "53VDC Switching Power Adaptor for PoE Switch 200W",
+    "id": "PSA53V200W",
+    "price": "220",
+    "description": "Powerful 53V 200W power supply unit built to handle high-density PoE switches running power-hungry devices.",
+    "specification": {
+      "output": "53V 3.77A (200W)",
+      "input": "AC100-240V",
+      "power_cord": "Not included"
+    },
+    "features": [
+      "PSU for high-load PoE switches"
+    ]
+  },
+  {
+    "name": "12V DC 5A Power Adaptor",
+    "id": "PSA007",
+    "price": "45",
+    "description": "12V 5A adapter unit bundled with a standard UK 3-pin power cord, designed for DVRs and PTZ cameras.",
+    "specification": {
+      "output": "12V DC 5A",
+      "power_cord": "UK 3-pin included",
+      "use_case": "DVR / Cameras"
+    },
+    "features": [
+      "Higher-current DVR/PTZ supply"
+    ]
+  },
+  {
+    "name": "5V DC Switching Power Adaptor",
+    "id": "PSA011",
+    "price": "15",
+    "description": "Standard 5V DC 2A power adapter suitable for light electronics and consumer-grade Wi-Fi cameras.",
+    "specification": {
+      "output": "5V DC 2000mA"
+    },
+    "features": [
+      "For 5V devices (e.g. consumer cameras)"
+    ]
+  },
+  {
+    "name": "24V AC Regulated Power Adaptor",
+    "id": "PSA012",
+    "price": "70",
+    "description": "Heavy-duty 24V AC 3A regulated transformer adapter designed for compatible heavy PTZ units and housing heaters.",
+    "specification": {
+      "output": "24V AC 3000mA",
+      "weight": "1.3kg"
+    },
+    "features": [
+      "AC24V supply for compatible PTZ/IPC"
+    ]
+  },
+  {
+    "name": "24V DC Switching Power Adaptor (UK 3-pin)",
+    "id": "PSA014",
+    "price": "45",
+    "description": "24V DC 2A switching power block paired with a UK 3-pin plug for dependable general-purpose 24V power.",
+    "specification": {
+      "output": "24V DC 2000mA",
+      "power_cord": "UK 3-pin included"
+    },
+    "features": [
+      "DC24V supply"
+    ]
+  },
+  {
+    "name": "36V DC Switching Power Adaptor",
+    "id": "PSA015",
+    "price": "35",
+    "description": "36V DC 1A power adapter unit often used for specialized PoE-style equipment and extended cable runs.",
+    "specification": {
+      "output": "36V DC 1000mA",
+      "plug": "UK 3-pin"
+    },
+    "features": [
+      "For PoE-style 36V devices"
+    ]
+  },
+  {
+    "name": "Passive Video Balun for HD-CVI/AHD/TVI/CVBS",
+    "id": "VB12-4K",
+    "price": "18",
+    "description": "Passive single-channel video balun for sending up to 4K resolution analog video over standard UTP Cat5e/6 cables.",
+    "specification": {
+      "channels": "1ch",
+      "supports": "720P/1080P/4MP/5MP/4K",
+      "cable": "UTP CAT5E/6",
+      "distance_hdcvi": "720P (400m), 1080P (250m), 4MP/4K (200m)"
+    },
+    "features": [
+      "Passive (no power required)",
+      "Side-by-side Interlocking",
+      "Lifetime Warranty (exclude burn)",
+      "Screw Terminal"
+    ]
+  },
+  {
+    "name": "Power Over Coax (POC) Transceiver",
+    "id": "PVT01H",
+    "price": "120",
+    "description": "1-channel transceiver pair that multiplexes video and DC power over a single coaxial cable up to 400m.",
+    "specification": {
+      "channels": "1ch HD-CVI/TVI/AHD/CVBS",
+      "input_voltage": "DC24-36V",
+      "output": "DC12V 9W (max) to camera",
+      "distance": "400m max at 720P/1080P",
+      "quantity": "1 pair"
+    },
+    "features": [
+      "Sends video + power over single coax",
+      "PSU sold separately"
+    ]
+  },
+  {
+    "name": "MINI Converter: HDMI to VGA",
+    "id": "HDMI2VGA",
+    "price": "15",
+    "description": "Compact active converter for displaying HDMI source devices on older VGA monitors at up to 1080P.",
+    "specification": {
+      "resolution": "Full HD 1080P",
+      "power": "USB port (5V)",
+      "included": "USB cable only"
+    },
+    "features": [
+      "Active converter",
+      "Compact size"
+    ]
+  },
+  {
+    "name": "MINI Converter: VGA to HDMI",
+    "id": "VGA2HDMI",
+    "price": "20",
+    "description": "Small-form-factor active converter that transforms older VGA video signals into a standard HDMI output.",
+    "specification": {
+      "resolution": "Full HD 1080P",
+      "power": "USB port (5V)",
+      "included": "USB cable only"
+    },
+    "features": [
+      "Active converter",
+      "Compact size"
+    ]
+  },
+  {
+    "name": "MINI Converter: HDMI to AV",
+    "id": "HDMI2AV",
+    "price": "20",
+    "description": "USB-powered mini adapter that converts modern HDMI signals down to legacy composite RCA AV outputs.",
+    "specification": {
+      "output": "RCA Yellow/White/Red",
+      "power": "USB port (5V)",
+      "included": "USB cable only"
+    },
+    "features": [
+      "HDMI to composite AV",
+      "Compact size"
+    ]
+  },
+  {
+    "name": "MINI Converter: AV to HDMI",
+    "id": "AV2HDMI",
+    "price": "20",
+    "description": "Mini adapter that converts classic analog composite RCA signals into a modern HDMI feed.",
+    "specification": {
+      "input": "RCA Yellow/White/Red",
+      "power": "USB port (5V)",
+      "included": "USB cable only"
+    },
+    "features": [
+      "AV to HDMI",
+      "Compact size"
+    ]
+  },
+  {
+    "name": "Display Port (DP) to HDMI Converter",
+    "id": "DP2HDMI",
+    "price": "18",
+    "description": "Passive plug-and-play converter that links a DisplayPort source to an HDMI monitor or TV.",
+    "specification": {
+      "power": "No power required"
+    },
+    "features": [
+      "Passive DP-HDMI"
+    ]
+  },
+  {
+    "name": "Mini Display Port (Mini DP) to HDMI Converter",
+    "id": "MDP2HDMI",
+    "price": "18",
+    "description": "Passive mini adapter designed to connect Mini DisplayPort devices (like older MacBooks) to HDMI displays.",
+    "specification": {
+      "power": "No power required"
+    },
+    "features": [
+      "Passive Mini DP-HDMI"
+    ]
+  },
+  {
+    "name": "HDMI extender over Single UTP cable",
+    "id": "HD-EXT50",
+    "price": "85",
+    "description": "HDMI transmitter and receiver kit that sends uncompressed 1080P video up to 50m using a single Cat5e/6 cable.",
+    "specification": {
+      "resolution": "1080P@60Hz",
+      "distance": "50m",
+      "cable": "Cat5e/Cat6",
+      "format": "Uncompressed",
+      "bandwidth": "225MHz",
+      "kit": "1 Rx, 1 Tx, 1 x 5V 1A adaptor"
+    },
+    "features": [
+      "Rx no power supply needed",
+      "Uncompressed transmission"
+    ]
+  },
+  {
+    "name": "HDMI extender over Coaxial cable",
+    "id": "HD-COAX300",
+    "price": "280",
+    "description": "Heavy-duty HDMI extender set capable of pushing 1080P signals up to 300m over RG6 coaxial cable.",
+    "specification": {
+      "resolution": "1080P@60Hz",
+      "distance": "300m over RG6",
+      "kit": "1 Rx, 1 Tx, 2 x 5V 1A adaptor"
+    },
+    "features": [
+      "Long-distance HDMI extension",
+      "Uses coax"
+    ]
+  },
+  {
+    "name": "HDMI extender over Single UTP cable (Multi-Rx)",
+    "id": "HDMIUTP",
+    "price": "150",
+    "description": "Network-capable HDMI extender kit supporting 1080P transmission to one or multiple receivers within a LAN.",
+    "specification": {
+      "resolution": "1080P",
+      "distance": "100m",
+      "cable": "Cat5e/Cat6",
+      "kit": "1 Rx, 1 Tx, 2 x 5V 1A adaptor"
+    },
+    "features": [
+      "Supports multiple receivers within LAN"
+    ]
+  },
+  {
+    "name": "HDMI extender over UTP - Receiver Only",
+    "id": "HDMIUTP-R",
+    "price": "85",
+    "description": "Standalone add-on receiver unit for expanding the HDMIUTP multi-receiver network distribution system.",
+    "specification": {
+      "resolution": "1080P",
+      "distance": "100m",
+      "cable": "Cat5e/Cat6",
+      "kit": "1 Rx, 1 x 5V 1A adaptor"
+    },
+    "features": [
+      "Additional receiver for HDMIUTP system"
+    ]
+  },
+  {
+    "name": "HDMI KVM Extender over Single UTP cable",
+    "id": "HD-KVM-EXT",
+    "price": "220",
+    "description": "KVM (Keyboard, Video, Mouse) extender allowing remote control of a PC up to 120m away via HDMI and USB.",
+    "specification": {
+      "resolution": "1080P",
+      "distance": "120m",
+      "interface": "USB1.1",
+      "ir": "Yes",
+      "cable": "Cat5e/Cat6",
+      "kit": "1 Rx, 1 Tx, 2 x 5V 1A adaptor"
+    },
+    "features": [
+      "Cascading via switch",
+      "IR pass-through"
+    ]
+  },
+  {
+    "name": "VGA KVM Extender over Single UTP cable",
+    "id": "VG-KVM-EXT",
+    "price": "180",
+    "description": "VGA-based KVM extender kit providing remote desktop access and control over distances up to 200m using UTP cable.",
+    "specification": {
+      "resolution": "1280*720 over 200m / 1080P over 100m",
+      "interface": "USB1.1",
+      "cable": "Cat5e/Cat6",
+      "kit": "1 Rx, 1 Tx, 2 x 5V 1A adaptor"
+    },
+    "features": [
+      "VGA + USB KVM extension"
+    ]
+  }
+]

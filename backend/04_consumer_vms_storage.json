@@ -1,0 +1,411 @@
+[
+  {
+    "name": "Cue 2E - 1080P Wi-Fi Camera",
+    "id": "Cue2E",
+    "price": "155",
+    "description": "Compact 1080P Wi-Fi indoor camera featuring human detection, built-in siren, and two-way talk functionality.",
+    "specification": {
+      "resolution": "20fps @ 1080P",
+      "wifi": "802.11b/g/n (Very Short distance)",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Mic & Speaker, Two-way talk",
+      "power_supply": "DC5V/1A",
+      "ir_distance": "Night vision up to 10m",
+      "lens": "3.6mm"
+    },
+    "features": [
+      "Built-in Siren",
+      "Human Detection"
+    ]
+  },
+  {
+    "name": "Ranger 2 (Blue) - 1080P Wi-Fi Pan & Tilt Camera",
+    "id": "Ranger2(Blue)",
+    "price": "222",
+    "description": "Versatile 1080P Pan & Tilt indoor Wi-Fi camera with smart tracking, human detection, and abnormal sound alarms.",
+    "specification": {
+      "resolution": "30fps @ 1080P",
+      "wifi": "802.11b/g/n 50m Open Field",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Mic & Speaker, Two-way talk",
+      "power_supply": "DC5V/1A",
+      "ir_distance": "Night vision up to 10m",
+      "lens": "3.6mm"
+    },
+    "features": [
+      "Built-in Siren",
+      "Human Detection",
+      "Abnormal Sound Alarm",
+      "Smart Tracking"
+    ]
+  },
+  {
+    "name": "A2 - 1080P Wi-Fi Pan & Tilt Camera",
+    "id": "A2",
+    "price": "200",
+    "description": "Affordable 1080P Pan & Tilt indoor Wi-Fi camera offering smart tracking, human detection, and built-in siren.",
+    "specification": {
+      "resolution": "H.264 20fps @ 1080P",
+      "wifi": "802.11b/g/n 50m Open Field",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Mic & Speaker, Two-way talk",
+      "power_supply": "DC5V/1A",
+      "ir_distance": "Night vision up to 10m",
+      "lens": "3.6mm"
+    },
+    "features": [
+      "Built-in Siren",
+      "Human Detection",
+      "Abnormal Sound Alarm",
+      "Smart Tracking"
+    ]
+  },
+  {
+    "name": "Ranger 2 (4MP) - 4MP Wi-Fi Pan & Tilt Camera",
+    "id": "Ranger2(4MP)",
+    "price": "268",
+    "description": "High-resolution 4MP Pan & Tilt indoor Wi-Fi camera with smart tracking, human detection, and advanced audio alarms.",
+    "specification": {
+      "resolution": "30fps @ 4MP",
+      "wifi": "802.11b/g/n 50m Open Field",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Mic & Speaker, Two-way talk",
+      "power_supply": "DC5V/1A",
+      "ir_distance": "Night vision up to 10m",
+      "lens": "3.6mm"
+    },
+    "features": [
+      "Built-in Siren",
+      "Human Detection",
+      "Abnormal Sound Alarm",
+      "Smart Tracking"
+    ]
+  },
+  {
+    "name": "Bullet 2C - 1080P Bullet Wi-Fi Camera",
+    "id": "Bullet2C",
+    "price": "208",
+    "description": "IP67-rated 1080P outdoor Wi-Fi bullet camera featuring human detection and a dual-antenna design for stable connection.",
+    "specification": {
+      "resolution": "30fps @ 1080P",
+      "wifi": "802.11b/g/n Dual Antenna",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Microphone",
+      "power_supply": "DC12V/0.5A",
+      "ir_distance": "Night vision up to 30m",
+      "lens": "2.8mm / 3.6mm",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Human Detection"
+    ]
+  },
+  {
+    "name": "Bullet 2C (4MP) - 4MP Bullet Wi-Fi Camera",
+    "id": "Bullet2C(4MP)",
+    "price": "249",
+    "description": "High-resolution 4MP outdoor Wi-Fi bullet camera with IP67 protection, human detection, and a built-in microphone.",
+    "specification": {
+      "resolution": "30fps @ 4MP",
+      "wifi": "802.11b/g/n Dual Antenna",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Microphone",
+      "power_supply": "DC12V/0.5A",
+      "ir_distance": "Night vision up to 30m",
+      "lens": "2.8mm / 3.6mm",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Human Detection"
+    ]
+  },
+  {
+    "name": "Bullet 2E - 1080P Bullet Wi-Fi Camera with Spotlight",
+    "id": "Bullet2E",
+    "price": "227",
+    "description": "Outdoor 1080P Wi-Fi bullet camera equipped with a built-in spotlight for full-color night vision and active deterrence.",
+    "specification": {
+      "resolution": "30fps @ 1080P",
+      "wifi": "802.11b/g/n Dual Antenna",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Microphone",
+      "power_supply": "DC12V/1A",
+      "ir_distance": "Night vision up to 30m",
+      "lens": "2.8mm / 3.6mm",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Built-in Spotlight",
+      "Human Detection",
+      "Smart Color Night vision",
+      "Full Color"
+    ]
+  },
+  {
+    "name": "Bullet 2 - 1080P Bullet Wi-Fi Camera with Siren",
+    "id": "Bullet2",
+    "price": "262",
+    "description": "1080P outdoor Wi-Fi bullet camera featuring active deterrence with a built-in spotlight, 110dB siren, and two-way audio.",
+    "specification": {
+      "resolution": "30fps @ 1080P",
+      "wifi": "802.11b/g/n",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Mic & Speaker, Two-way talk",
+      "power_supply": "DC12V/1A",
+      "ir_distance": "Night vision up to 30m",
+      "lens": "2.8mm",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Built-in Spotlight",
+      "110dB Siren Active Deterrence",
+      "Full Color Night vision"
+    ]
+  },
+  {
+    "name": "Bullet 2S (4MP) - 4MP Bullet Wi-Fi Camera with Siren",
+    "id": "Bullet2S(4MP)",
+    "price": "295",
+    "description": "Premium 4MP outdoor Wi-Fi bullet camera providing full-color night vision, a 110dB siren, and active spotlight deterrence.",
+    "specification": {
+      "resolution": "30fps @ 4MP",
+      "wifi": "802.11b/g/n",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Mic & Speaker, Two-way talk",
+      "power_supply": "DC12V/1A",
+      "ir_distance": "Night vision up to 30m",
+      "lens": "3.6mm",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Built-in Spotlight",
+      "110dB Siren Active Deterrence",
+      "Full Color Night vision"
+    ]
+  },
+  {
+    "name": "Cruiser - 1080P Wi-Fi Pan & Tilt Outdoor Camera",
+    "id": "Cruiser",
+    "price": "335",
+    "description": "IP66-rated outdoor Pan & Tilt 1080P Wi-Fi camera with smart tracking, full-color night vision, and a 110dB active deterrence siren.",
+    "specification": {
+      "resolution": "30fps @ 1080P",
+      "wifi": "802.11b/g/n 120m Open Field",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Mic & Speaker, Two-way talk",
+      "power_supply": "DC12V/1A",
+      "ir_distance": "IR up to 30m",
+      "lens": "3.6mm",
+      "ingress_protection": "IP66"
+    },
+    "features": [
+      "Built-in Spotlight",
+      "110dB Siren Active Deterrence",
+      "Full Color Night vision",
+      "Smart Tracking"
+    ]
+  },
+  {
+    "name": "Cruiser (4MP) - 4MP Wi-Fi Pan & Tilt Outdoor Camera",
+    "id": "Cruiser(4MP)",
+    "price": "375",
+    "description": "High-definition 4MP outdoor Pan & Tilt Wi-Fi camera featuring smart tracking, active deterrence, and full-color night vision.",
+    "specification": {
+      "resolution": "30fps @ 4MP",
+      "wifi": "802.11b/g/n 120m Open Field",
+      "ports": "1x Ethernet port",
+      "storage": "NVR, Cloud Storage and/or Micro-SD (max 256GB)",
+      "audio": "Built-in Mic & Speaker, Two-way talk",
+      "power_supply": "DC12V/1A",
+      "ir_distance": "IR up to 30m",
+      "lens": "3.6mm",
+      "ingress_protection": "IP66"
+    },
+    "features": [
+      "Built-in Spotlight",
+      "110dB Siren Active Deterrence",
+      "Full Color Night vision",
+      "Smart Tracking"
+    ]
+  },
+  {
+    "name": "4CH Wi-Fi Network Video Recorder",
+    "id": "NVR1104HS-W-S2",
+    "price": "471",
+    "description": "A 4-channel Wi-Fi NVR supporting wireless camera connections, featuring dual-antenna MIMO and up to 8TB storage capacity.",
+    "specification": {
+      "channels": "4CH Wi-Fi NVR",
+      "resolution": "1080P, Max Decoding: 1ch@6MP / 2ch@4MP / 4ch@1080P / 8ch@720P",
+      "bandwidth": "Wired 40Mbps; Wireless 16Mbps",
+      "wifi": "802.11b/g/n, 2x2 MIMO",
+      "video_output": "HDMI + VGA",
+      "audio": "Audio 1/1",
+      "interfaces": "2 x USB2.0",
+      "power_supply": "DC12V 1.5A",
+      "storage_interface": "Supports 1 x HDD up to 8TB"
+    },
+    "features": [
+      "H.264 Compression"
+    ]
+  },
+  {
+    "name": "8CH Wi-Fi Network Video Recorder",
+    "id": "NVR1108HS-W-S2",
+    "price": "605",
+    "description": "An 8-channel Wi-Fi NVR designed for wireless surveillance systems, offering easy setup, H.264 compression, and up to 8TB storage.",
+    "specification": {
+      "channels": "8CH Wi-Fi NVR",
+      "resolution": "1080P, Max Decoding: 1ch@6MP / 2ch@4MP / 4ch@1080P / 8ch@720P",
+      "bandwidth": "Wired 40Mbps; Wireless 16Mbps",
+      "wifi": "802.11b/g/n, 2x2 MIMO",
+      "video_output": "HDMI + VGA",
+      "audio": "Audio 1/1",
+      "interfaces": "2 x USB2.0",
+      "power_supply": "DC12V 1.5A",
+      "storage_interface": "Supports 1 x HDD up to 8TB"
+    },
+    "features": [
+      "H.264 Compression"
+    ]
+  },
+  {
+    "name": "Dahua OEM Seagate SkyHawk Hard Drive 1TB",
+    "id": "ST1000VX001",
+    "price": "465",
+    "description": "A 1TB surveillance-grade hard drive optimized for 24/7 video recording in DVR and NVR systems (Dahua OEM).",
+    "specification": {
+      "capacity": "1TB",
+      "interface": "SATA III (6Gb/s)",
+      "cache": "64MB",
+      "speed": "5900rpm"
+    },
+    "features": [
+      "Dahua OEM (Dahua Logo)",
+      "Surveillance-grade"
+    ]
+  },
+  {
+    "name": "Dahua OEM Seagate SkyHawk Hard Drive 2TB",
+    "id": "ST2000VX012",
+    "price": "520",
+    "description": "A reliable 2TB surveillance hard drive designed to handle continuous video recording workloads (Dahua OEM).",
+    "specification": {
+      "capacity": "2TB",
+      "interface": "SATA III (6Gb/s)",
+      "cache": "256MB",
+      "speed": "5900rpm"
+    },
+    "features": [
+      "Dahua OEM (Dahua Logo)",
+      "Surveillance-grade"
+    ]
+  },
+  {
+    "name": "Dahua OEM Seagate SkyHawk Hard Drive 4TB",
+    "id": "ST4000VX000",
+    "price": "715",
+    "description": "A 4TB surveillance-grade hard drive featuring RV sensors for improved reliability in multi-drive DVR/NVR enclosures (Dahua OEM).",
+    "specification": {
+      "capacity": "4TB",
+      "interface": "SATA III (6Gb/s)",
+      "cache": "64MB",
+      "speed": "5900rpm"
+    },
+    "features": [
+      "Dahua OEM",
+      "Surveillance-grade",
+      "RV Sensor"
+    ]
+  },
+  {
+    "name": "Dahua OEM Seagate SkyHawk Hard Drive 6TB",
+    "id": "ST6000VX001",
+    "price": "959",
+    "description": "A high-capacity 6TB surveillance hard drive equipped with RV sensors to maintain performance in demanding security systems (Dahua OEM).",
+    "specification": {
+      "capacity": "6TB",
+      "interface": "SATA III (6Gb/s)",
+      "cache": "256MB",
+      "speed": "5400rpm"
+    },
+    "features": [
+      "Dahua OEM",
+      "Surveillance-grade",
+      "RV Sensor"
+    ]
+  },
+  {
+    "name": "Dahua OEM Seagate SkyHawk Hard Drive 8TB",
+    "id": "ST8000VX004",
+    "price": "1918",
+    "description": "An 8TB 7200RPM surveillance hard drive built for heavy 24/7 video recording and multi-drive NVR environments (Dahua OEM).",
+    "specification": {
+      "capacity": "8TB",
+      "interface": "SATA III (6Gb/s)",
+      "cache": "256MB",
+      "speed": "7200rpm"
+    },
+    "features": [
+      "Dahua OEM",
+      "Surveillance-grade",
+      "RV Sensor"
+    ]
+  },
+  {
+    "name": "Dahua OEM Seagate SkyHawk Hard Drive 10TB AI",
+    "id": "ST10000VE000",
+    "price": "2458",
+    "description": "A massive 10TB surveillance hard drive optimized for AI-enabled NVRs, handling simultaneous video recording and analytics (Dahua OEM).",
+    "specification": {
+      "capacity": "10TB AI",
+      "interface": "SATA III (6Gb/s)",
+      "cache": "256MB",
+      "speed": "7200rpm"
+    },
+    "features": [
+      "Dahua OEM",
+      "Surveillance-grade",
+      "RV Sensor"
+    ]
+  },
+  {
+    "name": "WD Purple 1TB Surveillance HDD",
+    "id": "WD-1TB",
+    "price": "220",
+    "description": "A 1TB WD Purple surveillance hard drive engineered for 24/7 reliability and featuring AllFrame AI technology for seamless video capture.",
+    "specification": {
+      "capacity": "1TB",
+      "interface": "SATA III 6Gb/s",
+      "cache": "64MB",
+      "warranty": "3-yr"
+    },
+    "features": [
+      "Surveillance-grade",
+      "24/7 reliability",
+      "AllFrame AI tech"
+    ]
+  },
+  {
+    "name": "WD Purple 2TB Surveillance HDD",
+    "id": "WD-2TB",
+    "price": "350",
+    "description": "A 2TB WD Purple surveillance hard drive built to withstand continuous high-definition video recording workloads.",
+    "specification": {
+      "capacity": "2TB",
+      "interface": "SATA III 6Gb/s",
+      "cache": "64MB",
+      "warranty": "3-yr"
+    },
+    "features": [
+      "Surveillance-grade",
+      "24/7 reliability",
+      "AllFrame AI tech"
+    ]
+  }
+]

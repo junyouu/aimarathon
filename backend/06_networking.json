@@ -1,0 +1,1450 @@
+[
+  {
+    "name": "IPCOM Wireless CPE 2.4GHz",
+    "id": "CPE3",
+    "price": "150",
+    "description": "A 2.4GHz outdoor wireless CPE with 8dBi gain, offering 300Mbps throughput over a 500m range for wireless bridging.",
+    "specification": {
+      "frequency": "2.4GHz",
+      "gain": "8dBi",
+      "max_distance": "500m",
+      "throughput": "300Mbps",
+      "beamwidth": "H:60° V:60°",
+      "ports": "FE PoE/LAN port",
+      "standard": "802.11n",
+      "power": "DC or Passive PoE (9-12VDC)",
+      "ingress_protection": "IP65"
+    },
+    "features": [
+      "Auto-bridge tech",
+      "Purchase 2 units to create a wireless bridge"
+    ]
+  },
+  {
+    "name": "IPCOM Wireless CPE 5GHz (MS-5AC)",
+    "id": "MS-5AC",
+    "price": "250",
+    "description": "A 5GHz outdoor wireless CPE featuring 16dBi gain, delivering up to 450Mbps throughput over a 10km distance.",
+    "specification": {
+      "frequency": "5GHz",
+      "gain": "16dBi",
+      "max_distance": "10km",
+      "throughput": "450Mbps",
+      "beamwidth": "H:30° V:30°",
+      "ports": "GE PoE/LAN port",
+      "standard": "802.11a/n/ac PtP & PtMP",
+      "power": "PoE 802.3af/at / 24V0.5A Passive PoE / 12VDC 1A",
+      "ingress_protection": "IP65"
+    },
+    "features": [
+      "Auto-bridge tech",
+      "Purchase 2 units to create a wireless bridge"
+    ]
+  },
+  {
+    "name": "IPCOM Wireless CPE iLBE-M5",
+    "id": "iLBE-M5",
+    "price": "350",
+    "description": "A long-range 5GHz wireless CPE with 23dBi gain, designed to bridge networks up to 20km with 433Mbps throughput.",
+    "specification": {
+      "frequency": "5GHz",
+      "gain": "23dBi",
+      "max_distance": "20km",
+      "throughput": "433Mbps",
+      "beamwidth": "V:10° E:10°",
+      "ports": "FE PoE port",
+      "standard": "802.11a/n/ac PtP & PtMP",
+      "power": "24V0.5A Passive PoE (9-31VDC)",
+      "ingress_protection": "IP65"
+    },
+    "features": [
+      "Long-range wireless bridge",
+      "Auto-bridge tech"
+    ]
+  },
+  {
+    "name": "IPCOM Wireless CPE iLBE-5AC",
+    "id": "iLBE-5AC",
+    "price": "450",
+    "description": "A high-throughput 5GHz wireless CPE offering 867Mbps speeds and 23dBi gain for long-distance links up to 25km.",
+    "specification": {
+      "frequency": "5GHz",
+      "gain": "23dBi",
+      "max_distance": "25km",
+      "throughput": "867Mbps",
+      "beamwidth": "V:10° H:10°",
+      "ports": "GE PoE port",
+      "standard": "802.11a/n/ac PtP & PtMP",
+      "power": "24V0.5A Passive PoE (21-25VDC)",
+      "ingress_protection": "IP65"
+    },
+    "features": [
+      "Highest throughput long-range link",
+      "Auto-bridge tech"
+    ]
+  },
+  {
+    "name": "TodaaAir Wireless Transmission 5GHz",
+    "id": "DIP156-H",
+    "price": "120",
+    "description": "A pairable no-config 5GHz wireless bridge providing 150Mbps throughput over distances up to 2km.",
+    "specification": {
+      "frequency": "5GHz",
+      "max_distance": "2km",
+      "throughput": "150Mbps",
+      "ports": "10/100Mbps LAN",
+      "standard": "802.11n",
+      "power": "PoE 24V 1A (included)"
+    },
+    "features": [
+      "No-config wireless bridge (purchase in pairs)",
+      "PoE 12V supported"
+    ]
+  },
+  {
+    "name": "24V Passive PoE Adapter",
+    "id": "POE24V",
+    "price": "35",
+    "description": "A 24V passive PoE adapter designed to power TodaAir and other compatible wireless equipment.",
+    "specification": {
+      "input": "LAN",
+      "output": "PoE 24V"
+    },
+    "features": [
+      "For use with TodaAir wireless models"
+    ]
+  },
+  {
+    "name": "Dahua 6-port Fast Ethernet PoE Switch (4PoE+36W)",
+    "id": "PFS3006-4ET-36",
+    "price": "120",
+    "description": "A 6-port Fast Ethernet switch with 4 PoE+ ports and up to 36W power output, featuring a 250m extend mode.",
+    "specification": {
+      "ports": "4FE PoE + 2FE Uplink",
+      "max_poe_output": "36W",
+      "max_port_power": "30W per port (IEEE 802.3af/at)"
+    },
+    "features": [
+      "Extend Mode (DIP switch) up to 250m in 10Mbps",
+      "Lightning Protection CM 6KV, DM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 6-port Fast Ethernet PoE Switch (4PoE+60W)",
+    "id": "PFS3006-4ET-60",
+    "price": "180",
+    "description": "A 6-port Fast Ethernet PoE switch delivering up to 60W total power, including Hi-PoE support on port 1.",
+    "specification": {
+      "ports": "4FE PoE + 2FE Uplink",
+      "max_poe_output": "60W",
+      "max_port_power": "30W per port (60W for port 1 Hi-PoE)"
+    },
+    "features": [
+      "Extend Mode up to 250m",
+      "Lightning Protection CM 2KV, DM 0.5KV"
+    ]
+  },
+  {
+    "name": "Dahua Hardened 6-port L2 Unmanaged PoE Switch",
+    "id": "PFS3106-4ET-60",
+    "price": "350",
+    "description": "An industrial-grade hardened 6-port unmanaged PoE switch with a wide operating temperature range and SFP uplink.",
+    "specification": {
+      "ports": "4FE PoE + 1GE + 1*SFP Uplink",
+      "max_poe_output": "60W",
+      "max_port_power": "30W per port (60W for port 1 Hi-PoE)",
+      "temperature": "-30°C to 65°C"
+    },
+    "features": [
+      "Industrial wide temp design",
+      "Lightning Protection CM 6KV, DM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 10-port Fast Ethernet PoE Switch (8PoE+65W)",
+    "id": "PFS3010-8ET-65",
+    "price": "250",
+    "description": "A 10-port switch featuring 8 Fast Ethernet PoE ports with up to 65W total output and 250m long-distance transmission.",
+    "specification": {
+      "ports": "8FE PoE + 2FE Uplink",
+      "max_poe_output": "65W",
+      "max_port_power": "30W per port"
+    },
+    "features": [
+      "Extend Mode up to 250m",
+      "Lightning Protection CM 6KV, DM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 10-port Fast Ethernet PoE Switch (8PoE+96W)",
+    "id": "PFS3010-8ET-96",
+    "price": "320",
+    "description": "A 10-port switch featuring 8 Fast Ethernet PoE ports, 2 Gigabit uplinks, and a 96W PoE budget with Hi-PoE support.",
+    "specification": {
+      "ports": "8FE PoE + 2GE Uplink",
+      "max_poe_output": "96W",
+      "max_port_power": "30W per port (60W for port 1 Hi-PoE)"
+    },
+    "features": [
+      "Extend Mode up to 250m",
+      "Lightning Protection CM 2KV, DM 0.5KV"
+    ]
+  },
+  {
+    "name": "Dahua Hardened 10-port L2 Unmanaged PoE Switch",
+    "id": "PFS3110-8ET-96",
+    "price": "550",
+    "description": "An industrial 10-port unmanaged PoE switch designed for extreme temperatures, offering 96W total power and Hi-PoE on ports 1-2.",
+    "specification": {
+      "ports": "8FE PoE + 1GE + 1*SFP Uplink",
+      "max_poe_output": "96W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)",
+      "temperature": "-30°C to 65°C"
+    },
+    "features": [
+      "Industrial wide temp",
+      "Lightning Protection CM 6KV, DM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 18-port Fast Ethernet PoE Switch (16PoE+135W)",
+    "id": "PFS3218-16ET-135",
+    "price": "650",
+    "description": "An 18-port switch with 16 PoE ports, 135W total budget, intelligent PoE watchdog features, and long-distance support.",
+    "specification": {
+      "ports": "16FE PoE + 2*Combo",
+      "max_poe_output": "135W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "DIP switch port isolation",
+      "250m long distance PoE",
+      "Intelligent PoE",
+      "PD Alive (PoE Watchdog)",
+      "QoS"
+    ]
+  },
+  {
+    "name": "Dahua 26-port Fast Ethernet PoE Switch (24PoE+240W)",
+    "id": "PFS3226-24ET-240",
+    "price": "900",
+    "description": "A 26-port switch with 24 PoE ports providing 240W of power, PD Alive watchdog, and port isolation for robust networking.",
+    "specification": {
+      "ports": "24FE PoE + 2*Combo",
+      "max_poe_output": "240W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "DIP switch port isolation",
+      "250m long distance PoE",
+      "Intelligent PoE",
+      "PD Alive",
+      "QoS"
+    ]
+  },
+  {
+    "name": "Dahua 6-port Managed Fast Ethernet PoE Switch",
+    "id": "PFS4206-4P-120",
+    "price": "600",
+    "description": "A managed 6-port industrial switch featuring VLAN management, dual SFP uplinks, and a generous 120W PoE budget.",
+    "specification": {
+      "ports": "3FE PoE + 1GE PoE + 2*SFP",
+      "max_poe_output": "120W",
+      "max_port_power": "30W per port (60W for port 4 Hi-PoE)",
+      "temperature": "Industrial wide"
+    },
+    "features": [
+      "VLAN, Management, Spanning Tree",
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Dahua 18-port Managed Fast Ethernet PoE Switch",
+    "id": "PFS4218-16ET-190",
+    "price": "1100",
+    "description": "An 18-port managed switch equipped with 16 PoE ports, spanning tree support, and a 190W power budget.",
+    "specification": {
+      "ports": "16FE PoE + 2*Combo",
+      "max_poe_output": "190W or 240W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "Long Distance Mode (250m)",
+      "VLAN, Spanning Tree, Management",
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Dahua 26-port Managed Fast Ethernet PoE Switch",
+    "id": "PFS4226-24ET-240",
+    "price": "1300",
+    "description": "A 26-port managed switch offering advanced VLAN features and a 240W power budget across 24 PoE ports.",
+    "specification": {
+      "ports": "24FE PoE + 2*Combo",
+      "max_poe_output": "240W or 360W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "Long Distance Mode (250m)",
+      "VLAN, Spanning Tree, Management",
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Dahua ePoE Managed Switch (LR2218)",
+    "id": "LR2218-16ET-240",
+    "price": "1800",
+    "description": "A managed 16-port PoE switch featuring Dahua's ePoE technology for ultra-long 800m cable runs on ports 1-8.",
+    "specification": {
+      "ports": "16FE PoE + 2*Combo",
+      "max_poe_output": "240W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)",
+      "epoe": "Ports 1-8 support 800m ePoE"
+    },
+    "features": [
+      "Web management",
+      "802.1Q VLAN, STP/RSTP, LACP, 802.1X, QoS"
+    ]
+  },
+  {
+    "name": "Dahua 6-port Gigabit PoE Switch (Unmanaged)",
+    "id": "PFS3006-4GT-60",
+    "price": "200",
+    "description": "An unmanaged 6-port Gigabit switch with 4 PoE ports, Hi-PoE support, and a 60W power budget.",
+    "specification": {
+      "ports": "4GE PoE + 2GE",
+      "max_poe_output": "60W",
+      "max_port_power": "30W per port (60W for port 1 Hi-PoE)"
+    },
+    "features": [
+      "Gigabit unmanaged",
+      "Lightning Protection CM 2KV, DM 1KV"
+    ]
+  },
+  {
+    "name": "Dahua 10-port Gigabit PoE Switch (Unmanaged)",
+    "id": "PFS3010-8GT-96",
+    "price": "350",
+    "description": "An unmanaged 10-port Gigabit switch supplying 96W of PoE power across 8 ports, including Hi-PoE on port 1.",
+    "specification": {
+      "ports": "8GE PoE + 2GE",
+      "max_poe_output": "96W",
+      "max_port_power": "30W per port (60W for port 1 Hi-PoE)"
+    },
+    "features": [
+      "Gigabit unmanaged",
+      "Lightning Protection CM 6KV, DM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 3-port Unmanaged PoE Switch",
+    "id": "PFS3103-1GT1ET-60",
+    "price": "250",
+    "description": "A compact 3-port unmanaged PoE switch featuring flexible fiber uplink and dual power backup.",
+    "specification": {
+      "ports": "1*FE PoE, 1*GE PoE, 1*SFP",
+      "max_poe_output": "60W"
+    },
+    "features": [
+      "IEEE802.3af, 802.3at, Hi-PoE",
+      "DC48V-DC57V & Dual power backup"
+    ]
+  },
+  {
+    "name": "Dahua Hardened 9-port L2 Unmanaged PoE Switch",
+    "id": "PFS3409-4GT-96",
+    "price": "650",
+    "description": "An industrial-grade 9-port Gigabit switch equipped with 4 PoE ports, 4 SFP slots, and dual power backup.",
+    "specification": {
+      "ports": "4*GE PoE, 1*GE, 4*SFP",
+      "max_poe_output": "96W",
+      "temperature": "-30°C to +65°C"
+    },
+    "features": [
+      "Industrial wide temp",
+      "Dual power backup"
+    ]
+  },
+  {
+    "name": "Dahua Hardened 11-port L2 Unmanaged PoE Switch",
+    "id": "PFS3211-8GT-120",
+    "price": "850",
+    "description": "An industrial 11-port Gigabit switch with 8 PoE ports, wide temperature tolerance, and a 120W power budget.",
+    "specification": {
+      "ports": "8*GE PoE, 1*GE, 2*SFP",
+      "max_poe_output": "120W",
+      "temperature": "-30°C to +65°C"
+    },
+    "features": [
+      "Industrial wide temp",
+      "Dual power backup"
+    ]
+  },
+  {
+    "name": "Dahua 16-port Unmanaged Gigabit PoE Switch",
+    "id": "PFS3016-16GT-190",
+    "price": "800",
+    "description": "A full Gigabit 16-port unmanaged PoE switch providing up to 190W power and excellent lightning protection.",
+    "specification": {
+      "ports": "16-port Gigabit PoE",
+      "max_poe_output": "190W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Dahua 20-port Unmanaged Gigabit PoE Switch (16PoE+240W)",
+    "id": "PFS3220-16GT-240",
+    "price": "1100",
+    "description": "A high-capacity 20-port Gigabit unmanaged switch supporting the 802.3bt standard and a total 240W PoE budget.",
+    "specification": {
+      "ports": "16GE PoE + 2GE + 2*SFP",
+      "max_poe_output": "240W",
+      "max_port_power": "30W per port (90W for port 1-2 802.3bt)",
+      "switching_capacity": "52Gbps",
+      "forwarding_rate": "29.76Mpps"
+    },
+    "features": [
+      "802.3bt support on port 1-2"
+    ]
+  },
+  {
+    "name": "Dahua 28-port Unmanaged Gigabit PoE Switch (24PoE+360W)",
+    "id": "PFS3228-24GT-360",
+    "price": "1500",
+    "description": "A heavy-duty 28-port Gigabit unmanaged switch featuring 24 PoE ports, 802.3bt support, and a 360W power budget.",
+    "specification": {
+      "ports": "24GE PoE + 2GE + 2*SFP",
+      "max_poe_output": "360W",
+      "max_port_power": "30W per port (90W for port 1-2 802.3bt)",
+      "switching_capacity": "52Gbps",
+      "forwarding_rate": "38.688Mpps"
+    },
+    "features": [
+      "802.3bt support on port 1-2"
+    ]
+  },
+  {
+    "name": "Dahua 12-port Managed Gigabit PoE Switch",
+    "id": "PFS4212-8GT-96",
+    "price": "950",
+    "description": "A managed 12-port Gigabit switch featuring 8 PoE ports, dual SFP uplinks, and a 96W power output.",
+    "specification": {
+      "ports": "8GE PoE + 2GE + 2*SFP",
+      "max_poe_output": "96W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "Managed Gigabit",
+      "Lightning Protection CM 2KV, DM 1KV"
+    ]
+  },
+  {
+    "name": "Dahua 10-port Managed Gigabit PoE Switch",
+    "id": "PFS4210-8GT-150",
+    "price": "1050",
+    "description": "A fully managed 10-port Gigabit PoE switch delivering up to 150W of power and advanced network management capabilities.",
+    "specification": {
+      "ports": "8GE PoE + 2*SFP",
+      "max_poe_output": "150W"
+    },
+    "features": [
+      "Managed Gigabit",
+      "Lightning Protection CM 2KV, DM 0.5KV"
+    ]
+  },
+  {
+    "name": "Dahua 18-port Managed Gigabit PoE Switch",
+    "id": "PFS4218-16GT-190",
+    "price": "1400",
+    "description": "An 18-port managed Gigabit switch with comprehensive Layer 2 management, multicasting, and a 190W PoE budget.",
+    "specification": {
+      "ports": "16GE PoE + 2*SFP",
+      "max_poe_output": "190W",
+      "max_port_power": "30W per port (60W for port 1-2 Hi-PoE)"
+    },
+    "features": [
+      "VLAN, Spanning Tree, Management",
+      "Multicast, Port Mirroring",
+      "Lightning Protection CM 2KV, DM 1KV"
+    ]
+  },
+  {
+    "name": "Dahua 18-port Managed Gigabit PoE Switch (16PoE+2Combo+240W)",
+    "id": "PFS4218-16GT2GF-240",
+    "price": "1600",
+    "description": "An 18-port managed Gigabit switch offering 802.3bt PoE support, long-distance transmission, and a 240W power budget.",
+    "specification": {
+      "ports": "16GE PoE + 2*GE/SFP Combo",
+      "max_poe_output": "240W",
+      "max_port_power": "30W per port (90W for port 1-2 802.3bt)",
+      "switching_capacity": "52Gbps"
+    },
+    "features": [
+      "250m long distance PoE",
+      "802.3bt support",
+      "Lightning Protection CM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 26-port Managed Gigabit PoE Switch",
+    "id": "PFS4226-24GT-240",
+    "price": "1800",
+    "description": "A robust 26-port managed Gigabit switch equipped with extensive Layer 2 features and a 240W PoE budget.",
+    "specification": {
+      "ports": "24GE PoE + 2*SFP",
+      "max_poe_output": "240W or 360W",
+      "max_port_power": "30W per port (60W for port 1/2 Hi-PoE)"
+    },
+    "features": [
+      "VLAN, Spanning Tree, Management",
+      "Multicast, Port Mirroring",
+      "Lightning Protection CM 2KV, DM 1KV"
+    ]
+  },
+  {
+    "name": "Dahua 26-port Managed Gigabit PoE Switch (24PoE+Combo+360W)",
+    "id": "PFS4226-24GT2GF-360",
+    "price": "2100",
+    "description": "A high-end 26-port managed Gigabit switch supporting 802.3bt on high-power ports and a massive 360W PoE budget.",
+    "specification": {
+      "ports": "24GE PoE + 2*GE/SFP Combo",
+      "max_poe_output": "360W",
+      "max_port_power": "30W per port (90W for port 1-2 802.3bt)",
+      "switching_capacity": "52Gbps",
+      "forwarding_rate": "38.688Mpps"
+    },
+    "features": [
+      "250m long distance PoE",
+      "802.3bt support",
+      "Lightning Protection CM 4KV"
+    ]
+  },
+  {
+    "name": "Dahua 20-port Managed Gigabit PoE Switch (4 SFP uplink)",
+    "id": "PFS4420-16GT-240",
+    "price": "1500",
+    "description": "A managed 20-port Gigabit switch offering 16 PoE ports, 4 SFP uplinks for versatile fiber connections, and 240W power.",
+    "specification": {
+      "ports": "16GE PoE + 4*SFP",
+      "max_poe_output": "240W",
+      "max_port_power": "30W per port",
+      "switching_capacity": "40Gbps"
+    },
+    "features": [
+      "4 SFP uplinks",
+      "Lightning Protection CM 2KV"
+    ]
+  },
+  {
+    "name": "Dahua 28-port Managed Gigabit PoE Switch (4 SFP uplink)",
+    "id": "PFS4428-24GT-370",
+    "price": "1900",
+    "description": "A managed 28-port Gigabit switch equipped with 24 PoE ports, 4 SFP uplinks, and a substantial 370W PoE budget.",
+    "specification": {
+      "ports": "24GE PoE + 4*SFP",
+      "max_poe_output": "370W",
+      "max_port_power": "30W per port",
+      "switching_capacity": "56Gbps"
+    },
+    "features": [
+      "4 SFP uplinks",
+      "Lightning Protection CM 2KV"
+    ]
+  },
+  {
+    "name": "Dahua L2+ Managed Aggregation Switch",
+    "id": "PFS5452-48GT4XF-400",
+    "price": "4500",
+    "description": "A high-density Layer 2+ aggregation switch featuring 48 Gigabit PoE ports, four 10G SFP+ uplinks, and a 400W budget.",
+    "specification": {
+      "ports": "48GE PoE + 4*10G SFP+",
+      "max_poe_output": "400W",
+      "max_port_power": "30W per port",
+      "switching_capacity": "176Gbps"
+    },
+    "features": [
+      "L2+ Managed",
+      "10G SFP+ uplinks",
+      "Lightning Protection CM 2KV"
+    ]
+  },
+  {
+    "name": "Industrial Gigabit PoE Switch (Managed)",
+    "id": "PFS4210-8GT-DP",
+    "price": "1200",
+    "description": "A rugged, industrial-grade 8-port Gigabit PoE switch offering managed features, serial interfaces, and dual power inputs.",
+    "specification": {
+      "ports": "8*GE PoE, 2*SFP, RS232, RS485",
+      "temperature": "-40°C to 75°C"
+    },
+    "features": [
+      "Dual power input for redundancy",
+      "Power supply sold separately"
+    ]
+  },
+  {
+    "name": "Meanwell Industrial DIN Rail Power Supply 120W",
+    "id": "EDR-120-48",
+    "price": "150",
+    "description": "A reliable 120W industrial DIN rail power supply unit providing adjustable 48-55VDC output for PoE applications.",
+    "specification": {
+      "power": "120W",
+      "voltage": "48VDC 2.5A (adjustable 48-55V)"
+    },
+    "features": [
+      "Overload, Over-voltage, Over-temperature protection"
+    ]
+  },
+  {
+    "name": "Meanwell Industrial DIN Rail Power Supply 240W",
+    "id": "NDR-240-48",
+    "price": "280",
+    "description": "A high-capacity 240W industrial DIN rail power supply offering 48-55VDC output with built-in overload protection.",
+    "specification": {
+      "power": "240W",
+      "voltage": "48VDC 5A (adjustable 48-55V)"
+    },
+    "features": [
+      "Overload, Over-voltage, Over-temperature protection"
+    ]
+  },
+  {
+    "name": "Dahua Desktop 8-port Fast Ethernet Switch",
+    "id": "PFS3008-8ET-L",
+    "price": "45",
+    "description": "A compact, desktop-friendly 8-port Fast Ethernet switch housed in a plastic casing for basic networking needs.",
+    "specification": {
+      "ports": "8-port 10/100Mbps",
+      "casing": "Plastic",
+      "power": "5VDC"
+    },
+    "features": [
+      "7x24H stable performance",
+      "Compact desktop switch"
+    ]
+  },
+  {
+    "name": "Dahua Desktop 5-port Gigabit Switch",
+    "id": "PFS3005-5GT-L",
+    "price": "55",
+    "description": "A small desktop 5-port Gigabit switch designed for reliable 24/7 high-speed local networking.",
+    "specification": {
+      "ports": "5-port 10/100/1000Mbps",
+      "casing": "Plastic",
+      "power": "5VDC"
+    },
+    "features": [
+      "7x24H stable performance",
+      "Gigabit desktop switch"
+    ]
+  },
+  {
+    "name": "Dahua Desktop 8-port Gigabit Switch",
+    "id": "PFS3008-8GT-L",
+    "price": "85",
+    "description": "An affordable 8-port Gigabit desktop switch offering stable plug-and-play performance in a plastic casing.",
+    "specification": {
+      "ports": "8-port 10/100/1000Mbps",
+      "casing": "Plastic",
+      "power": "5VDC"
+    },
+    "features": [
+      "7x24H stable performance",
+      "Gigabit desktop switch"
+    ]
+  },
+  {
+    "name": "Industrial Ethernet Media Converter (Unmanaged)",
+    "id": "PFS3102-1T",
+    "price": "180",
+    "description": "An unmanaged industrial media converter bridging 10/100/1000 Base-T copper to gigabit fiber with wide temperature support.",
+    "specification": {
+      "ports": "1*100M/1000M SFP, 1*10/100/1000 Base-T",
+      "temperature": "-40°C to 70°C"
+    },
+    "features": [
+      "Industrial wide temp",
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Industrial Ethernet Access Switch (Unmanaged)",
+    "id": "PFS3106-4T",
+    "price": "250",
+    "description": "A hardened 6-port industrial access switch combining Fast Ethernet, Gigabit, and SFP uplink options.",
+    "specification": {
+      "ports": "4FE + 1GE + 1*SFP",
+      "temperature": "-40°C to 70°C"
+    },
+    "features": [
+      "Industrial wide temp",
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Desktop 16-port Gigabit Unmanaged Switch",
+    "id": "PFS3016-16GT",
+    "price": "280",
+    "description": "A rackmountable 16-port Gigabit unmanaged switch in a metal casing, ensuring excellent heat dissipation.",
+    "specification": {
+      "ports": "16-port 10/100/1000 Base-T",
+      "casing": "Metal"
+    },
+    "features": [
+      "Good heat dissipation",
+      "Rackmountable metal casing"
+    ]
+  },
+  {
+    "name": "Desktop 24-port Gigabit Unmanaged Switch",
+    "id": "PFS3024-24GT",
+    "price": "380",
+    "description": "A robust 24-port Gigabit unmanaged switch featuring a metal housing for reliable, high-density local networking.",
+    "specification": {
+      "ports": "24-port 10/100/1000 Base-T",
+      "casing": "Metal"
+    },
+    "features": [
+      "Good heat dissipation",
+      "Rackmountable metal casing"
+    ]
+  },
+  {
+    "name": "Industrial Unmanaged Access Switch (9-port)",
+    "id": "PFS3409-4GT",
+    "price": "650",
+    "description": "An unmanaged industrial 9-port switch offering 5 Gigabit ports and 4 SFP slots for flexible fiber topologies.",
+    "specification": {
+      "ports": "5GE + 4*SFP",
+      "temperature": "-30°C to 65°C"
+    },
+    "features": [
+      "Dual power backup",
+      "Lightning Protection CM 4KV, DM 2KV"
+    ]
+  },
+  {
+    "name": "Managed Aggregation Switch (28-port)",
+    "id": "PFS5428-24GT",
+    "price": "1500",
+    "description": "A fully managed 28-port aggregation switch offering 24 Gigabit ports and four 10G SFP+ uplinks for medium-scale surveillance networks.",
+    "specification": {
+      "ports": "24GE + 4*10G SFP+",
+      "switching_capacity": "128Gbps"
+    },
+    "features": [
+      "Suitable for <200 IPC",
+      "Port Aggregation, VLAN, Spanning Tree",
+      "Web/CLI management"
+    ]
+  },
+  {
+    "name": "Managed Aggregation Switch (36-port)",
+    "id": "PFS5936-24GF8GT4XF",
+    "price": "2800",
+    "description": "A versatile 36-port managed aggregation switch featuring a mix of Gigabit, SFP, and 10G SFP+ ports.",
+    "specification": {
+      "ports": "8GE + 24*1G SFP + 4*10G SFP+",
+      "switching_capacity": "221Gbps"
+    },
+    "features": [
+      "Suitable for <200 IPC",
+      "Port Aggregation, VLAN, STP, RSTP, MSTP, ERPS",
+      "Web, Telnet, CLI management"
+    ]
+  },
+  {
+    "name": "Managed Aggregation Fiber Switch",
+    "id": "S5500-24GF4XF-E",
+    "price": "4500",
+    "description": "A high-performance fiber aggregation switch supporting IRF2 stacking, designed to handle up to 200 IP cameras.",
+    "specification": {
+      "ports": "8GE Combo + 16*SFP + 4*10G SFP+",
+      "switching_capacity": "336Gbps"
+    },
+    "features": [
+      "Suitable for <200 IPC",
+      "IRF2 Stacking",
+      "High Performance, High Scalability"
+    ]
+  },
+  {
+    "name": "Managed Aggregation Switch (52-port)",
+    "id": "S5600-48GT4XF",
+    "price": "6000",
+    "description": "A top-tier 52-port managed aggregation switch featuring 48 Gigabit ports, 4 10G SFP+ slots, and stacking capabilities.",
+    "specification": {
+      "ports": "48GE Combo + 4*10G SFP+",
+      "switching_capacity": "598Gbps"
+    },
+    "features": [
+      "Suitable for <300 IPC",
+      "IRF2 Stacking",
+      "High Performance, High Scalability"
+    ]
+  },
+  {
+    "name": "PoE+ Midspan",
+    "id": "TAM1GT1GT-30",
+    "price": "120",
+    "description": "A single-port Gigabit PoE+ midspan injector delivering up to 30W of power for standard IP devices.",
+    "specification": {
+      "data": "10/100/1000 Base-T",
+      "standards": "IEEE802.3af, IEEE802.3at",
+      "output": "Up to 30W"
+    },
+    "features": [
+      "Single-port PoE+ midspan injector"
+    ]
+  },
+  {
+    "name": "Hi-PoE Midspan",
+    "id": "PFT1200",
+    "price": "250",
+    "description": "A high-power 60W Hi-PoE midspan injector specifically designed to drive power-hungry PTZ speed dome cameras.",
+    "specification": {
+      "ports": "1 x GE input, 1 x GE Hi-PoE output"
+    },
+    "features": [
+      "For Hi-PoE 60W speed dome",
+      "Power/PoE status indicators"
+    ]
+  },
+  {
+    "name": "PoE Extender",
+    "id": "PFT1300",
+    "price": "180",
+    "description": "A PoE extender designed to cascade power and data up to 300m for Dahua Hi-PoE compatible devices.",
+    "features": [
+      "Compatible only with Dahua Hi-PoE output ports",
+      "Cascade up to 2 extenders",
+      "Connect up to 3 IPC (max total power 8W) at 300m"
+    ]
+  },
+  {
+    "name": "Ethernet over Coax (EoC) Passive Converter",
+    "id": "LR1002",
+    "price": "100",
+    "description": "A passive EoC adapter pair for extending ePoE Ethernet and power over legacy RG59 coaxial cables.",
+    "features": [
+      "ONLY for ePoE use",
+      "Comes in a pair (1*RJ45, 1*BNC)",
+      "Supports RG59 cable (400m/100Mbps to 1000m/10Mbps)"
+    ]
+  },
+  {
+    "name": "Long Reach Ethernet over Coax Extender (Transmitter)",
+    "id": "LR1002-1ET",
+    "price": "150",
+    "description": "An active EoC transmitter unit designed to inject PoE power and data over long coaxial cable runs.",
+    "specification": {
+      "ports": "1*RJ45, 1*BNC"
+    },
+    "features": [
+      "Transmitter supplies PoE power to IP device",
+      "Supports RG59 (400m/100Mbps to 1000m/10Mbps)"
+    ]
+  },
+  {
+    "name": "Long Reach Ethernet over Coax Extender (Receiver)",
+    "id": "LR1002-1EC",
+    "price": "150",
+    "description": "An active EoC receiver unit that extracts network data and PoE power from extended coaxial cable lines.",
+    "specification": {
+      "ports": "1*RJ45, 1*BNC"
+    },
+    "features": [
+      "Must be powered from PoE Switch / Injector",
+      "Supports RG59 (400m/100Mbps to 1000m/10Mbps)"
+    ]
+  },
+  {
+    "name": "Gigabit SFP Multimode Fiber Module Transceiver",
+    "id": "PFT3950",
+    "price": "80",
+    "description": "A dual-fiber multimode Gigabit SFP module capable of 1.25G network transmissions up to 500m.",
+    "specification": {
+      "type": "Dual Fiber",
+      "distance": "500m",
+      "speed": "1.25G"
+    },
+    "features": [
+      "Compatible with DAHUA, BELCO, ZyXEL",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "Gigabit SFP Singlemode Fiber Module Transceiver (Bi-Di 20km)",
+    "id": "PFT3960",
+    "price": "120",
+    "description": "A single-mode, single-fiber Bi-Directional Gigabit SFP transceiver for establishing links up to 20km.",
+    "specification": {
+      "type": "Single Fiber (Bi-Directional)",
+      "distance": "20km",
+      "speed": "1.25G"
+    },
+    "features": [
+      "Must be used in pairs with PFT3970",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "Gigabit SFP Singlemode Fiber Module Transceiver (Bi-Di paired)",
+    "id": "PFT3970",
+    "price": "120",
+    "description": "The matching single-mode Bi-Directional Gigabit SFP transceiver intended to be paired with the PFT3960 module.",
+    "specification": {
+      "type": "Single Fiber (Bi-Directional)",
+      "distance": "20km",
+      "speed": "1.25G"
+    },
+    "features": [
+      "Pair with PFT3960",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "High Power Outdoor AP/CPE 5GHz (PFM881)",
+    "id": "PFM881",
+    "price": "250",
+    "description": "An outdoor high-power 5GHz wireless access point and CPE with 15dBi gain for links up to 3km.",
+    "specification": {
+      "ports": "2 x 10/100Mbps LAN",
+      "gain": "15dBi",
+      "speed": "300Mbps",
+      "distance": "3km"
+    },
+    "features": [
+      "Passive PoE 24V 0.5A adapter included",
+      "Purchase 2 units to create a wireless bridge"
+    ]
+  },
+  {
+    "name": "1ch POE Injector (UK Plug type)",
+    "id": "POE3101",
+    "price": "45",
+    "description": "A simple single-channel 48VDC PoE injector equipped with a standard UK plug for powering IP devices up to 100m away.",
+    "specification": {
+      "power": "48VDC 0.5A",
+      "distance": "100m"
+    },
+    "features": [
+      "Single-port PoE injector with UK plug"
+    ]
+  },
+  {
+    "name": "PoE Splitter Cable (12V 1.25A)",
+    "id": "POESPL",
+    "price": "30",
+    "description": "A practical PoE splitter cable that separates a standard PoE signal into network data and 12V 1.25A DC power.",
+    "specification": {
+      "output": "12V 1.25A"
+    },
+    "features": [
+      "IEEE 802.3af/at PoE Standard Compliant",
+      "Splits PoE to data + 12V power"
+    ]
+  },
+  {
+    "name": "PoE Splitter Cable (12V 2A)",
+    "id": "POESPL2",
+    "price": "40",
+    "description": "A higher-current PoE splitter cable designed to output 12V 2A DC power alongside the Ethernet data connection.",
+    "specification": {
+      "output": "12V 2A"
+    },
+    "features": [
+      "IEEE 802.3af/at PoE Standard Compliant",
+      "Higher current variant"
+    ]
+  },
+  {
+    "name": "Passive IP Extender over Coax",
+    "id": "IP7001",
+    "price": "80",
+    "description": "A passive extender kit enabling IP network transmission over existing coaxial cabling up to 200m at 10Mbps.",
+    "specification": {
+      "distance": "200m @ 10Mbps"
+    },
+    "features": [
+      "Comes in a pair",
+      "Might not be compatible with certain brands/models"
+    ]
+  },
+  {
+    "name": "Belco 8-port RJ45 + 2-port SFP Gigabit Unmanaged Switch",
+    "id": "GS1008-2S",
+    "price": "150",
+    "description": "A flexible unmanaged Gigabit switch featuring 8 copper ports and 2 SFP slots for fiber integration.",
+    "features": [
+      "Users can insert various SFP modules",
+      "Gigabit unmanaged"
+    ]
+  },
+  {
+    "name": "Belco 1-port RJ45 + 8-port SFP Gigabit Unmanaged Fiber Switch",
+    "id": "GS1001-8S",
+    "price": "200",
+    "description": "A fiber-heavy unmanaged Gigabit switch offering 8 SFP slots and a single RJ45 port for backbone connections.",
+    "specification": {
+      "capacity": "Support 4K VLAN IDs, Level III QoS"
+    },
+    "features": [
+      "SFP ports support 1000M full duplex",
+      "Fiber-rich switch"
+    ]
+  },
+  {
+    "name": "Gigabit SFP Singlemode Fiber Module Transceiver (OC24-20A/B)",
+    "id": "OC24-20A",
+    "price": "90",
+    "description": "A single-mode single-fiber Gigabit SFP module designed for dependable transmissions up to 20km.",
+    "specification": {
+      "type": "Single Fiber",
+      "distance": "20km",
+      "speed": "1.25G"
+    },
+    "features": [
+      "Must use in pairs (OC24-20A with OC24-20B)",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "SFP Singlemode Dual Fiber Module Transceiver",
+    "id": "SFP-DSMLC",
+    "price": "100",
+    "description": "A standard single-mode dual-fiber Gigabit SFP module featuring LC connectors for distances up to 20km.",
+    "specification": {
+      "type": "Dual Fiber",
+      "distance": "20km",
+      "speed": "1.25G"
+    },
+    "features": [
+      "Singlemode dual-fiber LC",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "SFP Multimode Dual Fiber Module Transceiver",
+    "id": "SFP-DMMLC",
+    "price": "80",
+    "description": "A reliable multimode dual-fiber Gigabit SFP module with LC connectors for short-range links up to 2km.",
+    "specification": {
+      "type": "Dual Fiber",
+      "distance": "2km",
+      "speed": "1.25G"
+    },
+    "features": [
+      "Multimode dual-fiber LC",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "10 Gigabit SFP+ Singlemode Fiber Module",
+    "id": "SFP10G-DSMLC",
+    "price": "350",
+    "description": "A high-speed 10-Gigabit single-mode dual-fiber SFP+ module capable of pushing 10G data up to 20km.",
+    "specification": {
+      "type": "Dual Fiber",
+      "distance": "20km",
+      "speed": "10G"
+    },
+    "features": [
+      "10G singlemode",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "10 Gigabit SFP+ Multimode Fiber Module",
+    "id": "SFP10G-DMMLC",
+    "price": "280",
+    "description": "A high-speed 10-Gigabit multimode dual-fiber SFP+ transceiver for short-distance 10G links up to 300m.",
+    "specification": {
+      "type": "Dual Fiber",
+      "distance": "300m",
+      "speed": "10G"
+    },
+    "features": [
+      "10G multimode",
+      "Not compatible with Cisco, HP, 3Com, Broadcom, Alcatel"
+    ]
+  },
+  {
+    "name": "BELCO Fiber to Video Converter (1-16ch)",
+    "id": "FCC1001S",
+    "price": "120",
+    "description": "An analog video-to-fiber converter supporting up to 16 channels of CVBS/CVI/AHD/TVI over long distances.",
+    "specification": {
+      "capacity": "1-16ch Video",
+      "distance": "5km (Singlemode) / 500m (Multimode)"
+    },
+    "features": [
+      "Supports CVI/AHD/TVI/CVBS",
+      "Some models include RS485 data transmission"
+    ]
+  },
+  {
+    "name": "BELCO Fiber to Gigabit Ethernet Media Converter (Singlemode)",
+    "id": "FMC1000S",
+    "price": "150",
+    "description": "A single-mode Gigabit Ethernet media converter utilizing dual SC fiber connectors for runs up to 20km.",
+    "specification": {
+      "distance": "20km",
+      "type": "Singlemode"
+    },
+    "features": [
+      "Dual Fiber SC connector"
+    ]
+  },
+  {
+    "name": "BELCO Fiber to Gigabit Ethernet Media Converter (Multimode)",
+    "id": "FMC1000M",
+    "price": "140",
+    "description": "A multimode Gigabit Ethernet media converter featuring dual SC connectors for 2km fiber extensions.",
+    "specification": {
+      "distance": "2km",
+      "type": "Multimode"
+    },
+    "features": [
+      "Dual Fiber SC connector"
+    ]
+  },
+  {
+    "name": "19\" Rackmount 2U Chassis for BELCO Converters",
+    "id": "MCC14-D5V",
+    "price": "400",
+    "description": "A 2U 19-inch rackmount chassis accommodating up to 14 standalone media converters with dual redundant power supplies.",
+    "specification": {
+      "slots": "14 slots for standalone media converters",
+      "power": "Built-in dual power supply 5VDC 12A"
+    },
+    "features": [
+      "Rackmount chassis",
+      "Dual PSU redundancy"
+    ]
+  },
+  {
+    "name": "Ruijie 5-port Gigabit Cloud Managed Router",
+    "id": "EG105G",
+    "price": "180",
+    "description": "A highly capable 5-port Gigabit router supporting dual WAN and seamless remote management via Ruijie Cloud.",
+    "specification": {
+      "ports": "5-port Gigabit",
+      "wan": "Up to 2 WAN",
+      "concurrent_users": "100",
+      "throughput": "300Mbps"
+    },
+    "features": [
+      "Cloud-managed via Ruijie Cloud",
+      "3 years warranty",
+      "Lifetime Free Ruijie Cloud Platform"
+    ]
+  },
+  {
+    "name": "Ruijie 5-port Gigabit Cloud Managed Router with PoE+",
+    "id": "EG105G-P",
+    "price": "350",
+    "description": "A 5-port Gigabit cloud-managed router featuring 4 PoE+ ports to power access points and IP cameras directly.",
+    "specification": {
+      "ports": "5-port Gigabit",
+      "poe_ports": "4 PoE+ ports",
+      "wan": "Up to 2 WAN",
+      "max_poe_output": "54W",
+      "concurrent_users": "100",
+      "throughput": "300Mbps"
+    },
+    "features": [
+      "Cloud-managed",
+      "3 years warranty",
+      "Lifetime Free Ruijie Cloud Platform"
+    ]
+  },
+  {
+    "name": "Ruijie 10-port Gigabit Cloud Managed Router with PoE+",
+    "id": "EG210G-P",
+    "price": "650",
+    "description": "A robust 10-port cloud-managed Gigabit router with 8 PoE+ ports, capable of supporting up to 200 concurrent users.",
+    "specification": {
+      "ports": "10-port Gigabit",
+      "poe_ports": "8 PoE+ ports",
+      "wan": "Up to 4 WAN",
+      "max_poe_output": "70W",
+      "concurrent_users": "200",
+      "throughput": "600Mbps"
+    },
+    "features": [
+      "Cloud-managed",
+      "3 years warranty",
+      "Lifetime Free Ruijie Cloud Platform"
+    ]
+  },
+  {
+    "name": "Ruijie AC1300 Enterprise Grade Wi-Fi Router",
+    "id": "EG105GW",
+    "price": "400",
+    "description": "An enterprise-grade Wi-Fi router offering AC1300 wireless speeds, integrated Gigabit routing, and Ruijie Cloud management.",
+    "specification": {
+      "ports": "5-port Gigabit Ethernet including 2 WAN",
+      "wifi": "802.11ac Wave2, 1317Mbps",
+      "capacity": "500Mbps downlink, up to 100 clients"
+    },
+    "features": [
+      "Enterprise-grade Wi-Fi",
+      "3 years warranty",
+      "Lifetime Free Ruijie Cloud Platform"
+    ]
+  },
+  {
+    "name": "Reyee 1200M Dual-band Wireless Home Router (Enhanced)",
+    "id": "EW1200",
+    "price": "120",
+    "description": "A dual-band AC1200 home wireless router featuring Reyee Mesh networking for seamless Wi-Fi roaming.",
+    "specification": {
+      "ports": "4 Fast Ethernet (1WAN+3LAN)",
+      "wifi": "802.11ac Wave2, 1167Mbps",
+      "broadband": "100Mbps"
+    },
+    "features": [
+      "Enterprise-grade chip",
+      "Reyee Mesh networking",
+      "Wi-Fi seamless roaming"
+    ]
+  },
+  {
+    "name": "Reyee 1300M Dual-band Gigabit Wireless Home Router (Enhanced)",
+    "id": "EW1200G-PRO",
+    "price": "180",
+    "description": "An enhanced AC1300 Gigabit home router utilizing enterprise-grade chips for fast, stable Reyee Mesh Wi-Fi.",
+    "specification": {
+      "ports": "4GE (1WAN+3LAN)",
+      "wifi": "802.11ac Wave2, 1267Mbps"
+    },
+    "features": [
+      "Enterprise-grade chip",
+      "Reyee Mesh networking",
+      "Wi-Fi seamless roaming"
+    ]
+  },
+  {
+    "name": "Reyee 1800M WiFi6 Dual-band Gigabit Mesh Router",
+    "id": "EW1800GX-PRO",
+    "price": "280",
+    "description": "A modern WiFi6 dual-band gigabit router delivering up to 1800Mbps speeds and high-performance Reyee Mesh roaming.",
+    "specification": {
+      "ports": "5GE (1WAN+4LAN)",
+      "wifi": "802.11ax (WiFi6) 1800M",
+      "antennas": "2+2 independent high-performance signal amplifiers"
+    },
+    "features": [
+      "WiFi6 support",
+      "Reyee Mesh networking",
+      "Wi-Fi seamless roaming"
+    ]
+  },
+  {
+    "name": "Reyee Indoor 802.11ac Wall Socket Access Point",
+    "id": "AP130(L)",
+    "price": "250",
+    "description": "An elegant, wall-mountable 802.11ac access point designed to replace standard 86-type faceplates for discrete indoor Wi-Fi.",
+    "specification": {
+      "dual_band": "Yes",
+      "form_factor": "Wall-mountable 86-type faceplate",
+      "ports": "4 Data LAN Ports",
+      "power": "PoE"
+    },
+    "features": [
+      "Replaceable plate (White/Gold/Black)",
+      "3 years warranty",
+      "Cloud-manageable"
+    ]
+  },
+  {
+    "name": "Reyee AC1300 Dual-Band Ceiling Mount Access Point",
+    "id": "RAP2200(E)",
+    "price": "350",
+    "description": "A versatile AC1300 dual-band ceiling mount access point offering enterprise Wi-Fi coverage and cloud management.",
+    "specification": {
+      "wifi": "867Mbps @ 5GHz + 400Mbps @ 2.4GHz",
+      "ports": "2 x 10/100/1000Base-T uplink",
+      "power": "PoE (802.3af/at) or 12VDC 1.5A",
+      "standard": "802.11a/b/g/n/ac Wave1/Wave2"
+    },
+    "features": [
+      "Cloud-manageable",
+      "3 years warranty"
+    ]
+  },
+  {
+    "name": "Reyee AX1800 WiFi6 Dual-Band Ceiling Mount Access Point",
+    "id": "RAP2260(G)",
+    "price": "550",
+    "description": "A high-performance WiFi6 AX1800 ceiling mount access point designed for dense device environments and cloud control.",
+    "specification": {
+      "wifi": "1201Mbps @ 5GHz + 574Mbps @ 2.4GHz",
+      "ports": "2 x 10/100/1000Base-T uplink",
+      "power": "PoE+ (802.3at) or 12VDC 1.5A",
+      "standard": "802.11a/b/g/n/ac Wave1/Wave2/ax"
+    },
+    "features": [
+      "WiFi6 support",
+      "Cloud-manageable",
+      "3 years warranty"
+    ]
+  },
+  {
+    "name": "Reyee AX1800 WiFi6 Outdoor Access Point",
+    "id": "RAP6260(G)",
+    "price": "900",
+    "description": "A rugged, IP68-rated outdoor WiFi6 access point delivering AX1800 speeds and superior weather resistance.",
+    "specification": {
+      "antennas": "4 & 6dBi Omni-directional",
+      "wifi": "1201Mbps @ 5GHz + 574Mbps @ 2.4GHz",
+      "ports": "1GE & 1SFP uplink",
+      "power": "PoE (802.3af/at) or 12VDC",
+      "standard": "802.11a/b/g/n/ac Wave1/Wave2/ax",
+      "ingress_protection": "IP68"
+    },
+    "features": [
+      "WiFi6 support",
+      "Outdoor rated",
+      "Cloud-manageable",
+      "3 years warranty"
+    ]
+  },
+  {
+    "name": "Reyee 5-port Gigabit Cloud Managed Smart PoE Switch",
+    "id": "ES205GC-P",
+    "price": "250",
+    "description": "A compact 5-port Gigabit smart switch featuring 4 PoE+ ports and centralized remote management via Ruijie Cloud.",
+    "specification": {
+      "ports": "5-port Gigabit",
+      "poe_ports": "4 GE PoE+",
+      "max_poe_output": "54W",
+      "uplink": "1GE"
+    },
+    "features": [
+      "Cloud-managed via Ruijie Cloud"
+    ]
+  },
+  {
+    "name": "Reyee 9-port Gigabit Cloud Managed Smart PoE Switch",
+    "id": "ES209GC-P",
+    "price": "450",
+    "description": "A 9-port Gigabit smart switch equipped with 8 PoE+ ports and simple cloud-based remote management.",
+    "specification": {
+      "ports": "9-port Gigabit",
+      "poe_ports": "8 GE PoE+",
+      "max_poe_output": "120W",
+      "uplink": "1GE"
+    },
+    "features": [
+      "Cloud-managed via Ruijie Cloud"
+    ]
+  },
+  {
+    "name": "Reyee 18-port Gigabit Cloud Managed Smart PoE Switch",
+    "id": "ES218GC-P",
+    "price": "900",
+    "description": "An 18-port Gigabit cloud-managed switch offering 16 PoE+ ports and dual SFP uplinks for expanding networks.",
+    "specification": {
+      "ports": "18-port Gigabit",
+      "poe_ports": "16 GE PoE+",
+      "max_poe_output": "240W",
+      "uplink": "2SFP"
+    },
+    "features": [
+      "Cloud-managed via Ruijie Cloud"
+    ]
+  },
+  {
+    "name": "Reyee 26-port Gigabit Cloud Managed Smart PoE Switch",
+    "id": "ES226GC-P",
+    "price": "1200",
+    "description": "A 26-port Gigabit cloud-managed switch featuring 24 PoE+ ports and dual SFP uplinks to accommodate extensive IP setups.",
+    "specification": {
+      "ports": "26-port Gigabit",
+      "poe_ports": "24 GE PoE+",
+      "max_poe_output": "370W",
+      "uplink": "2 SFP"
+    },
+    "features": [
+      "Cloud-managed via Ruijie Cloud"
+    ]
+  },
+  {
+    "name": "Reyee 24-port Gigabit Cloud Managed L2 Switch",
+    "id": "NBS3100-24GT4SFP",
+    "price": "1100",
+    "description": "A Layer 2 cloud-managed 24-port Gigabit switch with 4 SFP uplinks for reliable, high-performance backbone networking.",
+    "specification": {
+      "ports": "24-port Gigabit",
+      "uplink": "4 SFP",
+      "switching_capacity": "336Gbps",
+      "forwarding_rate": "42Mpps"
+    },
+    "features": [
+      "L2 Cloud Managed",
+      "Web/Cloud management"
+    ]
+  },
+  {
+    "name": "Ruijie 5750C Series Enterprise Switch",
+    "id": "S5750C-28SFP4XS-H",
+    "price": "5500",
+    "description": "A premium enterprise-class switch featuring 20 Gigabit SFP ports, combo ports, and modular power supply options.",
+    "specification": {
+      "ports": "20 Gigabit SFP + 8 Gigabit Combo + 4 x 10G SFP+",
+      "extension": "2 extension slots",
+      "power": "2 modular power slots (requires at least 1 power module)",
+      "switching_capacity": "598Gbps",
+      "forwarding_rate": "222Mpps"
+    },
+    "features": [
+      "Enterprise-class switch",
+      "Modular PSU"
+    ]
+  },
+  {
+    "name": "AC Power Module for S5750-H Series",
+    "id": "RG-PA70I",
+    "price": "400",
+    "description": "A dedicated 70W modular AC power supply unit designed specifically for the Ruijie S5750-H series switches.",
+    "specification": {
+      "power": "70W"
+    },
+    "features": [
+      "Designed for S5750-H series switches"
+    ]
+  },
+  {
+    "name": "Ruijie 1-port Gigabit PoE Injector (802.3af)",
+    "id": "RG-E-120(GE)",
+    "price": "80",
+    "description": "A standard 15.4W Gigabit PoE injector adhering to the 802.3af standard for powering lightweight network devices.",
+    "specification": {
+      "standard": "1000Base-T, 802.3af",
+      "output": "15.4W",
+      "dimensions": "53 x 32.5 x 140 mm"
+    },
+    "features": [
+      "Single-port PoE injector"
+    ]
+  },
+  {
+    "name": "Ruijie 1-port Gigabit PoE Injector (802.3at)",
+    "id": "RG-E-130(GE)",
+    "price": "120",
+    "description": "A powerful 30W Gigabit PoE+ injector adhering to the 802.3at standard to support high-draw access points and cameras.",
+    "specification": {
+      "standard": "1000Base-T, 802.3at",
+      "output": "30W",
+      "dimensions": "88 x 51 x 166 mm"
+    },
+    "features": [
+      "Single-port PoE+ injector"
+    ]
+  }
+]

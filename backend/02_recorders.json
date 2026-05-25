@@ -1,0 +1,794 @@
+[
+  {
+    "name": "Cooper 4CH Pentabrid 1080P 1U WizSense AI DVR",
+    "id": "XVR1B04H-I",
+    "price": "420",
+    "description": "A 4-channel compact 1080P Pentabrid WizSense DVR featuring AI capabilities such as Face Recognition, Perimeter Protection, and SMD Plus.",
+    "specification": {
+      "compression": "H.265+ 5M-N/1080P Pentabrid DVR with HDMI & VGA display output",
+      "channels": "4 ch 1080P@15fps; Supports 4+2 IPC (each up to 6MP) - Max 32Mbps",
+      "audio_interface": "Audio 1/1",
+      "video_stream": "All analogue channels video stream SMD Plus",
+      "storage": "Max 1 x HDD up to 6TB",
+      "power_supply": "DC12V 1.5A"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "Cooper 8CH Pentabrid 1080P 1U WizSense AI DVR",
+    "id": "XVR1B08H-I",
+    "price": "565",
+    "description": "An 8-channel 1080P Pentabrid WizSense DVR supporting up to 6TB of storage, complete with smart AI features like SMD Plus and Perimeter Protection.",
+    "specification": {
+      "compression": "H.265+ 5M-N/1080P Pentabrid DVR with HDMI & VGA display output",
+      "channels": "8 ch 1080P@15fps; Supports 8+4 IPC (each up to 6MP) - Max 64Mbps",
+      "audio_interface": "Audio 1/1",
+      "storage": "Max 1 x HDD up to 6TB",
+      "power_supply": "DC12V 2A"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "Cooper 16CH Pentabrid 1080P 1U WizSense AI DVR",
+    "id": "XVR1B16H-I",
+    "price": "780",
+    "description": "A 16-channel 1080P Pentabrid WizSense DVR that supports up to 16TB of storage and provides advanced AI analytics including Face Recognition.",
+    "specification": {
+      "compression": "H.265+ 5M-N/1080P Pentabrid DVR with HDMI & VGA display output",
+      "channels": "16 ch 1080P@15fps; Supports 16+8 IPC (each up to 6MP) - Max 128Mbps",
+      "audio_interface": "Audio 1/1",
+      "storage": "Max 1 x HDD up to 16TB",
+      "power_supply": "DC12V 2A"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "4CH 5M-N / 4M-N / 1080P Compact 1U WizSense Pentabrid DVR",
+    "id": "XVR5104HS-I2",
+    "price": "511",
+    "description": "A compact 4-channel WizSense Pentabrid DVR offering up to 5M-N recording resolution and built-in AI functions like SMD Plus.",
+    "specification": {
+      "channels": "4 channel BNC + 2 IPC up to 6MP (Max 32Mbps)",
+      "recording_resolution": "All channel Recording 5M-N @ 10fps ; 4M-N/1080P @ 15fps",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "storage": "Supports 1 x HDD up to 6TB",
+      "power_supply": "12V 1.5A"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "8CH 5M-N / 4M-N / 1080P Compact 1U WizSense Pentabrid DVR",
+    "id": "XVR5108HS-I3",
+    "price": "645",
+    "description": "An 8-channel compact WizSense Pentabrid DVR with 5M-N recording support, AI capabilities, and capacity for a 10TB hard drive.",
+    "specification": {
+      "channels": "8 channel BNC + 4 IPC up to 6MP (Max 64Mbps)",
+      "recording_resolution": "All channel Recording 5M-N @ 10fps ; 4M-N/1080P @ 15fps",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "storage": "Supports 1 x HDD up to 10TB",
+      "power_supply": "12V 2A"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "16CH Pentabrid 1080P Compact 1U WizSense DVR",
+    "id": "XVR5116HS-I3",
+    "price": "834",
+    "description": "A 16-channel 1080P compact WizSense DVR offering robust AI features, H.265+ compression, and up to 128Mbps IP camera bandwidth.",
+    "specification": {
+      "channels": "16 channel H.265+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "Full channel 1080P @ 15fps recording",
+      "ip_support": "Supports 24ch IPC up to 6MP (Max 128Mbps)",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/2A",
+      "storage": "Supports 1 x HDD up to 16TB"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "16CH 1080P 2HDD 1U Pentabrid DVR",
+    "id": "XVR5216AN-S2",
+    "price": "780",
+    "description": "A 16-channel 1080P Pentabrid DVR equipped with dual HDD bays supporting up to 8TB each, ideal for extended recording times.",
+    "specification": {
+      "channels": "16 channel H.264+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "Full channel 1080P @ 15fps recording",
+      "ip_support": "Supports 24ch IPC up to 4MP (Max 96Mbps)",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/4A",
+      "storage": "Supports 2 x HDD up to 8TB each disk"
+    },
+    "features": []
+  },
+  {
+    "name": "32CH 1080P 2HDD 1U Pentabrid DVR",
+    "id": "XVR5232AN-S2",
+    "price": "1049",
+    "description": "A large-capacity 32-channel 1080P Pentabrid DVR featuring dual HDD support, HDMI/VGA/TV outputs, and robust IP camera integration.",
+    "specification": {
+      "channels": "32 channel H.264+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "Full channel 1080P @ 15fps recording",
+      "ip_support": "Supports 32ch IPC up to 4MP (Max 128Mbps)",
+      "video_output": "HDMI, VGA & TV display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/5A",
+      "storage": "Supports 2 x HDD up to 8TB each disk"
+    },
+    "features": []
+  },
+  {
+    "name": "16CH 1080P 2HDD 1U Pentabrid WizSense DVR",
+    "id": "XVR5216AN-I3",
+    "price": "861",
+    "description": "A 16-channel 1080P WizSense Pentabrid DVR with dual 16TB HDD bays, intelligent video analytics, and H.265+ compression.",
+    "specification": {
+      "channels": "16 channel H.265+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "Full channel 1080P @ 15fps recording",
+      "ip_support": "Supports 24ch IPC up to 6MP (Max 128Mbps)",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/4A",
+      "storage": "Supports 2 x HDD up to 16TB each disk"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "32CH 1080P 2HDD 1U Pentabrid WizSense DVR",
+    "id": "XVR5232AN-I3",
+    "price": "1130",
+    "description": "A 32-channel 1080P WizSense Pentabrid DVR supporting dual 16TB hard drives and advanced AI surveillance features.",
+    "specification": {
+      "channels": "32 channel H.265+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "Full channel 1080P @ 15fps recording",
+      "ip_support": "Supports 32ch IPC up to 6MP (Max 128Mbps)",
+      "video_output": "HDMI, VGA & TV display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/4A",
+      "storage": "Supports 2 x HDD up to 16TB each disk"
+    },
+    "features": [
+      "AI Features: Face Recognition, Perimeter Protection & SMD Plus"
+    ]
+  },
+  {
+    "name": "16CH Pentabrid 1080P 1.5U WizSense AI DVR",
+    "id": "XVR5416L-I2",
+    "price": "$",
+    "description": "A 16-channel 1.5U WizSense AI DVR offering support for 4 HDDs, comprehensive alarm/audio interfaces, and advanced Face Recognition.",
+    "specification": {
+      "channels": "16 channel H.265+ 5M-N/1080P Pentabrid DVR, GE port",
+      "recording_resolution": "16 ch 1080P@15fps",
+      "ip_support": "Supports 16+8 IPC (each up to 8MP) - Max 128Mbps",
+      "video_output": "2HDMI, VGA & TV display output",
+      "control_interface": "Alarm 16/6, IoT & POS, eSATA, RS485, RS232",
+      "audio_interface": "Audio 4/1",
+      "storage": "Max 4 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "Face Recognition",
+      "Perimeter Protection",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "16CH Pentabrid 1080P 2U WizSense AI DVR",
+    "id": "XVR5816S-I2",
+    "price": "1413",
+    "description": "A heavy-duty 16-channel 2U WizSense DVR supporting up to 8 HDDs, extensive alarm inputs, and advanced intelligent analytics.",
+    "specification": {
+      "channels": "16 channel H.265+ 5M-N/1080P Pentabrid DVR, 2GE port",
+      "recording_resolution": "16 ch 1080P@15fps",
+      "ip_support": "Supports 16+8 IPC (each up to 8MP) - Max 128Mbps",
+      "video_output": "2HDMI, VGA & TV display output",
+      "control_interface": "Alarm 16/6, IoT & POS, eSATA, RS485, RS232",
+      "audio_interface": "Audio 16/1",
+      "storage": "Max 8 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "Face Recognition",
+      "Perimeter Protection",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "32CH Pentabrid 1080P 2U WizSense AI DVR",
+    "id": "XVR5832S-I2",
+    "price": "1682",
+    "description": "A massive 32-channel 2U WizSense DVR featuring 8 HDD bays, dual gigabit ports, and comprehensive AI capabilities like SMD Plus.",
+    "specification": {
+      "channels": "32 channel H.265+ 5M-N/1080P Pentabrid DVR, 2GE port",
+      "recording_resolution": "32 ch 1080P@15fps",
+      "ip_support": "Supports 32 IPC (each up to 8MP) - Max 128Mbps",
+      "video_output": "2HDMI, VGA & TV display output",
+      "control_interface": "Alarm 16/6, IoT & POS, eSATA, RS485, RS232",
+      "audio_interface": "Audio 16/1",
+      "storage": "Max 8 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "Face Recognition",
+      "Perimeter Protection",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "4K-N / 5MP Pentabrid Compact 1U DVR (4CH)",
+    "id": "XVR5104HS-4KL-I3",
+    "price": "1951",
+    "description": "A premium 4-channel compact 4K-N DVR equipped with IoT/POS integrations, SMD Plus, and face recognition over video stream.",
+    "specification": {
+      "channels": "4 channel BNC",
+      "recording_resolution": "All channel Recording 4K @ 7fps; 5MP @ 12fps; 4MP @ 15fps",
+      "ip_support": "max 8 IPC up to 8MP (Max 64Mbps)",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, IoT & POS functions",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "12V 2A",
+      "storage": "Supports 1 x HDD up to 10TB"
+    },
+    "features": [
+      "Video Stream FR",
+      "Smart Motion Detection (SMD Plus)"
+    ]
+  },
+  {
+    "name": "4K-N / 5MP Pentabrid Compact 1U DVR (8CH)",
+    "id": "XVR5108HS-4KL-I3",
+    "price": "699",
+    "description": "An 8-channel compact 4K-N Pentabrid DVR providing high-resolution recording, advanced AI video streaming, and single 10TB HDD support.",
+    "specification": {
+      "channels": "8 channel BNC",
+      "recording_resolution": "All channel Recording 4K @ 7fps; 5MP @ 12fps; 4MP @ 15fps",
+      "ip_support": "max 16 IPC up to 8MP (Max 128Mbps)",
+      "video_output": "HDMI + VGA display output",
+      "control_interface": "RS485, IoT & POS functions",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "12V 2A",
+      "storage": "Supports 1 x HDD up to 10TB"
+    },
+    "features": [
+      "Video Stream FR",
+      "Smart Motion Detection (SMD Plus)"
+    ]
+  },
+  {
+    "name": "8CH Pentabrid 4K Compact 1U DVR",
+    "id": "XVR5108HS-4KL",
+    "price": "645",
+    "description": "An 8-channel 4K Pentabrid DVR capable of ultra-HD recording and display, supporting an additional 4 IP cameras.",
+    "specification": {
+      "channels": "8 channel H.264+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "All channels 4K@7fps recording",
+      "ip_support": "Supports 8+4 IPC (each up to 4MP) - Max 48Mbps",
+      "video_output": "HDMI 4K & VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/2A",
+      "storage": "Supports 1 x HDD up to 8TB"
+    },
+    "features": []
+  },
+  {
+    "name": "16CH Pentabrid 4K Mini 1U DVR",
+    "id": "XVR5116H-4KL",
+    "price": "780",
+    "description": "A 16-channel 4K Pentabrid mini DVR with a gigabit ethernet port, 4K HDMI output, and support for up to 8TB of storage.",
+    "specification": {
+      "channels": "16 channel H.264+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "All channels 4K@7fps recording",
+      "ip_support": "Supports 16+8 IPC (each up to 4MP) - Max 96Mbps",
+      "video_output": "HDMI 4K & VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/3A",
+      "storage": "Supports 1 x HDD up to 8TB"
+    },
+    "features": []
+  },
+  {
+    "name": "16CH Pentabrid 2HDD 4K 1U DVR",
+    "id": "XVR5216AN-4KL",
+    "price": "914",
+    "description": "A 16-channel 4K Pentabrid DVR equipped with dual HDD bays for extended 4K video retention and gigabit network connectivity.",
+    "specification": {
+      "channels": "16 channel H.264+ Pentabrid DVR, 1 x GE port",
+      "recording_resolution": "All channels 4K@7fps recording",
+      "ip_support": "Supports 16+8 IPC (each up to 4MP) - Max 96Mbps",
+      "video_output": "HDMI 4K & VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V/5A",
+      "storage": "Supports 2 x HDD up to 8TB each disk"
+    },
+    "features": []
+  },
+  {
+    "name": "8CH 4K Pentabrid 1U 2HDD DVR",
+    "id": "XVR5208AN-4KL-I3",
+    "price": "1009",
+    "description": "An 8-channel 4K Pentabrid DVR featuring dual 16TB HDD slots, smart search capabilities, and intelligent video system (IVS) analytics.",
+    "specification": {
+      "channels": "8 channel H.265+ Pentabrid DVR, GE port",
+      "recording_resolution": "All channels 4K@7fps/4M@15fps",
+      "ip_support": "Supports 8+8 IPC (each up to 8MP) - Max 128Mbps",
+      "video_output": "HDMI 4K & VGA display output",
+      "control_interface": "RS485, 2 x USB",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "12VDC 4A",
+      "storage": "Max 2 x HDD up to 16TB each"
+    },
+    "features": [
+      "Smart Search",
+      "IVS"
+    ]
+  },
+  {
+    "name": "32CH Pentabrid 4K 1U WizSense AI DVR",
+    "id": "XVR5232AN-4KL-I2",
+    "price": "1278",
+    "description": "A high-density 32-channel 4K WizSense Pentabrid DVR offering dual HDD slots, 6-channel face recognition, and SMD Plus.",
+    "specification": {
+      "channels": "32 channel H.265+ Pentabrid DVR, GE port",
+      "recording_resolution": "32 channels 4K@7fps",
+      "ip_support": "Supports 32 IPC (each up to 8MP) - Max 128Mbps",
+      "video_output": "HDMI 4K, VGA & TV display output",
+      "control_interface": "RS485, GE, IoT & POS",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V 5A",
+      "storage": "Max 2 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "6ch Face Recognition",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "32CH Pentabrid 4K 1.5U WizSense AI DVR",
+    "id": "XVR5432L-4KL-I2",
+    "price": "1682",
+    "description": "A 32-channel 1.5U 4K WizSense Pentabrid DVR that accommodates up to 4 HDDs, dual 4K HDMI outputs, and full AI perimeter protection.",
+    "specification": {
+      "channels": "32 channel H.265+ Pentabrid DVR, GE port",
+      "recording_resolution": "32 channels 4K@7fps",
+      "ip_support": "Supports 32 IPC (each up to 12MP) - Max 128Mbps",
+      "video_output": "2HDMI 4K, VGA & TV display output",
+      "control_interface": "Alarm 16/6, GE, IoT & POS, eSATA, RS485, RS232",
+      "audio_interface": "Audio 4/1",
+      "storage": "Max 4 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "Face Recognition",
+      "Perimeter Protection",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "32CH Pentabrid 4K 2U WizSense AI DVR",
+    "id": "XVR5832S-4KL-I2",
+    "price": "2219",
+    "description": "An enterprise-grade 32-channel 2U 4K WizSense Pentabrid DVR with 8 HDD bays, deep learning AI, and comprehensive system interfaces.",
+    "specification": {
+      "channels": "32 channel H.265+ Pentabrid DVR, 2GE port",
+      "recording_resolution": "32 channels 4K@7fps",
+      "ip_support": "Supports 32 IPC (each up to 12MP) - Max 128Mbps",
+      "video_output": "2HDMI 4K, VGA & TV display output",
+      "control_interface": "Alarm 16/6, 2GE, IoT & POS, eSATA, RS485, RS232",
+      "audio_interface": "Audio 16/1",
+      "storage": "Max 8 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "Face Recognition",
+      "Perimeter Protection",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "4CH 4K Pentabrid Elegant 1U DVR",
+    "id": "XVR7104E-4KL-X",
+    "price": "740",
+    "description": "A stylish 4-channel 4K Pentabrid DVR offering 15fps 4K recording, SPOT monitor support, and intelligent video capabilities.",
+    "specification": {
+      "channels": "4 channels",
+      "recording_resolution": "4K@15fps",
+      "ip_support": "Supports 4+4 IPC (each up to 8MP) - Max 32Mbps",
+      "video_output": "HDMI 4K & VGA display output, SPOT monitor configurable",
+      "control_interface": "RS485; 3 x USB; GE; IoT & POS",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "12VDC 2A",
+      "storage": "Max 1 x HDD up to 10TB"
+    },
+    "features": [
+      "Smart Search",
+      "IVS"
+    ]
+  },
+  {
+    "name": "4CH 4K Pentabrid Wizsense AI H.265+ DVR",
+    "id": "XVR7104H-4KL-I2",
+    "price": "834",
+    "description": "A 4-channel 4K WizSense Pentabrid DVR boasting real-time 4K display, SMD Plus, and integrated face recognition on analog streams.",
+    "specification": {
+      "channels": "4 channel BNC",
+      "recording_resolution": "All channel Display Real-Time 4K @ 30fps ; Recording 4K @ 15fps",
+      "ip_support": "+ 4 IPC up to 8MP",
+      "video_output": "HDMI + VGA",
+      "control_interface": "RS485, GE, IoT & POS functionalities",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V 2A",
+      "storage": "Max 1 x HDD up to 10TB"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "2 channels video stream face recognition, only support analog camera"
+    ]
+  },
+  {
+    "name": "8CH 4K Pentabrid Wizsense AI H.265+ DVR (Single HDD)",
+    "id": "XVR7108H-4KL-I2",
+    "price": "1049",
+    "description": "An 8-channel 4K WizSense Pentabrid DVR equipped with real-time 4K display, intelligent perimeter protection, and H.265+ compression.",
+    "specification": {
+      "channels": "8 channel BNC",
+      "recording_resolution": "All channel Display Real-Time 4K @ 30fps ; Recording 4K @ 15fps",
+      "ip_support": "+ 8 IPC up to 8MP (Max 128Mbps)",
+      "video_output": "HDMI + VGA",
+      "control_interface": "RS485, GE, IoT & POS functionalities",
+      "audio_interface": "Audio 1/1",
+      "power_supply": "DC12V 3A",
+      "storage": "Max 1 x HDD up to 10TB"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "2 channels video stream face recognition, only support analog camera"
+    ]
+  },
+  {
+    "name": "8CH 4K Pentabrid Wizsense AI H.265+ DVR (Dual HDD)",
+    "id": "XVR7208A-4KL-I2",
+    "price": "1238",
+    "description": "An 8-channel 4K WizSense Pentabrid DVR featuring dual HDD support, comprehensive IoT/POS functions, and AI video stream processing.",
+    "specification": {
+      "channels": "8 channel BNC",
+      "recording_resolution": "All channel Display Real-Time 4K @ 30fps ; Recording 4K @ 15fps",
+      "ip_support": "+ 8 IPC up to 8MP (Max 128Mbps)",
+      "video_output": "HDMI + VGA",
+      "control_interface": "RS485, GE, Audio 4/1 and Alarm 8/3, IoT & POS functionalities",
+      "audio_interface": "Audio 4/1",
+      "power_supply": "DC12V 5A",
+      "storage": "2 x HDD for 7208A up to 10TB"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "2 channels video stream face recognition, only support analog camera"
+    ]
+  },
+  {
+    "name": "8CH 4K Pentabrid Ultra AI H.265+ DVR",
+    "id": "XVR8208A-4K-I",
+    "price": "1816",
+    "description": "An 8-channel Ultra AI 4K DVR designed for extreme processing, supporting massive face databases and 64 IP channels.",
+    "specification": {
+      "channels": "8ch 4K@15fps",
+      "ip_support": "Supports 64 channels of IPC @ 12MP, max 256Mbps incoming bandwidth",
+      "video_output": "HDMI1 output 4K@60fps, HDMI2, VGA",
+      "control_interface": "Alarm 16/6, RS232, RS485, 3 x USB, 2GE",
+      "audio_interface": "Audio 4/1",
+      "storage": "2bay SATA HDD up to 10TB each"
+    },
+    "features": [
+      "8ch Perimeter Protection",
+      "4ch Video stream Face Recognition",
+      "24 Face pictures / second processing",
+      "20 Face databases with 100,000 face images in total"
+    ]
+  },
+  {
+    "name": "16CH 4K Pentabrid Ultra AI H.265+ DVR (2bay)",
+    "id": "XVR8216A-4KL-I",
+    "price": "2219",
+    "description": "A 16-channel dual-bay Ultra AI 4K DVR providing deep-learning face recognition, expansive IP support, and powerful video outputs.",
+    "specification": {
+      "channels": "16ch 4K@7fps",
+      "ip_support": "Supports 64 channels of IPC @ 12MP, max 256Mbps incoming bandwidth",
+      "video_output": "HDMI1 output 4K@60fps, HDMI2, VGA",
+      "control_interface": "Alarm 16/6, RS232, RS485, 3 x USB, 2GE",
+      "audio_interface": "Audio 4/1",
+      "storage": "2bay SATA HDD up to 10TB each"
+    },
+    "features": [
+      "16ch Perimeter Protection",
+      "4ch Video stream Face Recognition",
+      "24 Face pictures / second processing",
+      "20 Face databases with 100,000 face images in total"
+    ]
+  },
+  {
+    "name": "16CH 4K Pentabrid Ultra AI H.265+ DVR (8bay)",
+    "id": "XVR8816S-4KL-I",
+    "price": "2959",
+    "description": "A heavy-duty 16-channel 8-bay Ultra AI 4K DVR offering RAID storage capabilities and unparalleled face processing technology.",
+    "specification": {
+      "channels": "16ch 4K@7fps",
+      "ip_support": "Supports 64 channels of IPC @ 12MP, max 256Mbps incoming bandwidth",
+      "video_output": "HDMI1 output 4K@60fps, HDMI2, VGA",
+      "control_interface": "Alarm 16/6, RS232, RS485, 3 x USB, 2GE, eSATA",
+      "audio_interface": "Audio 16/1",
+      "storage": "8bay SATA HDD up to 10TB each"
+    },
+    "features": [
+      "16ch Perimeter Protection",
+      "4ch Video stream Face Recognition",
+      "24 Face pictures / second processing",
+      "20 Face databases with 100,000 face images in total",
+      "RAID 0,1,5,10"
+    ]
+  },
+  {
+    "name": "4CH Compact 1U Lite 4K H.265 NVR with on-board PoE",
+    "id": "NVR1104HS-P-S3/H",
+    "price": "740",
+    "description": "A 4-channel compact 4K NVR with 4 built-in PoE+ ports, simplifying IP camera deployment with plug-and-play capability.",
+    "specification": {
+      "bandwidth": "80Mbps Access, 80Mbps Storage, 60Mbps Forwarding",
+      "poe_ports": "4 x PoE+ ports (Max 25.5W each port, 36W in total)",
+      "decoding": "Up to 1ch@8MP/4ch@1080P decoding (for playback)",
+      "storage_interface": "Supports 1 x HDD up to 8TB",
+      "io_ports": "2 x USB2.0, HDMI + VGA output, Audio 1/1"
+    },
+    "features": [
+      "Up to 8MP resolution"
+    ]
+  },
+  {
+    "name": "8CH Compact 1U Lite 4K H.265 NVR with on-board PoE",
+    "id": "NVR1108HS-8P-S3/H",
+    "price": "1009",
+    "description": "An 8-channel compact 4K NVR equipped with 8 PoE+ ports, supporting up to 8MP resolution cameras and H.265 compression.",
+    "specification": {
+      "bandwidth": "80Mbps Access, 80Mbps Storage, 60Mbps Forwarding",
+      "poe_ports": "8 x PoE+ ports (Max 25.5W each port, 72W in total)",
+      "decoding": "Up to 1ch@8MP/4ch@1080P decoding (for playback)",
+      "storage_interface": "Supports 1 x HDD up to 8TB",
+      "io_ports": "2 x USB2.0, HDMI + VGA output, Audio 1/1"
+    },
+    "features": [
+      "Up to 8MP resolution"
+    ]
+  },
+  {
+    "name": "8CH Compact 1U Lite 4K H.265 NVR",
+    "id": "NVR4108HS-4KS2/L",
+    "price": "659",
+    "description": "A standalone 8-channel compact 4K NVR that is perfect for use as a reliable slave NVR or dedicated monitoring device.",
+    "specification": {
+      "bandwidth": "80Mbps Access, 80Mbps Storage, 60Mbps Forwarding",
+      "decoding": "Decoding 8ch @ 1080P(30fps)",
+      "power_supply": "DC12V 2A",
+      "storage_interface": "Supports 1 x HDD up to 8TB",
+      "io_ports": "2 x USB2.0, HDMI + VGA display, Audio 1/1"
+    },
+    "features": [
+      "Up to 8MP resolution",
+      "Suitable for use as Slave NVR / Monitoring"
+    ]
+  },
+  {
+    "name": "16CH Compact 1U Lite 4K H.265 NVR",
+    "id": "NVR4116HS-4KS2/L",
+    "price": "1198",
+    "description": "A 16-channel compact 4K NVR supporting Gigabit network connectivity and 8MP resolution, ideal for scalable IP surveillance.",
+    "specification": {
+      "bandwidth": "80Mbps Access, 80Mbps Storage, 64Mbps Forwarding",
+      "decoding": "Decoding 2ch @ 8MP(30fps) / 8ch @ 1080P(30fps)",
+      "power_supply": "GE, DC12V 2A",
+      "storage_interface": "Supports 1 x HDD up to 8TB",
+      "io_ports": "2 x USB2.0, HDMI + VGA display, Audio 1/1"
+    },
+    "features": [
+      "Up to 8MP resolution",
+      "Suitable for use as Slave NVR / Monitoring"
+    ]
+  },
+  {
+    "name": "8CH Compact 1U H.265 Lite NVR with 8-port POE",
+    "id": "NVR4108HS-8P-4KS2/L",
+    "price": "1049",
+    "description": "An 8-channel compact 4K NVR providing 8 integrated PoE ports for simple plug-and-play installation of IP cameras.",
+    "specification": {
+      "bandwidth": "80Mbps Access, 80Mbps Storage, 30Mbps Forwarding",
+      "decoding": "Decoding 2ch @ 8MP(30fps) / 8ch @ 1080P(30fps)",
+      "poe_ports": "8 x PoE ports (max 72W)",
+      "power_supply": "DC48V 2A",
+      "storage_interface": "Supports 1 x HDD up to 8TB",
+      "io_ports": "2 x USB ports, HDMI + VGA output, Audio 1/1"
+    },
+    "features": [
+      "Up to 8MP resolution",
+      "Simple Plug & Play Installation"
+    ]
+  },
+  {
+    "name": "16CH 1U 4K H.265 Lite NVR",
+    "id": "NVR4216-4KS2/L",
+    "price": "1278",
+    "description": "A 16-channel 1U 4K NVR featuring dual HDD bays for extended storage, high incoming bandwidth, and gigabit ethernet.",
+    "specification": {
+      "bandwidth": "128Mbps Access, 128Mbps Storage, 64Mbps Forwarding",
+      "power_supply": "DC12V 4A, GE",
+      "storage_interface": "Supports 2 x HDD up to 8TB each disk",
+      "io_ports": "2 x USB, Audio 1/1, 4K HDMI + VGA display, Alarm 4/2"
+    },
+    "features": [
+      "Up to 8MP resolution"
+    ]
+  },
+  {
+    "name": "32CH 1.5U 4HDD 4K AI WizSense NVR",
+    "id": "NVR4432-4KS2/I",
+    "price": "4237",
+    "description": "A 32-channel 1.5U 4K WizSense NVR loaded with AI analytics like ANPR and heat mapping, supporting four 10TB HDDs.",
+    "specification": {
+      "resolution": "Up to 16MP resolution",
+      "bandwidth": "Max 160Mbps Recording bandwidth (with AI Enabled)",
+      "video_output": "VGA + HDMI",
+      "audio_alarm": "Alarm 16/6, Audio 1/1",
+      "interfaces": "RS232, RS485, 2 x USB ports, 2GE",
+      "storage_interface": "Supports 4 x HDD up to 10TB each disk"
+    },
+    "features": [
+      "Perimeter",
+      "Face Detection",
+      "Face Recognition",
+      "ANPR",
+      "People Counting",
+      "SMD Plus",
+      "Stereo Analysis",
+      "Heat Map"
+    ]
+  },
+  {
+    "name": "16CH 1.5U 4K AI WizSense NVR with 16-port POE",
+    "id": "NVR4416-16P-4KS2/I",
+    "price": "3833",
+    "description": "A 16-channel 4K WizSense NVR featuring 16 integrated PoE ports, comprehensive AI capabilities, and 4 HDD bays.",
+    "specification": {
+      "resolution": "Up to 16MP resolution",
+      "bandwidth": "Max 160Mbps Recording bandwidth (with AI Enabled)",
+      "video_output": "VGA + HDMI",
+      "audio_alarm": "Alarm 16/6, Audio 1/1",
+      "interfaces": "RS232, RS485, 2 x USB ports, GE",
+      "storage_interface": "Supports 4 x HDD up to 10TB each disk",
+      "poe_ports": "16-port POE (max 130W)"
+    },
+    "features": [
+      "Perimeter",
+      "Face Detection",
+      "Face Recognition",
+      "ANPR",
+      "People Counting",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "16CH 1U 4K H.265 NVR with 16-port POE",
+    "id": "NVR5216-16P-4KS2E",
+    "price": "3162",
+    "description": "A powerful 16-channel 4K NVR with 16 PoE ports including ePoE support, providing a massive 320Mbps bandwidth.",
+    "specification": {
+      "resolution": "Up to 12MP resolution",
+      "bandwidth": "Max 320Mbps Incoming & Recording bandwidth",
+      "video_output": "VGA + HDMI",
+      "interfaces": "RS232, RS485, GE, 2 x USB ports",
+      "audio_alarm": "Alarm 4/2, Audio 1/1",
+      "poe_ports": "16 x PoE ports (max 130W), PoE Ports 1-8 ports support 800m ePoE & EoC",
+      "storage_interface": "Supports 2 x HDD up to 10TB each disk"
+    },
+    "features": []
+  },
+  {
+    "name": "32CH 2U 4K H.265 AI NVR",
+    "id": "NVR5832-I/L",
+    "price": "7440",
+    "description": "A 32-channel 2U 4K AI NVR designed for high-density surveillance, supporting 8 HDDs and deep-learning video analytics.",
+    "specification": {
+      "resolution": "Up to 16MP resolution",
+      "bandwidth": "Max 160Mbps Recording bandwidth (with AI Enabled)",
+      "video_output": "VGA + 2HDMI",
+      "interfaces": "2GE, RS232, RS485, 4 x USB ports",
+      "audio_alarm": "Alarm 16/4, Audio 1/1",
+      "storage_interface": "Supports 8 x HDD up to 8TB each disk"
+    },
+    "features": [
+      "Perimeter",
+      "Metadata",
+      "Face Recognition",
+      "ANPR",
+      "POS",
+      "People Counting",
+      "Blacklist"
+    ]
+  },
+  {
+    "name": "32CH 2U Ultra 4K H.265 Super NVR",
+    "id": "NVR608-32-4KS2",
+    "price": "6457",
+    "description": "An enterprise-grade 32-channel Ultra 4K NVR powered by an Intel Dual Core processor, offering RAID storage and huge 384Mbps bandwidth.",
+    "specification": {
+      "resolution": "Up to 12MP resolution",
+      "bandwidth": "384Mbps Input, 384Mbps Recording, 384Mbps Transmission",
+      "preview_playback": "Preview 16ch @ 1080P, Playback 16ch @ 1080P",
+      "audio_alarm": "Audio I/O 1/1, Alarm 16/8",
+      "video_output": "1 VGA + 2 HDMI",
+      "interfaces": "RS232, RS485, 4 x USB, 2GE, iSCSI",
+      "storage_interface": "Supports 8 x HDD of 8TB each",
+      "raid": "RAID 0/1/5/10"
+    },
+    "features": [
+      "Intel Dual Core",
+      "R model includes Redundant Power Supply"
+    ]
+  },
+  {
+    "name": "64CH 2U Ultra 4K H.265 Super NVR",
+    "id": "NVR608-64-4KS2",
+    "price": "8743",
+    "description": "A high-capacity 64-channel Ultra 4K NVR featuring an Intel Quad Core processor, 8 HDD bays, and robust RAID 0/1/5/10 support.",
+    "specification": {
+      "resolution": "Up to 12MP resolution",
+      "bandwidth": "384Mbps Input, 384Mbps Recording, 384Mbps Transmission",
+      "preview_playback": "Preview 16ch @ 1080P, Playback 16ch @ 1080P",
+      "audio_alarm": "Audio I/O 1/1, Alarm 16/8",
+      "video_output": "1 VGA + 2 HDMI",
+      "interfaces": "RS232, RS485, 4 x USB, 2GE, iSCSI",
+      "storage_interface": "Supports 8 x HDD of 8TB each",
+      "raid": "RAID 0/1/5/10"
+    },
+    "features": [
+      "Intel Quad Core"
+    ]
+  },
+  {
+    "name": "128CH 2U Ultra 4K H.265 Super NVR",
+    "id": "NVR608-128-4KS2",
+    "price": "16813",
+    "description": "A massive 128-channel Ultra 4K NVR built for large-scale enterprise deployments, boasting exceptional 384Mbps bandwidth and secure RAID storage.",
+    "specification": {
+      "resolution": "Up to 12MP resolution",
+      "bandwidth": "384Mbps Input, 384Mbps Recording, 384Mbps Transmission",
+      "preview_playback": "Preview 16ch @ 1080P, Playback 16ch @ 1080P",
+      "audio_alarm": "Audio I/O 1/1, Alarm 16/8",
+      "video_output": "1 VGA + 2 HDMI",
+      "interfaces": "RS232, RS485, 4 x USB, 2GE, iSCSI",
+      "storage_interface": "Supports 8 x HDD of 8TB each",
+      "raid": "RAID 0/1/5/10"
+    },
+    "features": []
+  }
+]
