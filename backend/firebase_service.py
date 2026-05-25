@@ -9,6 +9,11 @@ import firebase_admin
 from firebase_admin import credentials, firestore, storage
 from dotenv import load_dotenv
 
+from google.cloud.firestore_v1.base_vector_query import DistanceMeasure
+from google.cloud.firestore_v1.vector import Vector
+
+from model import llm
+
 load_dotenv()
 
 
@@ -269,3 +274,16 @@ class FirebaseService:
             return {"status": "healthy", "firebase": "connected"}
         except Exception as e:
             return {"status": "unhealthy", "firebase": f"error: {e}"}
+        
+    def find_nearest_catalog(self, text):
+        collection_ref = self.db.collection("catalog")
+
+        line_vector = llm.embedding(text)
+
+        return collection_ref.find_nearest(
+            vector_field="embedding_vector",
+            query_vector=Vector(line_vector),
+            distance_measure=DistanceMeasure.COSINE,
+            limit=100,
+            distance_result_field="vector_distance"
+        )

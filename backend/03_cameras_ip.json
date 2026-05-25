@@ -1,0 +1,2203 @@
+[
+  {
+    "name": "2MP Entry IR Eyeball Network Camera (Φ109 × 86mm)",
+    "id": "HDW1230T1-S5",
+    "price": "222",
+    "description": "A cost-effective 2MP eyeball network camera with a 3.6mm fixed lens, 30m IR night vision, and IP67 weather resistance.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP CMOS Sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "30fps @ 2MP (1920 x 1080)",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "housing": "Metal+Plastic"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4MP Entry IR Eyeball Network Camera (Φ109 × 86mm)",
+    "id": "HDW1431T1-S4",
+    "price": "263",
+    "description": "An affordable 4MP eyeball network camera featuring True 120dB WDR, 30m IR night vision, and IP67 protection.",
+    "specification": {
+      "sensor": "1/3\" 4MP CMOS Sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "20fps @ 4MP (2688 x 1520)",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "housing": "Metal+Plastic"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "True 120dB WDR"
+    ]
+  },
+  {
+    "name": "2MP Entry IR Bullet Network Camera (Φ70 × 163mm)",
+    "id": "HFW1230S1-S5",
+    "price": "215",
+    "description": "A reliable 2MP bullet network camera offering 30fps video, 30m IR night vision, and an IP67-rated weatherproof housing.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP CMOS Sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "3MP Entry IR Bullet Network Camera (Φ70 × 163mm)",
+    "id": "HFW1330S1-S4",
+    "price": "235",
+    "description": "A versatile 3MP bullet network camera providing clear video at 20fps, 30m IR illumination, and IP67 weatherproofing.",
+    "specification": {
+      "sensor": "1/2.7\" 3MP CMOS Sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "20fps @ 3MP",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4MP Entry IR Bullet Network Camera (Φ70 × 163mm)",
+    "id": "HFW1431S1-S4",
+    "price": "256",
+    "description": "A 4MP bullet network camera featuring True 120dB WDR for challenging lighting, alongside 30m IR night vision.",
+    "specification": {
+      "sensor": "1/3\" 4MP CMOS Sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "True 120dB WDR"
+    ]
+  },
+  {
+    "name": "2MP Entry Full Colour Eyeball Network Camera (Φ109 × 86mm)",
+    "id": "HDW1239T1-LED-S5",
+    "price": "235",
+    "description": "A 2MP full-color eyeball network camera equipped with a warm LED providing 24/7 color imaging up to 20m.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "white_light_distance": "Warm LED up to 20m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "BLC",
+      "3DNR",
+      "DWDR",
+      "Full-Color"
+    ]
+  },
+  {
+    "name": "2MP Entry Full Colour Bullet Network Camera (Φ70 × 163mm)",
+    "id": "HFW1239S1-LED-S5",
+    "price": "229",
+    "description": "A compact 2MP full-color bullet network camera with a 15m warm LED for constant color surveillance in low light.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "white_light_distance": "Warm LED up to 15m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "BLC",
+      "3DNR",
+      "DWDR",
+      "Full-Color"
+    ]
+  },
+  {
+    "name": "2MP Entry IR Varifocal Dome Network Camera (Φ122 × 98mm)",
+    "id": "HDPW1230R1-ZS-S5",
+    "price": "316",
+    "description": "A flexible 2MP dome network camera featuring a 2.7-12mm motorized vari-focal lens and 40m IR night vision.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP CMOS",
+      "minimum_illumination": "0.008Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "2.7-12mm Motorised Vari-focal",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 40m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4MP Entry IR Varifocal Dome Network Camera (Φ122 × 98mm)",
+    "id": "HDPW1431R1-ZS-S4",
+    "price": "357",
+    "description": "A high-resolution 4MP dome network camera with a motorized vari-focal lens, True WDR, and 40m IR capabilities.",
+    "specification": {
+      "sensor": "1/3\" 4MP CMOS",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.7-12mm Motorised Vari-focal",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 40m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "True 120dB WDR"
+    ]
+  },
+  {
+    "name": "2MP Entry IR Varifocal Bullet Network Camera (Φ91 × 244mm)",
+    "id": "HFW1230T1-ZS-S5",
+    "price": "323",
+    "description": "A rugged 2MP bullet network camera offering a motorized vari-focal lens, 50m IR illumination, and IP67 rating.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP CMOS",
+      "minimum_illumination": "0.008Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "2.7-12mm Motorised Vari-focal",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4MP Entry IR Varifocal Bullet Network Camera (Φ91 × 244mm)",
+    "id": "HFW1431T1-ZS-S4",
+    "price": "363",
+    "description": "A 4MP bullet network camera equipped with a motorized vari-focal lens, True WDR, and long-range 50m IR night vision.",
+    "specification": {
+      "sensor": "1/3\" 4MP CMOS",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.7-12mm Motorised Vari-focal",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Dual-Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Day&Night (ICR)",
+      "BLC",
+      "3DNR",
+      "True 120dB WDR"
+    ]
+  },
+  {
+    "name": "2MP WDR IR Mini Dome Network Camera (Φ110 × 81mm)",
+    "id": "HDBW2231E-S-S2",
+    "price": "263",
+    "description": "A compact 2MP mini dome camera featuring Starlight technology, True WDR, and an IK10 vandal-resistant housing.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 1080P",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "storage": "Micro-SD Slot (max 256GB)"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "2MP WDR IR Eyeball Network Camera (Φ110 × 101mm)",
+    "id": "HDW2231T-AS-S2",
+    "price": "276",
+    "description": "A 2MP Starlight eyeball camera with a built-in microphone, True WDR, and 30m IR for clear audio-visual recording.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 1080P",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "3DNR",
+      "True WDR"
+    ]
+  },
+  {
+    "name": "2MP IR Bullet Starlight Network Camera (Φ70 × 166mm)",
+    "id": "HFW2231S-S-S2",
+    "price": "269",
+    "description": "A 2MP bullet network camera utilizing Sony STARVIS Starlight technology for exceptional low-light performance and True WDR.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Sony STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 1080P",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP WDR IR Mini Dome Network Camera (Φ110 × 81mm)",
+    "id": "HDBW2431E-S-S2",
+    "price": "309",
+    "description": "A 4MP mini dome network camera combining Starlight technology, True WDR, and IK10 vandal protection.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "3.6mm / 2.8mm Optional",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP WDR IR Dome Network Camera (Φ109 × 55mm)",
+    "id": "HDBW2431F-AS-S2",
+    "price": "330",
+    "description": "A low-profile 4MP dome camera with a built-in microphone, True WDR, and IK10 impact protection.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Built-in Mic, Audio 1/1"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP WDR IR Bullet Network Camera (Φ70 × 166mm)",
+    "id": "HFW2431S-S-S2",
+    "price": "316",
+    "description": "A 4MP bullet network camera delivering crisp video with Starlight technology, True WDR, and 30m IR night vision.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP WDR IR Bullet Network Camera (Φ90 × 244mm)",
+    "id": "HFW2431T-AS-S2",
+    "price": "357",
+    "description": "A heavy-duty 4MP bullet camera featuring extended 80m IR night vision, True WDR, and comprehensive audio/alarm interfaces.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 80m",
+      "ingress_protection": "IP67",
+      "housing": "Metal",
+      "audio": "Audio 1/1, Alarm 1/1"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP Lite Full Colour Eyeball Network Camera",
+    "id": "HDW2439T-AS-LED-S2",
+    "price": "350",
+    "description": "A 4MP full-color eyeball camera with a built-in microphone and 30m warm LED for vibrant 24/7 color recording.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "white_light_distance": "WL LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic"
+    },
+    "features": [
+      "3DNR",
+      "TWDR 120dB",
+      "Full-Color"
+    ]
+  },
+  {
+    "name": "4MP Lite Full Colour Bullet Network Camera",
+    "id": "HFW2439S-SA-LED-S2",
+    "price": "343",
+    "description": "A 4MP full-color bullet network camera providing continuous color imaging up to 30m, supported by a built-in microphone.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "white_light_distance": "WL LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic"
+    },
+    "features": [
+      "3DNR",
+      "TWDR 120dB",
+      "Full-Color"
+    ]
+  },
+  {
+    "name": "5MP IR Dome WDR Network Camera (Φ110 × 81mm)",
+    "id": "HDBW2531E-S-S2",
+    "price": "343",
+    "description": "A high-resolution 5MP dome camera featuring Starlight technology, True WDR, and IK10 vandal resistance.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "5MP WDR IR Eyeball Network Camera (Φ110 × 101mm)",
+    "id": "HDW2531T-AS-S2",
+    "price": "357",
+    "description": "A 5MP eyeball network camera offering sharp Starlight imaging, a built-in microphone, and True WDR.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "5MP IR Bullet WDR Network Camera (φ70 × 166mm)",
+    "id": "HFW2531S-S-S2",
+    "price": "350",
+    "description": "A crisp 5MP bullet network camera equipped with Starlight low-light capabilities and True WDR for demanding scenes.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4K Lite IR Fixed-focal Dome Network Camera (φ110 × 81mm)",
+    "id": "HDBW2831E-S-S2",
+    "price": "430",
+    "description": "An 8MP (4K) dome network camera delivering ultra-high-definition video, Starlight technology, and IK10 impact resistance.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.009Lux",
+      "frame_rate": "15fps @ 8MP",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265 Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "8MP WDR IR Eyeball Network Camera (φ110 × 101mm)",
+    "id": "HDW2831T-AS-S2",
+    "price": "451",
+    "description": "An 8MP (4K) eyeball camera capturing exceptional detail, featuring a built-in microphone and Starlight low-light performance.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.009Lux",
+      "frame_rate": "15fps @ 8MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4K Lite IR Fixed-focal Bullet Network Camera (φ70 × 166mm)",
+    "id": "HFW2831S-S-S2",
+    "price": "437",
+    "description": "An 8MP (4K) bullet network camera providing ultra-high-definition Starlight imaging and 30m IR night vision.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.009Lux",
+      "frame_rate": "15fps @ 8MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265 Dual Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "2MP Vandal-Proof IR Dome Starlight Camera w/ Motorised Lens (φ122 × 89mm)",
+    "id": "HDBW2231R-ZS-S2",
+    "price": "350",
+    "description": "A versatile 2MP dome camera with a motorized vari-focal lens, Starlight technology, and IK10 vandal-proof housing.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Sony STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 1080P",
+      "lens": "2.7~13.5mm Motorised Vari-focal",
+      "power_supply": "DC12V/PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR up to 40m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "2MP IR Bullet Starlight Camera w/ Motorised Lens (213 x 80 x 72mm)",
+    "id": "HFW2231T-ZAS-S2",
+    "price": "370",
+    "description": "A 2MP bullet camera featuring a motorized vari-focal lens, exceptional Starlight sensitivity, and 60m IR range.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Sony STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 1080P",
+      "lens": "2.7~13.5mm Motorised Vari-focal",
+      "power_supply": "DC12V/PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR up to 60m",
+      "ingress_protection": "IP67",
+      "audio": "Audio 1/1, Alarm 1/1"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP IR Dome IP Camera (φ122 × 89mm)",
+    "id": "HDBW2431R-ZS-S2",
+    "price": "397",
+    "description": "A 4MP dome network camera providing adjustable motorized vari-focal viewing, True WDR, and IK10 protection.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive Scan CMOS",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "25fps @ 4MP",
+      "lens": "2.7~13.5mm Motorised Varifocal",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265 Dual Stream",
+      "ir_distance": "IR LED up to 40m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP WDR IR Bullet IP Camera (244 x φ90mm)",
+    "id": "HFW2431T-ZS-S2",
+    "price": "417",
+    "description": "A 4MP bullet camera equipped with a motorized vari-focal lens, True WDR, and powerful 60m IR illumination.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "20fps @ 4MP",
+      "lens": "2.7~13.5mm Motorised Varifocal",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Dual Stream",
+      "ir_distance": "IR LED up to 60m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "8MP IR Varifocal Dome Starlight IP Camera (Φ122mm x 89mm)",
+    "id": "HDBW2831R-ZS-S2",
+    "price": "531",
+    "description": "A premium 8MP (4K) dome camera featuring a motorized vari-focal lens, Starlight sensitivity, and IVS analytics.",
+    "specification": {
+      "sensor": "1/2.7\" 8.0MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "15fps @ 8MP",
+      "lens": "2.7~13.5mm Motorised",
+      "power_supply": "DC12V / PoE 802.3af",
+      "encoding": "H.265+",
+      "ir_distance": "IR LED up to 40m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "IVS"
+    ]
+  },
+  {
+    "name": "8MP IR Varifocal Bullet Starlight IP Camera (244mm x Φ90mm)",
+    "id": "HFW2831T-ZS-S2",
+    "price": "552",
+    "description": "An 8MP (4K) bullet camera with a motorized vari-focal lens, advanced Starlight low-light imaging, and IVS support.",
+    "specification": {
+      "sensor": "1/2.7\" 8.0MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "15fps @ 8MP",
+      "lens": "2.7~13.5mm Motorised",
+      "power_supply": "DC12V / PoE 802.3af",
+      "encoding": "H.265",
+      "ir_distance": "IR LED up to 60m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "IVS"
+    ]
+  },
+  {
+    "name": "2MP WDR LXIR Bullet Network Camera (244 x 79 x 76mm)",
+    "id": "HFW4231T-S",
+    "price": "740",
+    "description": "A smart 2MP bullet camera featuring advanced detection analytics, True WDR, and extended 80m IR night vision.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "30fps @ 1080P",
+      "lens": "6mm Fixed",
+      "power_supply": "PoE",
+      "encoding": "H.265+ & H.264 Triple-Stream",
+      "ir_distance": "IR LED up to 80m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "True WDR 120dB",
+      "3DNR",
+      "Smart Detection (Tripwire, Intrusion, Abandoned Object, Face Detect)"
+    ]
+  },
+  {
+    "name": "2MP WDR Starlight Pinhole Network Camera (45 x 58 x 35mm)",
+    "id": "HUM4231",
+    "price": "874",
+    "description": "A discreet 2MP pinhole network camera offering Starlight sensitivity and True WDR for covert surveillance applications.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0MP Progressive Scan CMOS",
+      "minimum_illumination": "Starlight 0.007Lux",
+      "frame_rate": "25fps @ 1080P",
+      "lens": "2.8mm Pinhole",
+      "power_supply": "DC12V",
+      "encoding": "H.265 Triple Stream",
+      "audio": "Audio 1/1"
+    },
+    "features": [
+      "True WDR (120dB)",
+      "3DNR",
+      "Smart Detection"
+    ]
+  },
+  {
+    "name": "1.3MP Dual-Lens People Counting AI Network Camera (162 x 76 x 38mm)",
+    "id": "HD4140X-3D",
+    "price": "1614",
+    "description": "A specialized dual-lens AI network camera designed for accurate people counting and advanced IVS analytics.",
+    "specification": {
+      "sensor": "Two 1/3\" 1.3MP Sony STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "lens": "2.8mm Fixed",
+      "power_supply": "PoE",
+      "encoding": "H.265 Triple-Stream",
+      "ingress_protection": "IP54",
+      "audio": "Built-in Mic",
+      "installation_height": "2.5~3.8m"
+    },
+    "features": [
+      "DWDR",
+      "3DNR",
+      "Standard IVS with People Counting"
+    ]
+  },
+  {
+    "name": "3x2MP Multi-sensor Panoramic IR Bullet Camera (298 x 173 x 121mm)",
+    "id": "PFW8601-A180",
+    "price": "3362",
+    "description": "A robust multi-sensor bullet camera providing a seamless 180-degree panoramic view and advanced intelligent analytics.",
+    "specification": {
+      "sensor": "Three 1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.007Lux",
+      "frame_rate": "Max 30fps @ 4096x832",
+      "lens": "3.6mm",
+      "power_supply": "AC24V / PoE+ (802.3at)",
+      "encoding": "Triple Stream H.265+",
+      "ir_distance": "IR distance up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Audio 1/1, Alarm 2/1",
+      "panoramic_view": "180-degree"
+    },
+    "features": [
+      "IVS",
+      "Heat Map",
+      "E-PTZ",
+      "3DNR",
+      "WDR 120dB"
+    ]
+  },
+  {
+    "name": "4MP 4x PTZ Network Camera (Φ122 × 89mm)",
+    "id": "SD22404T-GN",
+    "price": "1614",
+    "description": "A compact 4MP PTZ network camera offering 4x optical zoom, True WDR, and IVS with face detection.",
+    "specification": {
+      "sensor": "1/3\" CMOS image sensor",
+      "minimum_illumination": "0.05Lux",
+      "optical_zoom": "4x (2.7-11mm)",
+      "digital_zoom": "16x",
+      "encoding": "H.265",
+      "power_supply": "PoE (802.3af); DC12V 1.5A",
+      "ingress_protection": "IP66",
+      "impact_protection": "IK10",
+      "storage": "Micro SD up to 256GB"
+    },
+    "features": [
+      "120dB True WDR",
+      "Ultra 3DNR",
+      "Defog",
+      "IVS with Face Detection"
+    ]
+  },
+  {
+    "name": "2MP 25x Starlight IR Network Positioning System (Φ292 × 161 × 153mm)",
+    "id": "PTZ1A225U-IRA-N",
+    "price": "6053",
+    "description": "A heavy-duty 2MP positioning system featuring 25x optical zoom, 150m IR, and auto-tracking capabilities.",
+    "specification": {
+      "sensor": "1/2.8\" STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "50fps @ 1080P",
+      "optical_zoom": "25x (4.8-120mm)",
+      "digital_zoom": "16x",
+      "encoding": "H.265",
+      "power_supply": "DC12V 4A / PoE+",
+      "ir_distance": "IR up to 150m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Audio 1/1, Alarm 2/1",
+      "storage": "128GB Micro SD"
+    },
+    "features": [
+      "Auto-Tracking",
+      "120dB True WDR",
+      "Ultra DNR",
+      "Defog",
+      "ROI",
+      "EIS"
+    ]
+  },
+  {
+    "name": "2MP 3x Starlight IR PTZ Bullet Network Camera (195 x 90 x 103mm)",
+    "id": "PTZ1C203UE-GN",
+    "price": "2420",
+    "description": "A unique 2MP bullet-style PTZ camera with 3x optical zoom, Starlight sensitivity, and a built-in microphone.",
+    "specification": {
+      "sensor": "1/2.8\" STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "30fps @ 1080P",
+      "optical_zoom": "3x (2.7-8.1mm)",
+      "digital_zoom": "16x",
+      "encoding": "H.265",
+      "power_supply": "DC12V 1.5A / PoE",
+      "ir_distance": "IR up to 20m",
+      "ingress_protection": "IP66",
+      "storage": "256GB Micro SD",
+      "audio": "Audio 1/1"
+    },
+    "features": [
+      "120dB True WDR",
+      "3DNR",
+      "Defog",
+      "ROI",
+      "EIS",
+      "TVS 4000V Protection"
+    ]
+  },
+  {
+    "name": "3x2MP Multi-Sensor Network Camera + PTZ (Φ172 x 123mm)",
+    "id": "PSDW5631S-B360",
+    "price": "5113",
+    "description": "A comprehensive 360-degree multi-sensor camera paired with a 5x PTZ module for unparalleled situational awareness.",
+    "specification": {
+      "sensor": "Three 1/2.7\" CMOS",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "25fps @ 1080P",
+      "optical_zoom": "PTZ 5x (2.7-13.5mm)",
+      "digital_zoom": "16x",
+      "encoding": "H.265 Dual Stream",
+      "ir_distance": "IR up to 15m",
+      "power_supply": "DC12V 2A / PoE+",
+      "storage": "256GB Micro SD",
+      "audio": "Audio 1/1, Alarm 3/2",
+      "panoramic_view": "360-degree"
+    },
+    "features": [
+      "DWDR",
+      "3DNR",
+      "ROI"
+    ]
+  },
+  {
+    "name": "5MP IR & White Light Active Deterrence Full Colour Network PT Camera",
+    "id": "SD2A500-GN-A-PV",
+    "price": "1278",
+    "description": "A 5MP pan-tilt camera featuring active deterrence, full-color imaging, and human detection capabilities.",
+    "specification": {
+      "sensor": "1/2.8\" 5MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "4mm Fixed",
+      "power_supply": "DC12V 1.5A / PoE",
+      "encoding": "H.265 Dual Stream",
+      "ir_distance": "IR LED / Illumination up to 30m",
+      "ingress_protection": "IP66",
+      "storage": "Micro SD up to 512GB",
+      "audio": "Audio 1/1, Built-in Mic & Speaker"
+    },
+    "features": [
+      "Full-color",
+      "DWDR",
+      "3DNR",
+      "Active Deterrence",
+      "Human Detection",
+      "TVS 2000V"
+    ]
+  },
+  {
+    "name": "2MP Lite AI IR Bullet AI Network Camera (273 x 95 x 95mm)",
+    "id": "HDBW3241F-AS-M",
+    "price": "357",
+    "description": "A 2MP AI-powered dome camera featuring perimeter protection, SMD Plus, and Starlight technology.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Lite AI IR Bullet AI Network Camera (273 x 95 x 95mm)",
+    "id": "HDBW3541F-AS-M",
+    "price": "430",
+    "description": "A 5MP AI dome network camera equipped with SMD Plus, perimeter protection, and built-in audio.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Lite AI IR Bullet Network Camera (193 x 71 x 66mm)",
+    "id": "HFW3241E-SA",
+    "price": "343",
+    "description": "A 2MP AI bullet camera delivering advanced perimeter protection, SMD Plus, and Starlight low-light imaging.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Lite AI IR Bullet Network Camera (193 x 71 x 66mm)",
+    "id": "HFW3541E-SA",
+    "price": "417",
+    "description": "A 5MP AI bullet network camera featuring a built-in microphone, SMD Plus, and intelligent perimeter protection.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Lite AI IR Bullet Network Camera (193 x 71 x 66mm) - Audio/Alarm",
+    "id": "HFW3241E-AS",
+    "price": "357",
+    "description": "A 2MP AI bullet camera supporting full audio and alarm interfaces alongside SMD Plus and perimeter protection.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "audio": "Audio 1/1, Alarm 1/1"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Lite AI IR Bullet Network Camera (193 x 71 x 66mm) - Audio/Alarm",
+    "id": "HFW3541E-AS",
+    "price": "430",
+    "description": "A 5MP AI bullet camera offering comprehensive audio/alarm I/O, SMD Plus, and advanced perimeter protection.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP STARVIS CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "audio": "Audio 1/1, Alarm 1/1, Built-in Microphone"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP IR Fixed focal Dome WizSense Network Camera (Φ110 x 81mm)",
+    "id": "HDBW3241E-S",
+    "price": "330",
+    "description": "A 2MP WizSense dome camera featuring SMD Plus, perimeter protection, and IK10 vandal resistance.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "4MP IR Fixed focal Dome WizSense Network Camera (Φ110 x 81mm)",
+    "id": "HDBW3441E-S",
+    "price": "377",
+    "description": "A 4MP WizSense dome camera combining AI-driven perimeter protection, SMD Plus, and True WDR.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.8mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP IR Fixed focal Dome WizSense Network Camera (Φ110 x 81mm) - Audio/Alarm",
+    "id": "HDBW3241E-AS",
+    "price": "350",
+    "description": "A 2MP WizSense dome camera offering robust AI features, IK10 protection, and integrated audio/alarm connectivity.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "4MP IR Fixed focal Bullet WizSense Network Camera (193 x 71 x 66mm)",
+    "id": "HFW3441E-AS",
+    "price": "383",
+    "description": "A 4MP WizSense bullet camera equipped with advanced AI detection, built-in audio, and True WDR.",
+    "specification": {
+      "sensor": "1/3\" 4MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Microphone"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Lite AI IR Varifocal Dome Network Camera (Φ122 x 89mm)",
+    "id": "HDBW3241R-ZS",
+    "price": "397",
+    "description": "A 2MP AI dome camera featuring a motorized vari-focal lens, SMD Plus, and intelligent perimeter protection.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Lite AI IR Varifocal Dome Network Camera (Φ122 x 89mm)",
+    "id": "HDBW3541R-ZS",
+    "price": "471",
+    "description": "A 5MP AI dome camera with motorized vari-focal adjustment, True WDR, and comprehensive WizSense analytics.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Lite AI IR Varifocal Bullet Network Camera (Φ110 x 81mm)",
+    "id": "HFW3241T-ZS",
+    "price": "417",
+    "description": "A 2MP AI bullet camera offering motorized vari-focal capabilities, 60m IR, and advanced SMD Plus.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "frame_rate": "30fps",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Lite AI IR Varifocal Bullet Network Camera (Φ110 x 81mm)",
+    "id": "HFW3541T-ZAS",
+    "price": "491",
+    "description": "A 5MP AI bullet camera featuring a motorized vari-focal lens, audio/alarm I/O, and intelligent WizSense analytics.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive CMOS",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "audio": "Audio 1/1, Alarm 1/1"
+    },
+    "features": [
+      "Perimeter Protection",
+      "SMD Plus",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Full Color Eyeball WizSense Network Camera",
+    "id": "HDW3549TM-AS-LED",
+    "price": "417",
+    "description": "A 5MP WizSense eyeball camera providing vivid 24/7 full-color imaging, a built-in mic, and SMD Plus.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive CMOS sensor",
+      "minimum_illumination": "Starlight 0.003Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "Smart H.265+ Triple Stream",
+      "white_light_distance": "WL LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic"
+    },
+    "features": [
+      "Full-color",
+      "TWDR 120dB",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Full Color Bullet WizSense Network Camera",
+    "id": "HFW3549E-AS-LED",
+    "price": "430",
+    "description": "A 5MP WizSense bullet camera equipped with warm LED illumination for full-color night vision and AI analytics.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive CMOS sensor",
+      "minimum_illumination": "Starlight 0.003Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V, PoE",
+      "encoding": "Smart H.265+ Triple Stream",
+      "white_light_distance": "WL LED up to 30m",
+      "ingress_protection": "IP67",
+      "audio": "Audio 1/1, Alarm 1/1, Built-in Mic"
+    },
+    "features": [
+      "Full-color",
+      "TWDR 120dB",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Full-Colour Active Deterrence Eyeball WizSense Network Camera",
+    "id": "HDW3249H-AS-PV",
+    "price": "424",
+    "description": "A 2MP active deterrence eyeball camera featuring red/blue flashlight alarms, a siren, and 24/7 full-color imaging.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "0.0015Lux",
+      "frame_rate": "30fps",
+      "encoding": "H.265+ Triple Stream",
+      "white_light_distance": "Warm light up to 30m",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic & Speaker, Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Full-color",
+      "SMD Plus",
+      "Red & Blue Flashlight alarm",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Full-Colour Active Deterrence Eyeball WizSense Network Camera",
+    "id": "HDW3549H-AS-PV",
+    "price": "491",
+    "description": "A 5MP active deterrence eyeball camera combining full-color night vision with red/blue flash alarms and AI detection.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive CMOS",
+      "minimum_illumination": "0.003Lux",
+      "frame_rate": "20fps",
+      "encoding": "H.265+ Triple Stream",
+      "white_light_distance": "Warm light up to 30m",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic & Speaker, Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Full-color",
+      "SMD Plus",
+      "Red & Blue Flashlight alarm",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Full-Colour Active Deterrence Bullet WizSense Network Camera",
+    "id": "HFW3249T1-AS-PV",
+    "price": "437",
+    "description": "A 2MP active deterrence bullet camera providing full-color imaging, a built-in siren, and flashing warning lights.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP Progressive CMOS",
+      "minimum_illumination": "0.0015Lux",
+      "frame_rate": "30fps",
+      "encoding": "H.265+ Triple Stream",
+      "white_light_distance": "Warm light up to 40m",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic & Speaker, Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Full-color",
+      "SMD Plus",
+      "Red & Blue Flashlight alarm",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "5MP Full-Colour Active Deterrence Bullet WizSense Network Camera",
+    "id": "HFW3549T1-AS-PV",
+    "price": "504",
+    "description": "A 5MP active deterrence bullet camera featuring AI-driven human/vehicle detection and dynamic red/blue flash alarms.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive CMOS",
+      "minimum_illumination": "0.003Lux",
+      "frame_rate": "20fps",
+      "encoding": "H.265+ Triple Stream",
+      "white_light_distance": "Warm light up to 40m",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V, PoE",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Mic & Speaker, Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Full-color",
+      "SMD Plus",
+      "Red & Blue Flashlight alarm",
+      "True WDR (120dB)",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP IR Eyeball AI Network Camera (Φ106 x 94mm)",
+    "id": "HDW5241TM-ASE",
+    "price": "565",
+    "description": "A 2MP AI eyeball camera capable of face capture, people counting, and perimeter protection with Starlight technology.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / ePoE 800m / PoE 802.3af",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "audio": "Built-in Microphone"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "2MP IR Bullet AI Network Camera (182 x 70 x 70mm)",
+    "id": "HFW5241E-SE",
+    "price": "552",
+    "description": "A 2MP AI bullet camera featuring advanced intelligent functions like face capture and people counting.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V / ePoE 800m / PoE 802.3af",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "2MP IR Bullet AI Network Camera (244 x 79 x 76mm)",
+    "id": "HFW5241T-ASE",
+    "price": "605",
+    "description": "A robust 2MP AI bullet camera offering 80m IR night vision, face capture, and extended ePoE support.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "6mm Fixed",
+      "power_supply": "DC12V / ePoE 800m / PoE 802.3af",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 80m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "2MP IR Dome AI Network Camera (Φ159 x 118mm)",
+    "id": "HDBW5241E-ZE",
+    "price": "740",
+    "description": "A 2MP AI dome camera equipped with a motorized lens, people counting, and powerful video metadata capabilities.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.0028Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V / AC24V / PoE / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 40m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "2MP IR Bullet AI Network Camera (273 x 95 x 95mm)",
+    "id": "HFW5241E-ZE",
+    "price": "753",
+    "description": "A 2MP AI bullet camera featuring motorized vari-focal viewing, advanced AI analytics, and ePoE technology.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.0028Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V / PoE 802.3af / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 2/1, Audio 1/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "2MP IR Vari-Focal Bullet WizMind Network Camera (273 x 95 x 95mm)",
+    "id": "HFW5241E-Z12E",
+    "price": "1143",
+    "description": "A long-range 2MP WizMind bullet camera with a powerful 5.3-64mm motorized lens and 150m IR illumination.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "30fps @ 2MP",
+      "lens": "5.3-64mm Motorised",
+      "power_supply": "DC12V / PoE 802.3af / ePoE 800m",
+      "encoding": "Smart H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 150m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 2/1, Audio 1/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "4MP IR Dome AI Network Camera (Φ159 x 118mm)",
+    "id": "HDBW5442E-ZE",
+    "price": "914",
+    "description": "A 4MP AI dome camera featuring Starlight+ technology, Ultra WDR, and highly accurate face capture analytics.",
+    "specification": {
+      "sensor": "1/1.8\" 4MP Progressive Scan CMOS",
+      "minimum_illumination": "0.0024Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.7-12mm Motorised",
+      "power_supply": "DC12V / AC24V / PoE / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 45m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Starlight+",
+      "Ultra WDR (140dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "4MP IR Bullet AI Network Camera (273 x 95 x 95mm)",
+    "id": "HFW5442E-ZE",
+    "price": "935",
+    "description": "A 4MP AI bullet camera delivering exceptional Starlight+ imaging, Ultra WDR, and sophisticated video metadata.",
+    "specification": {
+      "sensor": "1/1.8\" 4MP Progressive Scan CMOS",
+      "minimum_illumination": "0.0024Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.7-12mm Motorised",
+      "power_supply": "DC12V / PoE 802.3af / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "Starlight+",
+      "Ultra WDR (140dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "5MP IR Dome AI Network Camera (Φ159 x 118mm)",
+    "id": "HDBW5541E-ZE",
+    "price": "875",
+    "description": "A 5MP AI dome camera combining motorized vari-focal flexibility with powerful people counting and perimeter protection.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V / AC24V / PoE / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 40m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1"
+    },
+    "features": [
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "5MP IR Bullet AI Network Camera (273 x 95 x 95mm)",
+    "id": "HFW5541E-ZE",
+    "price": "894",
+    "description": "A 5MP AI bullet camera offering precise motorized adjustment, advanced AI metadata, and True WDR.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V / PoE 802.3af / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 50m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 2/1, Audio 1/1"
+    },
+    "features": [
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "4MP Full Colour Dome WizMind AI Network Camera (Φ126 × 105mm)",
+    "id": "HDBW5449R1-ZE-LED",
+    "price": "1143",
+    "description": "A 4MP WizMind dome camera delivering unparalleled full-color imaging, motorized optics, and deep-learning AI features.",
+    "specification": {
+      "sensor": "1/1.8\" 4MP Progressive Scan CMOS",
+      "minimum_illumination": "0.0005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.7-12mm Motorised",
+      "power_supply": "DC12V / PoE / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "white_light_distance": "Warm LED up to 40m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Mic & Speaker"
+    },
+    "features": [
+      "Full-color",
+      "Starlight",
+      "140dB WDR",
+      "People Counting",
+      "Perimeter Protection",
+      "Face Detection",
+      "Face Attributes"
+    ]
+  },
+  {
+    "name": "4MP Full Colour Bullet WizMind AI Network Camera (288 x 94 x 85mm)",
+    "id": "HFW5449T1-ZE-LED",
+    "price": "1164",
+    "description": "A 4MP WizMind bullet camera featuring a 70m warm LED for full-color night vision and advanced AI analytics.",
+    "specification": {
+      "sensor": "1/1.8\" 4MP Progressive Scan CMOS",
+      "minimum_illumination": "0.0005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "2.7-12mm Motorised",
+      "power_supply": "DC12V / PoE / ePoE 800m",
+      "encoding": "H.265 Triple Stream",
+      "white_light_distance": "Warm LED up to 70m",
+      "ingress_protection": "IP67",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Mic & Speaker"
+    },
+    "features": [
+      "Full-color",
+      "Starlight",
+      "140dB WDR",
+      "People Counting",
+      "Perimeter Protection",
+      "Face Detection",
+      "Face Attributes"
+    ]
+  },
+  {
+    "name": "5MP WDR IR Dome WizMind AI Network Camera (Φ126 × 105mm)",
+    "id": "HDBW5541R1-AS-PV",
+    "price": "1009",
+    "description": "A 5MP WizMind dome camera integrating active deterrence alarms with highly accurate AI-driven detection.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 30m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Mic & Speaker"
+    },
+    "features": [
+      "Starlight",
+      "120dB WDR",
+      "Active Deterrence",
+      "People Counting",
+      "Perimeter Protection",
+      "Face Detection"
+    ]
+  },
+  {
+    "name": "5MP WDR IR Bullet WizMind AI Network Camera (244 x 79 x 76mm)",
+    "id": "HFW5541T-AS-PV",
+    "price": "969",
+    "description": "A 5MP WizMind bullet camera combining advanced AI features like people counting with active deterrence functions.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP Progressive Scan CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "20fps @ 5MP",
+      "lens": "3.6mm",
+      "power_supply": "DC12V / PoE",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 60m",
+      "ingress_protection": "IP67",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Speaker"
+    },
+    "features": [
+      "Starlight",
+      "120dB WDR",
+      "Active Deterrence",
+      "People Counting",
+      "Perimeter Protection"
+    ]
+  },
+  {
+    "name": "4MP AI Starlight+ Box Network Camera (136 x 75 x 66mm)",
+    "id": "HF5442E-E",
+    "price": "1278",
+    "description": "A flexible 4MP AI box camera offering Starlight+ performance, Ultra WDR, and robust facial recognition capabilities.",
+    "specification": {
+      "sensor": "1/1.8\" 4MP Progressive CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "60fps @ 1080P",
+      "lens": "C/CS Mount (Not included)",
+      "power_supply": "DC12V, AC24V, PoE",
+      "encoding": "H.265+ & H.264 Triple-Stream",
+      "audio": "Alarm 2/1, Audio 1/1 (Built-in Mic)",
+      "storage": "Micro-SD slot (Max 256GB)"
+    },
+    "features": [
+      "Starlight+",
+      "Ultra WDR (140dB)",
+      "3DNR",
+      "ePoE 800m",
+      "Face Capture",
+      "Various AI capabilities"
+    ]
+  },
+  {
+    "name": "8MP IR Bullet AI WizMind Network Camera (340 x 109 x 93mm)",
+    "id": "HFW7842H-ZVH",
+    "price": "2018",
+    "description": "An elite 8MP (4K) WizMind bullet camera featuring ANPR, parking space management, and deep AI analytics.",
+    "specification": {
+      "sensor": "1/1.8\" 8MP Progressive Scan CMOS",
+      "minimum_illumination": "0.003Lux",
+      "frame_rate": "30fps @ 8MP",
+      "lens": "2.7-12mm Motorised",
+      "power_supply": "AC24V/DC12V/PoE+ 802.3at / ePoE 800m",
+      "encoding": "H.265+ Five Stream",
+      "ir_distance": "IR LED up to 60m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 3/2, Audio 1/1, RS485"
+    },
+    "features": [
+      "Starlight+",
+      "True WDR (120dB)",
+      "3DNR",
+      "ANPR",
+      "Video Metadata",
+      "Apartment Littering",
+      "Parking Space Management"
+    ]
+  },
+  {
+    "name": "5MP WizMind Fisheye Network Camera (φ110 × 62mm)",
+    "id": "EB5541-AS",
+    "price": "1278",
+    "description": "A 5MP WizMind fisheye camera providing 360-degree panoramic coverage, heat mapping, and people counting.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP CMOS",
+      "minimum_illumination": "0.006Lux",
+      "frame_rate": "30fps @ 5MP",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Mic",
+      "view_angle": "360°"
+    },
+    "features": [
+      "120dB True WDR",
+      "3DNR",
+      "Multiple De-Warp Modes",
+      "IVS",
+      "Heat Map",
+      "People Counting"
+    ]
+  },
+  {
+    "name": "5MP WizMind IR Fisheye Network Camera (φ126 × 45mm)",
+    "id": "EW5541-AS",
+    "price": "1318",
+    "description": "A 5MP IR fisheye camera offering comprehensive 360-degree surveillance, intelligent de-warping, and AI analytics.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP CMOS",
+      "minimum_illumination": "0.006Lux",
+      "frame_rate": "30fps @ 5MP",
+      "power_supply": "DC12V, PoE",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR up to 10m",
+      "audio": "Alarm 1/1, Audio 1/1, Built-in Mic",
+      "view_angle": "360°"
+    },
+    "features": [
+      "120dB True WDR",
+      "3DNR",
+      "Multiple De-Warp Modes",
+      "IVS",
+      "Heat Map",
+      "People Counting"
+    ]
+  },
+  {
+    "name": "8MP Panoramic IR Fisheye Wizmind Network Camera (Φ150mm x 60mm)",
+    "id": "EBW8842-AS",
+    "price": "1951",
+    "description": "An 8MP (4K) panoramic fisheye camera capturing immersive 360-degree detail with built-in IR and intelligent analytics.",
+    "specification": {
+      "sensor": "1/1.7\" 8.0MP CMOS",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "30fps @ 8MP",
+      "power_supply": "DC12V; PoE+ (802.3at)",
+      "encoding": "H.265 & H.264 Triple Stream",
+      "ir_distance": "IR LED up to 10m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Audio 1/1, Alarm 2/2, Built-in Mic & Speaker",
+      "view_angle": "360°"
+    },
+    "features": [
+      "DWDR",
+      "3DNR",
+      "ROI",
+      "Multiple De-Warp Modes"
+    ]
+  },
+  {
+    "name": "12MP Panoramic Network IR Fisheye Camera (Φ150mm x 60mm)",
+    "id": "EBW81242",
+    "price": "2421",
+    "description": "A massive 12MP panoramic fisheye camera delivering ultra-high-resolution 360-degree imaging and Starlight sensitivity.",
+    "specification": {
+      "sensor": "1/1.7\" 12MP CMOS",
+      "minimum_illumination": "0.001Lux",
+      "frame_rate": "30fps @ 12MP",
+      "power_supply": "DC12V; PoE (802.3af)",
+      "encoding": "H.265 & H.264 Triple Stream",
+      "ir_distance": "IR LED up to 10m",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Audio 1/1, Alarm 2/2, Built-in Mic",
+      "view_angle": "360°"
+    },
+    "features": [
+      "Starlight",
+      "DWDR",
+      "3DNR",
+      "ROI",
+      "Multiple De-Warp Modes"
+    ]
+  },
+  {
+    "name": "4MP 4x Starlight IR PTZ AI Network Camera (Φ128 × 65mm)",
+    "id": "SD1A404XB-GNR",
+    "price": "1816",
+    "description": "A highly compact 4MP PTZ camera featuring 4x optical zoom, Starlight imaging, and advanced WizSense AI.",
+    "specification": {
+      "sensor": "1/2.8\" 4MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "optical_zoom": "4x (2.8-12mm)",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR LED up to 15m",
+      "power_supply": "DC12V 1.5A, PoE 802.3af",
+      "ingress_protection": "IP66",
+      "impact_protection": "IK08",
+      "audio": "Audio 1/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Metadata",
+      "Perimeter Protection",
+      "SMD"
+    ]
+  },
+  {
+    "name": "2MP Starlight IR Active Deterrence WizSense Network PTZ Camera (272 x 143mm)",
+    "id": "SD3A205-GNP-PV",
+    "price": "1951",
+    "description": "A 2MP active deterrence PTZ camera with 5x optical zoom, integrating flashing lights and a siren.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "30fps @ 1080P",
+      "optical_zoom": "5x (2.7-13.5mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 30m",
+      "power_supply": "DC12V 2A / PoE",
+      "ingress_protection": "IP66",
+      "audio": "Built-in Mic & Speaker, Audio 1/1"
+    },
+    "features": [
+      "Starlight",
+      "DWDR",
+      "3DNR",
+      "Active Deterrence",
+      "SMD Plus",
+      "TVS 2000V"
+    ]
+  },
+  {
+    "name": "4MP Full Color Active Deterrence WizSense Network PTZ Camera (272 x 143mm)",
+    "id": "SD3A400-GNP-B-PV",
+    "price": "1816",
+    "description": "A 4MP active deterrence PTZ camera providing 24/7 full-color video, a built-in siren, and human detection.",
+    "specification": {
+      "sensor": "1/2.8\" 4MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "lens": "4mm Fixed",
+      "encoding": "H.265+ Triple Stream",
+      "white_light_distance": "White LED up to 30m",
+      "power_supply": "DC12V 1.5A / PoE",
+      "ingress_protection": "IP66",
+      "audio": "Built-in Mic & Speaker, Audio 1/1"
+    },
+    "features": [
+      "Full-color",
+      "Starlight",
+      "True WDR 120dB",
+      "3DNR",
+      "Active Deterrence",
+      "Perimeter",
+      "TVS 2000V"
+    ]
+  },
+  {
+    "name": "2MP 25x Starlight IR PTZ AI Network Camera (Φ160 × 295mm)",
+    "id": "SD49225XA-HNR",
+    "price": "4710",
+    "description": "A powerful 2MP PTZ camera boasting 25x optical zoom, Starlight technology, and deep-learning perimeter protection.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "60fps @ 1080P",
+      "optical_zoom": "25x (4.8-120mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 100m",
+      "power_supply": "DC12V 3A / PoE 802.3at",
+      "ingress_protection": "IP66",
+      "audio": "Audio 1/1, Alarm 2/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Perimeter Protection",
+      "SMD",
+      "TVS 6000V"
+    ]
+  },
+  {
+    "name": "4MP 25x Starlight IR PTZ AI Network Camera (Φ160 × 295mm)",
+    "id": "SD49425XB-HNR",
+    "price": "5113",
+    "description": "A 4MP high-resolution PTZ camera equipped with a 25x optical zoom lens, 100m IR, and advanced AI tracking.",
+    "specification": {
+      "sensor": "1/2.8\" 4MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "optical_zoom": "25x (4.8-120mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR LED up to 100m",
+      "power_supply": "DC12V 3A / PoE 802.3at",
+      "ingress_protection": "IP66",
+      "audio": "Audio 1/1, Alarm 2/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Perimeter Protection",
+      "SMD"
+    ]
+  },
+  {
+    "name": "4MP 25x Starlight IR PTZ AI Network Camera with 4G (Φ160 × 295mm)",
+    "id": "SD49425XB-HNR-G",
+    "price": "5650",
+    "description": "A versatile 4MP PTZ camera featuring built-in 4G LTE support for remote deployments, alongside 25x optical zoom.",
+    "specification": {
+      "sensor": "1/2.8\" 4MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "optical_zoom": "25x (4.8-120mm)",
+      "encoding": "H.265+ Triple Stream",
+      "network_transmission": "Support 4G LTE/WCDMA/GSM",
+      "ir_distance": "IR LED up to 100m",
+      "power_supply": "DC12V 3A / PoE 802.3at",
+      "ingress_protection": "IP66",
+      "audio": "Audio 1/1, Alarm 2/1"
+    },
+    "features": [
+      "Starlight",
+      "True WDR (120dB)",
+      "3DNR",
+      "People Counting",
+      "Face Capture",
+      "Perimeter Protection",
+      "SMD"
+    ]
+  },
+  {
+    "name": "2MP 25x Starlight IR WizSense Network PTZ Camera (Φ190 × 332mm)",
+    "id": "SD5A225XA-HNR",
+    "price": "7400",
+    "description": "A robust 2MP WizSense PTZ camera offering 25x optical zoom, Auto-Tracking, and exceptional Starlight low-light capture.",
+    "specification": {
+      "sensor": "1/2.8\" 2MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "60fps @ 2MP",
+      "optical_zoom": "25x (5.4-135mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR up to 150m",
+      "power_supply": "AC24V 3A / PoE+ (802.3at)",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 2/1, Audio 1/1"
+    },
+    "features": [
+      "Auto-Tracking",
+      "Starlight",
+      "120dB True WDR",
+      "Defog",
+      "SMD Plus",
+      "Face Capture",
+      "Perimeter"
+    ]
+  },
+  {
+    "name": "4MP 32x Starlight IR WizSense Network PTZ Camera (Φ190 × 332mm)",
+    "id": "SD5A432XA-HNR",
+    "price": "8342",
+    "description": "A high-performance 4MP WizSense PTZ camera featuring extended 32x optical zoom and precise Auto-Tracking.",
+    "specification": {
+      "sensor": "1/2.8\" 4MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 4MP",
+      "optical_zoom": "32x (4.9-156mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR up to 150m",
+      "power_supply": "AC24V 3A / PoE+ (802.3at)",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 2/1, Audio 1/1"
+    },
+    "features": [
+      "Auto-Tracking",
+      "Starlight",
+      "120dB True WDR",
+      "Defog",
+      "SMD Plus",
+      "Face Capture",
+      "Perimeter"
+    ]
+  },
+  {
+    "name": "8MP 25x Starlight IR WizSense Network PTZ Camera (Φ190 × 332mm)",
+    "id": "SD5A825-HNR-YA",
+    "price": "$10090",
+    "description": "An ultra-HD 8MP (4K) PTZ camera delivering 25x optical zoom, 150m IR, and deep-learning-based auto-tracking.",
+    "specification": {
+      "sensor": "1/1.8\" 8MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 8MP",
+      "optical_zoom": "25x (5.4-135mm)",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR up to 150m",
+      "power_supply": "AC24V 3A / PoE+ (802.3at)",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 2/1, Audio 1/1"
+    },
+    "features": [
+      "Auto-Tracking",
+      "Starlight",
+      "120dB True WDR",
+      "Defog",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP 45x Starlight IR WizSense Network PTZ Camera (Φ209 × 337mm)",
+    "id": "SD6CE245XA-HNR",
+    "price": "11433",
+    "description": "An extreme-range 2MP PTZ camera boasting a massive 45x optical zoom and 250m IR for vast area surveillance.",
+    "specification": {
+      "sensor": "1/2.8\" STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "60fps @ 1080P",
+      "optical_zoom": "45x (3.95-177.7mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR up to 250m",
+      "power_supply": "AC24V 2.5A",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 7/2, Audio 1/1, RS-485"
+    },
+    "features": [
+      "Auto-Tracking",
+      "Starlight",
+      "120dB True WDR",
+      "3DNR",
+      "Defog",
+      "ROI",
+      "EIS",
+      "Face Detection",
+      "SMD Plus"
+    ]
+  },
+  {
+    "name": "4K 40x Starlight IR PTZ AI Network Camera (Φ262 × 416mm)",
+    "id": "SD8A840WA-HNF",
+    "price": "16140",
+    "description": "A flagship 8MP (4K) PTZ camera with 40x optical zoom, a smart wiper, and extended 500m IR illumination.",
+    "specification": {
+      "sensor": "1/1.8\" 8MP STARVIS CMOS",
+      "minimum_illumination": "0.002Lux",
+      "frame_rate": "30fps @ 8MP",
+      "optical_zoom": "40x (5.6-223mm)",
+      "encoding": "H.265 Triple Stream",
+      "ir_distance": "IR up to 500m",
+      "power_supply": "AC24V 3A; Hi-PoE",
+      "ingress_protection": "IP67",
+      "audio": "Alarm 7/2, Audio 1/1, 1 BNC, RS485"
+    },
+    "features": [
+      "Auto-Tracking",
+      "Starlight",
+      "120dB True WDR",
+      "Ultra DNR",
+      "Defog",
+      "Smart Wiper",
+      "Face Recognition"
+    ]
+  },
+  {
+    "name": "4K 40x Starlight IR PTZ AI Network Camera (Φ262 × 416mm) - PA",
+    "id": "SD8A840-HNF-PA",
+    "price": "17490",
+    "description": "An elite 8MP (4K) PTZ camera featuring 40x optical zoom, 140dB Ultra WDR, and highly advanced metadata analytics.",
+    "specification": {
+      "sensor": "1/1.8\" 8MP STARVIS CMOS",
+      "minimum_illumination": "0.005Lux",
+      "frame_rate": "30fps @ 8MP",
+      "optical_zoom": "40x (5.6-223mm)",
+      "encoding": "H.265+ Triple Stream",
+      "ir_distance": "IR up to 500m",
+      "power_supply": "DC36V 2.23A / Hi-PoE",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10",
+      "audio": "Alarm 7/2, Audio 1/1, 1 BNC, RS485"
+    },
+    "features": [
+      "Auto-Tracking",
+      "Starlight+",
+      "Smart Wiper",
+      "Face Recognition",
+      "Metadata",
+      "Perimeter",
+      "140dB Ultra WDR",
+      "Optical Defog",
+      "TVS 6000V"
+    ]
+  }
+]

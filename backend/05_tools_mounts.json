@@ -1,0 +1,474 @@
+[
+  {
+    "name": "Dahua Integrated Mount Tester for IP/HDCVI/AHD/TVI/CVBS",
+    "id": "PFM900-E",
+    "price": "1278",
+    "description": "A comprehensive multi-protocol mount tester equipped with a 4-inch IPS screen and flip keyboard for testing diverse camera systems.",
+    "specification": {
+      "screen": "4\" IPS",
+      "battery": "Replaceable 7.4V/22.2Wh polymer Li-ion (up to 8 hrs)",
+      "input": "QWERTY flip keyboard with 45 keys",
+      "output": "DC12V/2A power out"
+    },
+    "features": [
+      "Supports PoE+",
+      "Multi-protocol tester"
+    ]
+  },
+  {
+    "name": "2 meters Black Metal Pole",
+    "id": "PL2000-60",
+    "price": "150",
+    "description": "A sturdy 2-meter black metal mounting pole designed for installing cameras, readers, and wireless networking equipment.",
+    "specification": {
+      "diameter": "60mm",
+      "mounting_base": "205mm x 205mm",
+      "length": "2 meters"
+    },
+    "features": [
+      "Suitable for UHF Readers, Cameras, Photobeams, Wireless CPE"
+    ]
+  },
+  {
+    "name": "Dahua Vandal-proof Housing",
+    "id": "PFH610V",
+    "price": "250",
+    "description": "A robust 14-inch IP67/IK10 rated vandal-proof camera housing offering all-weather protection for box cameras.",
+    "specification": {
+      "size": "14\"",
+      "protection": "IP67, IK10",
+      "internal_dimension": "215 x 90 x 83mm"
+    },
+    "features": [
+      "All weather protection for Box cameras & lens",
+      "H series has built-in Heating & Cooling system",
+      "POE series has built-in PoE+ module"
+    ]
+  },
+  {
+    "name": "Ceiling Mount bracket for Dahua 14\" Housing",
+    "id": "PFB600W",
+    "price": "60",
+    "description": "A specialized ceiling mount bracket crafted from aluminium and PC, tailored for the Dahua PFH610V housing.",
+    "specification": {
+      "material": "Aluminium & PC"
+    },
+    "features": [
+      "Ceiling mount for PFH610V housing"
+    ]
+  },
+  {
+    "name": "Wall Mount bracket for Dahua 14\" Housing",
+    "id": "PFB604W",
+    "price": "90",
+    "description": "A heavy-duty aluminium wall mount bracket designed specifically to secure the Dahua PFH610V 14-inch housing.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "Wall mount for PFH610V housing"
+    ]
+  },
+  {
+    "name": "In-Ceiling Mount Bracket",
+    "id": "PFB200C",
+    "price": "40",
+    "description": "A flush-mount in-ceiling bracket providing a neat and integrated aesthetic for compatible dome cameras.",
+    "specification": {
+      "dimensions": "166.0mm x 75.8mm",
+      "material": "SECC & PC"
+    },
+    "features": [
+      "Neat and integrated design",
+      "Flush ceiling installation"
+    ]
+  },
+  {
+    "name": "Wall Mount bracket (PFB203W)",
+    "id": "PFB203W",
+    "price": "101",
+    "description": "A versatile aluminium wall mount bracket compatible with a wide range of Dahua dome and eyeball cameras.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "160mm(L) x 122mm(W) x 76mm(H)"
+    },
+    "features": [
+      "For HDBWxxE, HDBWxxR-Z/VF, EB Series, HDBxxC, SD22, HDWxxS, HDWxxR-Z"
+    ]
+  },
+  {
+    "name": "Water-proof Wall Mount bracket (PFB210W)",
+    "id": "PFB210W",
+    "price": "55",
+    "description": "A weatherproof aluminium wall mount bracket specifically designed for securing Dahua HDBWxxE-Z series cameras outdoors.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "230mm(W) x 169mm(H) x 113mm(D)"
+    },
+    "features": [
+      "For HDBWxxE-Z",
+      "Weatherproof"
+    ]
+  },
+  {
+    "name": "Ceiling Mount Bracket for Mini Dome, Eyeball & Fisheye Camera",
+    "id": "PFB220C",
+    "price": "45",
+    "description": "A multi-form-factor aluminium ceiling mount bracket suitable for Mini Dome, Eyeball, and Fisheye cameras.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "Multi-form-factor compatible"
+    ]
+  },
+  {
+    "name": "Pendant Mount bracket",
+    "id": "PFB300C",
+    "price": "65",
+    "description": "A pendant mount bracket designed to drop cameras from ceilings, compatible with stackable extension poles.",
+    "specification": {
+      "length": "235mm"
+    },
+    "features": [
+      "Can add extension poles"
+    ]
+  },
+  {
+    "name": "PTZ Wall Mount Bracket (PFB300S)",
+    "id": "PFB300S",
+    "price": "80",
+    "description": "A robust wall mount bracket tailored for securely holding Dahua SD50 and SD59 series PTZ cameras.",
+    "features": [
+      "For SD50, SD59 series PTZ cameras"
+    ]
+  },
+  {
+    "name": "IP66 Water-proof Wall Mount Bracket (PFB302S)",
+    "id": "PFB302S",
+    "price": "135",
+    "description": "An IP66-rated weatherproof wall mount bracket that features built-in junction box functionality for clean wiring.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "134mm(W) x 134mm(H) x 187.5mm(D)"
+    },
+    "features": [
+      "Junction Box function",
+      "IP66 rated"
+    ]
+  },
+  {
+    "name": "PTZ Wall Mount Bracket (PFB303W)",
+    "id": "PFB303W",
+    "price": "75",
+    "description": "A standard aluminium wall mount bracket designed to support a variety of Dahua PTZ camera models.",
+    "features": [
+      "PTZ camera wall mount"
+    ]
+  },
+  {
+    "name": "PTZ Wall Mount Bracket (PFB305W)",
+    "id": "PFB305W",
+    "price": "90",
+    "description": "A specialized wall mount bracket built to accommodate larger Dahua SD49, SD5A, and SD6CE series PTZ cameras.",
+    "features": [
+      "For SD49, SD5A, SD6CE series PTZ"
+    ]
+  },
+  {
+    "name": "Camera Mount Adapters (PFA100/101/102)",
+    "id": "PFA100",
+    "price": "38",
+    "description": "Aluminium mount adapter plates required for fitting specific camera models to compatible wall or pendant mounts.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "Refer camera datasheet to verify correct fitting"
+    ]
+  },
+  {
+    "name": "Camera Mount Adapters (PFA105/106/107/109)",
+    "id": "PFA105",
+    "price": "38",
+    "description": "A series of aluminium adapter plates used to transition specific camera bases to standard mounting brackets.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "Refer camera datasheet to verify correct fitting"
+    ]
+  },
+  {
+    "name": "Camera Adapter Plate (PFA108)",
+    "id": "PFA108",
+    "price": "40",
+    "description": "A specific aluminium adapter plate needed to correctly attach certain camera models to varied mounting arms.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "Refer camera datasheet to verify correct fitting"
+    ]
+  },
+  {
+    "name": "PTZ Mount Adapter (PFA110/111)",
+    "id": "PFA110",
+    "price": "38",
+    "description": "Aluminium mounting adapters designed to bridge the connection between PTZ cameras and their respective brackets.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "For PTZ cameras",
+      "Refer camera datasheet"
+    ]
+  },
+  {
+    "name": "Extension Pole for PFB300C",
+    "id": "PFA113",
+    "price": "50",
+    "description": "A 400mm stackable aluminium extension pole designed to increase the drop length of the PFB300C pendant mount.",
+    "specification": {
+      "length": "400mm",
+      "material": "Aluminium"
+    },
+    "features": [
+      "Stackable for longer drops"
+    ]
+  },
+  {
+    "name": "Extension Pole for PFB220C",
+    "id": "PFA117",
+    "price": "70",
+    "description": "A 780mm stackable aluminium extension pole used to extend the reach of the PFB220C ceiling mount bracket.",
+    "specification": {
+      "length": "780mm",
+      "material": "Aluminium"
+    },
+    "features": [
+      "Stackable for longer drops"
+    ]
+  },
+  {
+    "name": "Plastic Junction Box (PFA12A)",
+    "id": "PFA12A",
+    "price": "30",
+    "description": "A weather-resistant, non-discolouring PP plastic junction box designed to protect camera connections from the elements.",
+    "specification": {
+      "material": "Weatherability and Non-Discolouring PP",
+      "dimensions": "211mm(W) x 97mm(H) x 35mm(D)"
+    },
+    "features": [
+      "Structural water-proof design"
+    ]
+  },
+  {
+    "name": "Wall Mount Base for Dahua PTZ Camera",
+    "id": "PFA120",
+    "price": "60",
+    "description": "An aluminium wall mount base plate serving as the foundational support for installing Dahua PTZ wall brackets.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "115mm(W) x 160mm(H) x 37mm(D)"
+    },
+    "features": [
+      "PTZ wall mount base plate"
+    ]
+  },
+  {
+    "name": "IP66 Water-proof Junction Box (PFA121/122)",
+    "id": "PFA121",
+    "price": "85",
+    "description": "A heavy-duty IP66-rated aluminium junction box ensuring water-tight protection for outdoor camera wiring.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "134mm(W) x 134mm(D) x 55mm(H)"
+    },
+    "features": [
+      "IP66 rated junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA13A)",
+    "id": "PFA13A",
+    "price": "35",
+    "description": "A compact and discreet aluminium junction box designed to neatly conceal wiring for smaller camera profiles.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "96.8 x 33.5mm"
+    },
+    "features": [
+      "Compact junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA13G)",
+    "id": "PFA13G",
+    "price": "38",
+    "description": "An aluminium junction box specifically designed to fit the base profiles of Dahua TL and SL eyeball cameras.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "111.6 x 36mm"
+    },
+    "features": [
+      "For TL eyeball, SL eyeball"
+    ]
+  },
+  {
+    "name": "Water-proof Junction Box (PFA130-E)",
+    "id": "PFA130-E",
+    "price": "68",
+    "description": "A dedicated waterproof aluminium junction box providing secure, weather-resistant housing for camera cables.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "124 x 41mm"
+    },
+    "features": [
+      "Water-proof junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA134)",
+    "id": "PFA134",
+    "price": "40",
+    "description": "A small-form-factor junction box made of Aluminium and SECC, ideal for tight installation spaces.",
+    "specification": {
+      "material": "Aluminium & SECC",
+      "dimensions": "90 x 35mm"
+    },
+    "features": [
+      "Small junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA135)",
+    "id": "PFA135",
+    "price": "45",
+    "description": "A compact aluminium junction box serving as a mounting base and cable management solution for dome cameras.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "90 x 33.7mm"
+    },
+    "features": [
+      "Compact aluminium junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA136)",
+    "id": "PFA136",
+    "price": "45",
+    "description": "A mid-sized aluminium junction box providing ample room for stowing connections behind compatible cameras.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "110 x 33.5mm"
+    },
+    "features": [
+      "Mid-sized aluminium junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA137)",
+    "id": "PFA137",
+    "price": "50",
+    "description": "A standard-sized aluminium junction box designed to seamlessly integrate with a variety of Dahua camera models.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "122 x 33.8mm"
+    },
+    "features": [
+      "Aluminium junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA138)",
+    "id": "PFA138",
+    "price": "55",
+    "description": "A larger aluminium junction box offering extra space for complex wiring or balun storage behind the camera.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "161 x 38mm"
+    },
+    "features": [
+      "Large aluminium junction box"
+    ]
+  },
+  {
+    "name": "Camera Junction Box (PFA139)",
+    "id": "PFA139",
+    "price": "35",
+    "description": "A slim-profile aluminium junction box for aesthetic installations where minimizing mount depth is required.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "108 x 28.5mm"
+    },
+    "features": [
+      "Slim aluminium junction box"
+    ]
+  },
+  {
+    "name": "Power Box Enclosure (PFA140)",
+    "id": "PFA140",
+    "price": "339",
+    "description": "A spacious, weather-resistant enclosure designed to safely house power supplies, adapters, and system accessories outdoors.",
+    "specification": {
+      "material": "Aluminium & SECC",
+      "dimensions": "297(W) x 248(H) x 107(D) mm"
+    },
+    "features": [
+      "Enclosure for power supplies and accessories"
+    ]
+  },
+  {
+    "name": "Pole Mount Bracket (PFA150)",
+    "id": "PFA150",
+    "price": "101",
+    "description": "A versatile SECC steel pole mount adapter used to secure camera wall mounts firmly to round poles.",
+    "specification": {
+      "material": "SECC",
+      "dimensions": "130.4mm(W) x 170mm(H) x 45mm(D)"
+    },
+    "features": [
+      "Pole mount adapter"
+    ]
+  },
+  {
+    "name": "Corner Mount bracket (PFA151)",
+    "id": "PFA151",
+    "price": "90",
+    "description": "An SECC steel corner mount adapter allowing camera wall mounts to be securely installed on building corners.",
+    "specification": {
+      "material": "SECC",
+      "dimensions": "243mm(W) x 170mm(H) x 138mm(D)"
+    },
+    "features": [
+      "Corner mount adapter"
+    ]
+  },
+  {
+    "name": "Pole Mount Bracket (PFA152-E)",
+    "id": "PFA152-E",
+    "price": "85",
+    "description": "An adjustable aluminium pole mount bracket compatible with mast diameters ranging from 80mm to 150mm.",
+    "specification": {
+      "material": "Aluminium",
+      "dimensions": "125.6mm(W) x 114mm(H) x 20mm(D)",
+      "mast_diameter": "80~150mm"
+    },
+    "features": [
+      "Adjustable for various pole diameters"
+    ]
+  },
+  {
+    "name": "Housing Bracket (PFA162)",
+    "id": "PFA162",
+    "price": "60",
+    "description": "An aluminium support bracket offering three-axis rotation for precise positioning of box camera housings.",
+    "specification": {
+      "material": "Aluminium"
+    },
+    "features": [
+      "Support three-axis rotation for housing installation"
+    ]
+  }
+]

@@ -1,0 +1,1636 @@
+[
+  {
+    "name": "2MP IR Eyeball HD-CVI Camera (𝜙85 × 69mm)",
+    "id": "T1A21P",
+    "price": "120",
+    "description": "A cost-effective 2MP HD-CVI eyeball camera in a compact plastic housing, featuring Smart IR up to 20m and multi-format video output.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP IR Outdoor Bullet HD-CVI Camera (𝜙70 × 149mm)",
+    "id": "B1A21P",
+    "price": "135",
+    "description": "A 2MP HD-CVI bullet camera designed for outdoor use with an IP67 rating, offering 1080P resolution and 20m IR night vision.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP IR Eyeball HD-CVI Camera (𝜙94 × 78mm)",
+    "id": "T2A21",
+    "price": "155",
+    "description": "A durable 2MP HD-CVI eyeball camera enclosed in an IP67-rated aluminium housing, suitable for varied indoor and outdoor environments.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP IR Outdoor Bullet HD-CVI Camera (𝜙70 × 158mm)",
+    "id": "B2A21",
+    "price": "162",
+    "description": "A sturdy 2MP HD-CVI bullet camera with an aluminium casing and IP67 weatherproofing, providing reliable 1080P video.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP IR Dome HD-CVI Varifocal Camera (𝜙122 × 98mm)",
+    "id": "D3A21-VF",
+    "price": "263",
+    "description": "A versatile 2MP HD-CVI dome camera featuring a manually adjustable 2.7-12mm varifocal lens and 30m IR range.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "2.7 - 12mm Varifocal",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP IR Outdoor Bullet HD-CVI Varifocal Camera (210 x 90 x 90mm)",
+    "id": "B4A21-VF",
+    "price": "283",
+    "description": "An outdoor 2MP HD-CVI bullet camera with a 2.7-12mm varifocal lens, housed in an IP67-rated aluminium body.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "2.7 - 12mm Varifocal",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP IR Eyeball HD-CVI Camera (𝜙85 × 69mm)",
+    "id": "T1A51",
+    "price": "175",
+    "description": "A high-resolution 5MP HD-CVI eyeball camera in a lightweight plastic housing, offering crisp video and 20m IR night vision.",
+    "specification": {
+      "sensor": "1/2.7\" 5.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "20fps @ 5MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP IR Outdoor Bullet HD-CVI Camera (𝜙70 × 149mm)",
+    "id": "B1A51",
+    "price": "188",
+    "description": "An affordable 5MP HD-CVI bullet camera providing detailed surveillance with IP67 weather resistance for outdoor installations.",
+    "specification": {
+      "sensor": "1/2.7\" 5.0 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.04Lux",
+      "frame_rate": "20fps @ 5MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP IR Eyeball HD-CVI Camera (𝜙94 × 78mm)",
+    "id": "T2A51",
+    "price": "202",
+    "description": "A 5MP HD-CVI eyeball camera with an aluminium housing and IP67 rating, featuring a 2.8mm wide-angle lens.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "25fps @ 5MP (16:9 video output)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable via OSD",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP IR Outdoor Bullet HD-CVI Camera (𝜙70 × 158mm)",
+    "id": "B2A51",
+    "price": "208",
+    "description": "A robust 5MP HD-CVI bullet camera encased in aluminium, offering a 16:9 video output format and 20m IR.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "25fps @ 5MP (16:9 video output)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable via OSD",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP HD-CVI IR Eyeball Varifocal Camera (𝜙122 × 106mm)",
+    "id": "T3A51-Z",
+    "price": "303",
+    "description": "A premium 5MP HD-CVI eyeball camera featuring a 2.7-12mm motorized varifocal lens and extended 40m IR capabilities.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "25fps @ 5MP (16:9 video output)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable via OSD",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "2.7 - 12mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP HD-CVI IR Bullet Varifocal Camera (244 × 91 × 91mm)",
+    "id": "B3A51-Z",
+    "price": "316",
+    "description": "A high-performance 5MP HD-CVI bullet camera with a motorized varifocal lens, ideal for adjusting views in varied outdoor settings.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "25fps @ 5MP (16:9 video output)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable via OSD",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "2.7 - 12mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP Value Starlight HD-CVI IR Eyeball Camera (𝜙97 × 79mm)",
+    "id": "HDW1220SL-S2",
+    "price": "195",
+    "description": "A 2MP HD-CVI eyeball camera equipped with Starlight technology for superior low-light color performance before IR activation.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP Value Starlight HD-CVI IR Bullet Camera (𝜙70 × 154mm)",
+    "id": "HFW1220R-S2",
+    "price": "202",
+    "description": "An outdoor 2MP HD-CVI bullet camera featuring Starlight capabilities, ensuring clear 1080P imagery in challenging lighting.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "Starlight 0.008Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI Quick-to-install IR Eyeball Camera (𝜙97 × 93mm)",
+    "id": "HDW1200TRQ",
+    "price": "175",
+    "description": "A 2MP HD-CVI eyeball camera designed for rapid installation, featuring a 2.8mm lens and 25m Smart IR.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 25m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP50"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI IR Bullet Camera (161 x 70 x 70mm)",
+    "id": "HFW1200C",
+    "price": "182",
+    "description": "A standard 2MP HD-CVI bullet camera offering reliable 1080P video, 30m Smart IR, and an IP67 rating.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 30m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI IR Eyeball Camera (𝜙93 × 79mm)",
+    "id": "HDW1200M",
+    "price": "195",
+    "description": "A robust 2MP HD-CVI eyeball camera housed in metal, providing a wide 2.8mm view and 30m Smart IR.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 30m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Metal Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI IR Bullet Camera (174 x 72 x 70mm)",
+    "id": "HFW1200T",
+    "price": "200",
+    "description": "A durable 2MP HD-CVI bullet camera with a metal housing, delivering real-time 1080P video and IP67 weather resistance.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 30m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Metal Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI IR Dome Camera (𝜙122 × 89mm)",
+    "id": "HDBW1200R-Z",
+    "price": "295",
+    "description": "A 2MP HD-CVI dome camera featuring a motorized varifocal lens and IK10 vandal-proof rating for secure installations.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 30m",
+      "lens": "2.7 - 12mm Motorised Varifocal",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI IR Bullet Camera (210 × 90 × 90mm)",
+    "id": "HFW1200R-Z-IRE6",
+    "price": "316",
+    "description": "A 2MP HD-CVI bullet camera with a motorized varifocal lens and extended 60m Smart IR for long-range coverage.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@2MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "Smart IR LED up to 60m",
+      "lens": "2.7 - 12mm Motorised Varifocal",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4MP IR Eyeball HD-CVI Camera (𝜙85 × 69mm)",
+    "id": "HDW1400R",
+    "price": "208",
+    "description": "A 4MP HD-CVI eyeball camera offering sharp, high-resolution video in a compact plastic housing.",
+    "specification": {
+      "sensor": "1/3\" 4.1 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "Real-Time 30fps@4MP",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4MP IR Outdoor Bullet HD-CVI Camera (154 x 70 x 70mm)",
+    "id": "HFW1400R",
+    "price": "222",
+    "description": "A 4MP HD-CVI bullet camera providing clear daytime imagery and 20m IR, protected by an IP67 rating.",
+    "specification": {
+      "sensor": "1/2.7\" 4 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "Real-Time 30fps@4MP",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4K HDCVI IR Eyeball Camera (𝜙85 × 69mm)",
+    "id": "HDW1800R",
+    "price": "249",
+    "description": "An entry-level 4K (8MP) HD-CVI eyeball camera delivering ultra-high-definition video and 20m IR in a small footprint.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "15fps@4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP50"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4K HDCVI IR Bullet Camera (𝜙70 × 154mm)",
+    "id": "HFW1800R",
+    "price": "263",
+    "description": "A 4K (8MP) HD-CVI bullet camera designed for outdoor clarity, featuring IP67 weather resistance and 20m IR.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "15fps@4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "4K Real-time HDCVI IR Eyeball Camera (𝜙97× 86mm)",
+    "id": "HDW1800TL-A",
+    "price": "377",
+    "description": "A high-performance 4K HD-CVI eyeball camera capturing smooth 30fps video, enhanced with a built-in microphone.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "30fps@4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic cover with Metal inner core",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K Real-time HDCVI IR Bullet Camera (241 x 91 x 90mm)",
+    "id": "HFW1800TH-I8",
+    "price": "397",
+    "description": "A premium 4K HD-CVI bullet camera offering real-time 30fps recording and a powerful 80m IR range for expansive areas.",
+    "specification": {
+      "sensor": "1/2.7\" 8MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "30fps@4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable; OSD Menu",
+      "ir_distance": "IR LED up to 80m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Metal front cover with Plastic body",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP Starlight HD-CVI IR Dome Camera (𝜙112 × 89mm)",
+    "id": "HDBW1231EA-A",
+    "price": "263",
+    "description": "A 2MP HD-CVI dome camera combining Starlight sensitivity, True 130dB WDR, and a built-in microphone in an IK10 housing.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Metal Casing",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "130dB True WDR",
+      "Super Adapt",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Starlight HD-CVI IR Bullet Camera (161 × 70 × 70mm)",
+    "id": "HFW1231C-A",
+    "price": "249",
+    "description": "A 2MP HD-CVI bullet camera featuring advanced Starlight capabilities, Super Adapt technology, and integrated audio.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Plastic Casing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "130dB True WDR",
+      "Super Adapt",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Starlight HD-CVI IR Eyeball Camera w/ Motorised Lens (𝜙122 × 104mm)",
+    "id": "HDW1230T-Z-A",
+    "price": "357",
+    "description": "A 2MP HD-CVI eyeball camera with a motorized lens, Starlight imaging, and a built-in mic for versatile monitoring.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7 ~ 12mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Starlight HD-CVI IR Dome Camera w/ Motorised Lens (𝜙126 × 100mm)",
+    "id": "HDBW1231RA-Z-A",
+    "price": "377",
+    "description": "A tough 2MP HD-CVI dome camera offering a motorized lens, True WDR, Starlight tech, and IK10 impact protection.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7 - 12mm Motorised",
+      "power_supply": "DC12V",
+      "housing": "Metal Casing",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "130dB True WDR",
+      "Super Adapt",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Starlight HD-CVI IR Bullet Camera w/ Motorised Lens (210 x 90 x 90mm)",
+    "id": "HFW1231R-Z-A",
+    "price": "397",
+    "description": "A 2MP HD-CVI bullet camera equipped with a motorized lens, exceptional 130dB True WDR, and 80m IR range.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.002Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 80m",
+      "lens": "2.7 - 12mm Motorised",
+      "power_supply": "DC12V",
+      "housing": "Metal Casing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "130dB True WDR",
+      "Super Adapt",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Full-Colour HD-CVI Quick-to-install Eyeball Camera (𝜙97 × 93mm)",
+    "id": "HDW1239TLQ-A-LED",
+    "price": "235",
+    "description": "A quick-install 2MP HD-CVI eyeball camera that utilizes warm LEDs to provide vivid full-color video 24/7.",
+    "specification": {
+      "sensor": "1/2.8\" 2 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "audio": "Broadcast-quality audio",
+      "illumination_distance": "Warm LED up to 20m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "130dB True WDR",
+      "Built-in Microphone",
+      "Full-color"
+    ]
+  },
+  {
+    "name": "2MP Full-Colour Starlight HD-CVI Bullet Camera (198 × 80 × 76mm)",
+    "id": "HFW1239TLM-A-LED",
+    "price": "249",
+    "description": "A 2MP HD-CVI bullet camera ensuring 24/7 color details up to 40m away, supported by Starlight technology and a built-in mic.",
+    "specification": {
+      "sensor": "1/2.8\" 2.16 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "audio": "Broadcast-quality audio",
+      "illumination_distance": "White LED up to 40m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone",
+      "Full-color"
+    ]
+  },
+  {
+    "name": "2MP Full-Colour HD-CVI Eyeball Motorised Camera (𝜙122 × 105mm)",
+    "id": "HDW1239T-Z-A-LED",
+    "price": "330",
+    "description": "A 2MP HD-CVI eyeball camera offering full-color night vision, a motorized varifocal lens, and True 130dB WDR.",
+    "specification": {
+      "sensor": "1/2.8\" 2 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "audio": "Broadcast-quality audio",
+      "illumination_distance": "Illumination up to 40m",
+      "lens": "2.7 - 13.5mm Motorised",
+      "power_supply": "DC12V",
+      "housing": "Metal Casing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "Super Adapt",
+      "130dB True WDR",
+      "Built-in Microphone",
+      "Full-color"
+    ]
+  },
+  {
+    "name": "2MP Full-Colour HD-CVI Bullet Motorised Camera (244 × 90 × 90mm)",
+    "id": "HFW1239TU-Z-A-LED",
+    "price": "350",
+    "description": "A 2MP HD-CVI bullet camera featuring a motorized lens, 60m full-color illumination, and broadcast-quality audio.",
+    "specification": {
+      "sensor": "1/2.8\" 2 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "audio": "Broadcast-quality audio",
+      "illumination_distance": "Illumination up to 60m",
+      "lens": "2.7 - 13.5mm Motorised",
+      "power_supply": "DC12V",
+      "housing": "Metal Casing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "Super Adapt",
+      "130dB True WDR",
+      "Built-in Microphone",
+      "Full-color"
+    ]
+  },
+  {
+    "name": "5MP Full-Colour HD-CVI Quick-to-install Eyeball Camera (𝜙97 × 91mm)",
+    "id": "HDW1509TLQ-A-LED",
+    "price": "218",
+    "description": "A 5MP HD-CVI eyeball camera designed for easy setup, delivering full-color night vision and 120dB WDR.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "audio": "Broadcast-quality audio",
+      "illumination_distance": "Warm LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "3DNR",
+      "120dB WDR",
+      "Built-in Microphone",
+      "Full-color"
+    ]
+  },
+  {
+    "name": "5MP Full-Colour Starlight HD-CVI Bullet Camera (175 × 71 × 73mm)",
+    "id": "HFW1509T-A-LED",
+    "price": "216",
+    "description": "A 5MP HD-CVI bullet camera that uses Starlight tech and white LEDs to maintain vibrant color images in the dark.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "audio": "Broadcast-quality audio",
+      "illumination_distance": "White LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone",
+      "Full-color"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI Quick-to-install IR Eyeball Camera (𝜙110 × 88mm)",
+    "id": "HDW1500TLMQ",
+    "price": "283",
+    "description": "A 5MP HD-CVI eyeball camera in a metal dome, offering quick installation, Starlight capabilities, and 30m IR.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "25fps @ 5MP (16:9 ratio)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Metal Dome + Cover",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI IR Dome Camera (𝜙110 × 81mm)",
+    "id": "HDBW1500E",
+    "price": "276",
+    "description": "A vandal-resistant 5MP HD-CVI dome camera featuring Starlight technology and a 16:9 widescreen video output.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.01Lux",
+      "frame_rate": "25fps @ 5MP (16:9 ratio)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP IR Bullet HD-CVI Camera (176 x 73 x 73mm)",
+    "id": "HFW1500T",
+    "price": "269",
+    "description": "A 5MP HD-CVI bullet camera housed in aluminium, delivering clear 20fps video and reliable 30m IR night vision.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "20fps @ 5MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "5MP Long Range IR Bullet HD-CVI Camera (199 × 80 × 76 mm)",
+    "id": "HFW1500TL-A",
+    "price": "296",
+    "description": "A 5MP HD-CVI bullet camera designed for distance, featuring an 8mm lens, 80m Array IR, and a built-in microphone.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "20fps @ 5MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "Array IR LED up to 80m",
+      "lens": "8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium (Front) Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP IR Eyeball HD-CVI Camera (𝜙122 × 104mm)",
+    "id": "HDW1500T-Z-A",
+    "price": "357",
+    "description": "A versatile 5MP HD-CVI eyeball camera equipped with a motorized lens, 60m IR, and integrated audio recording.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "20fps @ 5MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7 ~ 12mm Motorised",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP IR Bullet HD-CVI Camera (𝜙91 × 210mm)",
+    "id": "HFW1500R-Z-IRE6-A",
+    "price": "370",
+    "description": "A 5MP HD-CVI bullet camera with a motorized varifocal lens, providing 60m IR range and a built-in microphone.",
+    "specification": {
+      "sensor": "1/2.7\" 5 Megapixel Progressive Scan CMOS image sensor",
+      "minimum_illumination": "0.02Lux",
+      "frame_rate": "20fps @ 5MP",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7 ~ 12mm Motorised",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K HDCVI IR Eyeball Camera (𝜙97 x 86mm)",
+    "id": "HDW1801TL-A",
+    "price": "337",
+    "description": "An 8MP (4K) HD-CVI eyeball camera that captures stunning ultra-HD video, featuring True 120dB WDR and a built-in mic.",
+    "specification": {
+      "sensor": "1/2.7\" 8 Megapixel CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "15fps @ 4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "3DNR",
+      "True WDR 120dB",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K HDCVI IR Bullet Camera (241 x 91 x 91mm)",
+    "id": "HFW1801TL-A",
+    "price": "357",
+    "description": "An 8MP (4K) HD-CVI bullet camera offering 80m IR reach, True WDR, and an integrated microphone for high-end surveillance.",
+    "specification": {
+      "sensor": "1/2.7\" 8 Megapixel CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "15fps @ 4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 80m",
+      "lens": "3.6mm Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "3DNR",
+      "True WDR 120dB",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K HDCVI IR Eyeball Camera (𝜙122 x 105mm)",
+    "id": "HDW1801T-Z",
+    "price": "397",
+    "description": "A 4K HD-CVI eyeball camera equipped with a motorized lens, True WDR, and 60m IR for flexible ultra-HD monitoring.",
+    "specification": {
+      "sensor": "1/2.7\" 8 Megapixel CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "15fps @ 4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "4K HDCVI IR Bullet Camera (210 x 91 x 91mm)",
+    "id": "HFW1801R-Z-IRE6",
+    "price": "410",
+    "description": "A robust 4K HD-CVI bullet camera featuring a motorized varifocal lens, 60m IR, and exceptional True WDR clarity.",
+    "specification": {
+      "sensor": "1/2.7\" 8 Megapixel CMOS image sensor",
+      "minimum_illumination": "0.03Lux",
+      "frame_rate": "15fps @ 4K",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7-13.5mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "3DNR",
+      "True WDR 120dB"
+    ]
+  },
+  {
+    "name": "2MP IR Eyeball Starlight+ WDR Camera (𝜙97 × 86mm)",
+    "id": "HDW2241TL",
+    "price": "263",
+    "description": "A 2MP HD-CVI eyeball camera utilizing Starlight+ technology for outstanding low-light imaging and True 120dB WDR.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "3.6mm",
+      "power_supply": "DC12V",
+      "housing": "Metal + Plastic casing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "True WDR 120dB",
+      "Starlight+",
+      "Smart IR",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP Starlight+ HD-CVI IR Bullet Camera (199 x 80 x 76mm)",
+    "id": "HFW2241TL",
+    "price": "269",
+    "description": "A 2MP HD-CVI bullet camera delivering superior night vision via Starlight+ technology and 40m Smart IR.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "3.6mm",
+      "power_supply": "DC12V",
+      "housing": "Metal front cover with Plastic body",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "True WDR 120dB",
+      "Starlight+",
+      "Smart IR",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP IR Dome Starlight+ WDR HD-CVI Camera (𝜙106 × 50mm)",
+    "id": "HDBW2241F-A",
+    "price": "283",
+    "description": "A tough 2MP HD-CVI dome camera featuring Starlight+ imaging, True WDR, an IK10 rating, and a built-in mic.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "2.8mm Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "True WDR 120dB",
+      "Starlight+",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Starlight+ HD-CVI IR Bullet Camera (161 x 70 x 70mm)",
+    "id": "HFW2241CM-A",
+    "price": "290",
+    "description": "A 2MP HD-CVI bullet camera housed in metal, offering 130dB True WDR, Starlight+ low-light performance, and integrated audio.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 30m",
+      "lens": "3.6mm",
+      "power_supply": "DC12V",
+      "housing": "Metal casing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "True WDR 130dB",
+      "Starlight+",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP IR Dome Starlight+ WDR Camera w/ Motorised Lens (𝜙122 × 89mm)",
+    "id": "HDBW2241R-Z",
+    "price": "357",
+    "description": "A 2MP HD-CVI dome camera with a motorized lens, IK10 vandal resistance, and Starlight+ technology for exceptional clarity.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "Array IR LED up to 30m",
+      "lens": "2.7 ~ 13.5mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "True WDR 120dB",
+      "Starlight+",
+      "Smart IR",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP IR Bullet Starlight+ WDR Camera w/ Motorised Lens (244 x 90 x 90mm)",
+    "id": "HFW2241T-Z-A",
+    "price": "384",
+    "description": "A long-range 2MP HD-CVI bullet camera featuring an 80m IR range, motorized lens, built-in mic, and Starlight+ imaging.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 80m",
+      "lens": "2.7 ~ 13.5mm Motorised",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "True WDR 120dB",
+      "Starlight+",
+      "Smart IR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI Quick-to-install IR Eyeball Camera (𝜙110mm x 101mm)",
+    "id": "HDW2501TQ-A",
+    "price": "330",
+    "description": "A 5MP HD-CVI eyeball camera designed for fast installation, featuring a built-in microphone, True WDR, and Starlight technology.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "frame_rate": "25fps @ 5MP resolution (2880 x 1620)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "3.6mm Fixed Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI IR Bullet Camera (180 x 70 x 70mm)",
+    "id": "HFW2501E-A",
+    "price": "323",
+    "description": "A 5MP HD-CVI bullet camera delivering Starlight low-light performance, 120dB WDR, and an integrated microphone.",
+    "specification": {
+      "sensor": "1/2.8\" 5MP CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps @ 5MP resolution (2592 x 1944)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "3.6mm Fixed Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI IR Eyeball Camera (𝜙122mm x 107mm)",
+    "id": "HDW2501T-Z-A",
+    "price": "397",
+    "description": "A 5MP HD-CVI eyeball camera equipped with a motorized lens, True WDR, and Starlight technology for dynamic surveillance needs.",
+    "specification": {
+      "sensor": "1/2.8\" 5MP CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps @ 5MP resolution (2592 x 1944)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "2.7~13.5mm Motorised Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI IR Bullet Camera (244mm x 90mm x 90mm)",
+    "id": "HFW2501TU-Z-A",
+    "price": "417",
+    "description": "A robust 5MP HD-CVI bullet camera featuring a motorized lens, 80m IR, and excellent Starlight low-light sensitivity.",
+    "specification": {
+      "sensor": "1/2.7\" 5MP CMOS image sensor",
+      "minimum_illumination": "Starlight 0.001Lux",
+      "frame_rate": "25fps @ 5MP resolution (2880 x 1620)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 80m",
+      "lens": "2.7~13.5mm Motorised Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K Starlight HD-CVI IR Eyeball Camera (𝜙106mm x 99mm)",
+    "id": "HDW2802T-A",
+    "price": "430",
+    "description": "An 8MP (4K) HD-CVI eyeball camera that combines ultra-HD resolution with Starlight sensitivity and True 120dB WDR.",
+    "specification": {
+      "sensor": "1/2\" 8.0 MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "15fps @ 8MP resolution (3840 x 2160)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 50m",
+      "lens": "2.8mm Fixed Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K Starlight HD-CVI IR Bullet Camera (180mm x 70mm x 70mm)",
+    "id": "HFW2802E-A",
+    "price": "424",
+    "description": "An 8MP (4K) HD-CVI bullet camera delivering high-definition Starlight imaging, built-in audio, and robust weatherproofing.",
+    "specification": {
+      "sensor": "1/2\" 8.0 MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "15fps @ 8MP resolution (3840 x 2160)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 40m",
+      "lens": "3.6mm Fixed Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K Starlight HD-CVI IR Varifocal Eyeball Camera (𝜙122mm x 107mm)",
+    "id": "HDW2802T-Z-A",
+    "price": "511",
+    "description": "A premium 4K HD-CVI eyeball camera equipped with a motorized lens, Starlight tech, and 120dB WDR for superior clarity.",
+    "specification": {
+      "sensor": "1/2\" 8.0 MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "15fps @ 8MP resolution (3840 x 2160)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 60m",
+      "lens": "3.7-11mm Motorised Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "4K Starlight HD-CVI IR Varifocal Bullet Camera (244mm x 90mm x 90mm)",
+    "id": "HFW2802T-Z-A",
+    "price": "531",
+    "description": "A high-end 4K HD-CVI bullet camera featuring a motorized varifocal lens, extensive 80m IR, and exceptional Starlight performance.",
+    "specification": {
+      "sensor": "1/2\" 8.0 MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "15fps @ 8MP resolution (3840 x 2160)",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "IR LED up to 80m",
+      "lens": "3.7-11mm Motorised Lens",
+      "power_supply": "DC12V",
+      "waterproof_rating": "IP67 Water-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP Starlight HD-CVI IR Fisheye Dome Camera (𝜙126 × 41mm)",
+    "id": "EW2501",
+    "price": "470",
+    "description": "A 5MP HD-CVI fisheye dome camera providing a 360-degree panoramic view, True 120dB WDR, and a built-in microphone.",
+    "specification": {
+      "sensor": "1/2.8\" 5 MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "frame_rate": "20fps@5MP",
+      "video_output": "OSD Menu Switchable",
+      "ir_distance": "IR LED up to 10m",
+      "lens": "1.4mm Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium + Plastic",
+      "view_angle": "360°Angle View"
+    },
+    "features": [
+      "3DNR",
+      "True WDR 120dB",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP & 4MP HD-CVI MotionEye Camera (147 × 73 × 83 mm)",
+    "id": "ME1200B-PIR",
+    "price": "316",
+    "description": "An HD-CVI bullet camera integrating a PIR sensor for dual detection, reducing false alarms and ensuring accurate motion triggering.",
+    "specification": {
+      "sensor": "1/2.7\" 2 Megapixel Progressive Scan CMOS image sensor; 0.02Lux (ME1200B) or 1/3\" 4.1 Megapixel; 0.03Lux (ME1400B)",
+      "frame_rate": "Real-Time 30fps",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Front Cover",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Smart IR",
+      "2DNR",
+      "DWDR",
+      "PIR for Dual Detection"
+    ]
+  },
+  {
+    "name": "2MP & 5MP HD-CVI Active Deterrance Camera (𝜙110mm×96mm)",
+    "id": "ME1200E-LED",
+    "price": "343",
+    "description": "An eyeball HD-CVI camera featuring a built-in PIR sensor and a white flashing light to actively deter potential intruders.",
+    "specification": {
+      "sensor": "1/2.7\" Progressive Scan CMOS image sensor; 0.02Lux",
+      "frame_rate": ">30fps @ 2MP (ME1200E) / >20fps @ 5MP (ME1500E)",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "2.8mm/3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "DWDR",
+      "2DNR",
+      "Built-in PIR for Dual Detection",
+      "White Light Flashing to warn off intruders"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI Active Deterrance Camera (147 × 72 × 83 mm)",
+    "id": "ME1200B-LED",
+    "price": "330",
+    "description": "A 2MP HD-CVI bullet camera equipped with PIR motion detection and a visual white light alarm for active deterrence.",
+    "specification": {
+      "sensor": "1/2.7\" Progressive Scan CMOS image sensor; 0.02Lux",
+      "frame_rate": "30fps @ 2MP (1920 x 1080)",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "DWDR",
+      "2DNR",
+      "Built-in PIR for Dual Detection",
+      "White Light Flashing to warn off intruders"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI Active Deterrance Camera (169 × 79 × 79 mm)",
+    "id": "ME1200D",
+    "price": "350",
+    "description": "A 2MP HD-CVI bullet camera that utilizes both a flashing white light and a siren to actively warn off trespassers upon PIR detection.",
+    "specification": {
+      "sensor": "1/2.7\" 2 MP Scan CMOS image sensor; 0.02Lux",
+      "frame_rate": "30fps@1080P",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Front Cover",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "PIR for Dual Detection",
+      "White Light & Siren to warn off intruders"
+    ]
+  },
+  {
+    "name": "2MP HD-CVI Temperature & Humidity Camera (176 × 86 × 75 mm)",
+    "id": "LC1220T-TH",
+    "price": "323",
+    "description": "A unique 2MP HD-CVI bullet camera that simultaneously monitors video and tracks environmental temperature and humidity.",
+    "specification": {
+      "sensor": "1/2.9\" 2.0 Megapixel SONY CMOS image sensor; 0.02Lux",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "Built-in Temperature & Humidity sensor",
+      "Smart IR",
+      "2DNR",
+      "DWDR"
+    ]
+  },
+  {
+    "name": "2MP HDCVI Active Deterrence Camera (145 x 77 x 146mm)",
+    "id": "ME2241C",
+    "price": "337",
+    "description": "A 2MP HD-CVI camera combining Starlight sensitivity, True 120dB WDR, and active deterrence features like a siren and white light.",
+    "specification": {
+      "sensor": "1/2.8\" 2 MP Progressive Scan CMOS image sensor",
+      "minimum_illumination": "Starlight 0.004Lux",
+      "frame_rate": "30fps@1080P",
+      "video_output": "HD and SD Switchable Output",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in PIR for Dual Detection",
+      "White Light & Siren to warn off intruders",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "5MP HDCVI Active Deterrence Camera (145 x 77 x 146mm)",
+    "id": "ME1500C",
+    "price": "511",
+    "description": "A high-resolution 5MP HD-CVI camera equipped with a PIR sensor, flashing white light, and siren for robust active deterrence.",
+    "specification": {
+      "sensor": "1/2.7\" 5 MP Progressive Scan CMOS image sensor; 0.02Lux",
+      "frame_rate": "20fps@5MP",
+      "video_output": "HD and SD Switchable Output; OSD Menu",
+      "ir_distance": "IR LED up to 20m",
+      "lens": "2.8mm M12 Fixed",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "PIR for Dual Detection",
+      "White Light & Siren to warn off intruders"
+    ]
+  },
+  {
+    "name": "2MP IR Mini Eyeball HD-CVI Camera (𝜙62 × 62mm)",
+    "id": "HDW3200G",
+    "price": "377",
+    "description": "A highly compact 2MP HD-CVI mini eyeball camera featuring a built-in microphone and IP67 weather resistance.",
+    "specification": {
+      "sensor": "1/2.7\" 2.0 Megapixel Progressive Scan CMOS image sensor; 0.02Lux",
+      "frame_rate": "30fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "ir_distance": "Smart IR LED up to 20m",
+      "lens": "3.6mm M12 Fixed",
+      "power_supply": "DC12V",
+      "housing": "Aluminium Housing",
+      "ingress_protection": "IP67"
+    },
+    "features": [
+      "DWDR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP Starlight HD-CVI Pinhole ATM Camera (36 × 30 × 22 mm)",
+    "id": "HUM3201B",
+    "price": "363",
+    "description": "A miniature 2MP HD-CVI pinhole camera designed for covert surveillance in ATMs, featuring True 120dB WDR and Starlight tech.",
+    "specification": {
+      "sensor": "1/2.8\" 2.0 Megapixel CMOS image sensor",
+      "minimum_illumination": "Starlight 0.05Lux (Color), 0.005 Lux (B/W)",
+      "frame_rate": "25fps @ 1080P",
+      "video_output": "HD-CVI/AHD/TVI/CVBS Switchable",
+      "lens": "2.8mm Pinhole",
+      "power_supply": "DC12V",
+      "housing": "Aluminium casing"
+    },
+    "features": [
+      "3DNR",
+      "120dB True WDR"
+    ]
+  },
+  {
+    "name": "4K IR Vandal-Proof HD-CVI Fisheye Camera (𝜙150mm x 48mm)",
+    "id": "EBW3802",
+    "price": "1009",
+    "description": "An 8MP (4K) HD-CVI fisheye camera offering an ultra-wide 180-degree view, housed in an IK10 vandal-proof dome.",
+    "specification": {
+      "sensor": "1/2\" 8.0 MP Progressive Scan CMOS image sensor; 0.01Lux",
+      "frame_rate": "15fps @ 8MP resolution (3840 x 2160)",
+      "video_output": "HD-CVI & CVBS outputs",
+      "ir_distance": "IR LED up to 15m",
+      "lens": "Panaromic 2.5mm 180° Fisheye Lens",
+      "view_angle": "180°Angle View",
+      "power_supply": "DC12V",
+      "ingress_protection": "IP67 Water-proof",
+      "impact_protection": "IK10 Vandal-proof"
+    },
+    "features": [
+      "120dB WDR",
+      "3DNR",
+      "Built-in Microphone"
+    ]
+  },
+  {
+    "name": "2MP 4x Starlight HDCVI Mini PTZ Dome - Surface Mount (𝜙122 × 89mm)",
+    "id": "SD22204-GC-LB",
+    "price": "875",
+    "description": "A compact 2MP HD-CVI mini PTZ dome camera providing 4x optical zoom, True 120dB WDR, and Starlight low-light performance.",
+    "specification": {
+      "sensor": "1/2.8\" STARVIS CMOS image sensor (without IR)",
+      "minimum_illumination": "Starlight 0.05Lux",
+      "optical_zoom": "4x Optical Zoom",
+      "digital_zoom": "16x Digital Zoom",
+      "frame_rate": "30fps @ 1080P resolution (1920 x 1080) / 60fps @ 720P",
+      "video_output": "CVI/TVI/AHD/CVBS mode",
+      "lens": "2.7 ~ 11mm",
+      "power_supply": "DC12V 1.5A",
+      "ingress_protection": "IP66",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "120dB True WDR",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP 15x Starlight HD-CVI Mini PTZ Dome - Surface Mount (𝜙170 × 155mm)",
+    "id": "SD42215-HC-LA",
+    "price": "2420",
+    "description": "A surface-mount 2MP HD-CVI PTZ dome camera featuring 15x optical zoom, Starlight sensitivity, and an IK10 vandal-proof casing.",
+    "specification": {
+      "sensor": "1/2.8\" STARVIS CMOS image sensor (without IR)",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "optical_zoom": "15x Optical Zoom",
+      "digital_zoom": "16x Digital Zoom",
+      "frame_rate": "30fps @ 1080P resolution (1920 x 1080)",
+      "lens": "5 ~ 75mm",
+      "power_supply": "DC12V 5A",
+      "weight": "1.8kg",
+      "ingress_protection": "IP66",
+      "impact_protection": "IK10"
+    },
+    "features": [
+      "120dB True WDR",
+      "3DNR"
+    ]
+  },
+  {
+    "name": "2MP 25x Starlight IR PTZ HD-CVI Camera (𝜙160 × 295mm)",
+    "id": "SD49225-HC-LA",
+    "price": "4710",
+    "description": "A high-performance 2MP HD-CVI PTZ camera equipped with 25x optical zoom, True 120dB WDR, and 100m IR night vision.",
+    "specification": {
+      "sensor": "1/2.8\" STARVIS CMOS image sensor",
+      "minimum_illumination": "Starlight 0.005Lux",
+      "optical_zoom": "25x Optical Zoom",
+      "digital_zoom": "16x Digital Zoom",
+      "frame_rate": "30fps @ 1080P resolution (1920 x 1080) / 60fps @ 720P",
+      "ir_distance": "IR up to 100m",
+      "lens": "4.8 ~ 120mm Motorised",
+      "power_supply": "DC12V 3A",
+      "ingress_protection": "IP66 Water-proof"
+    },
+    "features": [
+      "120dB True WDR",
+      "3DNR"
+    ]
+  }
+]
