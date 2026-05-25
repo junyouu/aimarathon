@@ -2,7 +2,7 @@ import re
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 
-from general import (api_key)
+from config import api_key
 
 class LLM:
   def __init__(self):

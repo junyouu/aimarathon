@@ -5,7 +5,8 @@ import json
 import re
 import time
 from openai import OpenAI
-from general import (app, firebase, api_key)
+from general import (app, firebase)
+from config import api_key
 
 client = OpenAI(base_url="https://llm.chutes.ai/v1", api_key=api_key)
 
