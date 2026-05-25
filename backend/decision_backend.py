@@ -22,7 +22,7 @@ class DecisionMakingAgent:
     def __init__(self, llm):
         self.llm = llm
 
-    def get_relevant_product(self, user_question):
+    def get_relevant_product(self, requirements):
         """
         🌐 Line-by-Line Firebase Cloud Vector RAG.
         Generates individual embedding vectors per requirement line to prevent
@@ -33,48 +33,30 @@ class DecisionMakingAgent:
         DISTANCE_THRESHOLD = 0.50
         retrieval_catalog = []
 
-        lines = [line.strip() for line in user_question.split('\n') if line.strip()]
-        print("🌐 [Firebase Line-by-Line RAG] Querying cloud independently per requirement row...")
-        category_counts = {}
+        vector_query = FirebaseService().find_nearest_catalog(requirements)
 
-        for line in lines:
-            match = re.search(r"Category:\s*([^.]+)", line)
-            if not match:
-                continue
-            category_name = match.group(1).strip()
+        matched_docs = vector_query.stream()
 
-            if category_name not in category_counts:
-                category_counts[category_name] = 0
+        for doc in matched_docs:
+            data = doc.to_dict()
+            distance = data.get("vector_distance", 1.0)
+            item_category = data.get("category", "Unknown")
 
-            vector_query = FirebaseService().find_nearest_catalog(line)
+            if distance <= DISTANCE_THRESHOLD:
+                doc_id_clean = str(doc.id).strip()
 
-            matched_docs = vector_query.stream()
-
-            for doc in matched_docs:
-                data = doc.to_dict()
-                distance = data.get("vector_distance", 1.0)
-                item_category = data.get("category", "Unknown")
-
-                if item_category == category_name and distance <= DISTANCE_THRESHOLD:
-                    doc_id_clean = str(doc.id).strip()
-
-                    if not any(x['ID'] == doc_id_clean for x in retrieval_catalog):
-                        retrieval_catalog.append({
-                            "ID": doc_id_clean,
-                            "Product Name": data.get("product_name", "Unknown Component"),
-                            "Features": data.get("features", []),
-                            "Price": float(data.get("price", 0.0)),
-                            "Description": data.get("description", ""),
-                            "Category": item_category,
-                            "vector_distance": round(distance, 4)
-                        })
-                        category_counts[category_name] += 1
+                if not any(x['ID'] == doc_id_clean for x in retrieval_catalog):
+                    retrieval_catalog.append({
+                        "ID": doc_id_clean,
+                        "Product Name": data.get("product_name", "Unknown Component"),
+                        "Features": data.get("features", []),
+                        "Price": float(data.get("price", 0.0)),
+                        "Description": data.get("description", ""),
+                        "Category": item_category,
+                        "vector_distance": round(distance, 4)
+                    })
 
         retrieval_catalog.sort(key=lambda x: x.get("vector_distance", 1.0))
-
-        print("\n📊 --- Python-Side Balanced Retrieval Summary ---")
-        for cat, count in category_counts.items():
-            print(f"   Collected {count} high-accuracy items for category: '{cat}'")
 
         print(f"\n[Success] Cloud RAG compiled. Pooled {len(retrieval_catalog)} targeted components safely.")
 
