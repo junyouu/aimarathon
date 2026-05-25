@@ -5,10 +5,10 @@ from firebase_service import FirebaseService
 from pydantic import BaseModel
 from general import app
 
-class PlanningRequest(BaseModel):
+class DecisionRequest(BaseModel):
     requirement: str
 
-class PlanningResponse(BaseModel):
+class DecisionResponse(BaseModel):
     bot_response: str
 
 
@@ -231,8 +231,8 @@ class DecisionMakingAgent:
             "b2b_proposal_report": reasoning
         }
     
-@app.post("/planning", response_model=PlanningResponse)
-async def planning(request: PlanningRequest) -> PlanningResponse:
+@app.post("/decision", response_model=DecisionResponse)
+async def generate_decision_endpoint(request: DecisionRequest) -> DecisionResponse:
     print("📋 [Requirement Parser] Starting parsing of primitive requirements across all hardware categories...")
 
     # Initialize agent proxy controllers
