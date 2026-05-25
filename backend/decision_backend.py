@@ -1,12 +1,16 @@
 import json
-import os
 import re
-
-import torch
-import firebase_admin
-from firebase_admin import credentials, firestore
 from model import llm
 from firebase_service import FirebaseService
+from pydantic import BaseModel
+from general import app
+
+class PlanningRequest(BaseModel):
+    requirement: str
+
+class PlanningResponse(BaseModel):
+    bot_response: str
+
 
 def extract_json(text):
     match = re.search(r'\{.*\}', text.replace('\n', ''), re.DOTALL)
@@ -25,16 +29,12 @@ class DecisionMakingAgent:
         CCTV camera crowding, using pure vector queries to completely avoid
         composite index precondition errors.
         """
-        from google.cloud.firestore_v1.vector import Vector
-        from google.cloud.firestore_v1.base_vector_query import DistanceMeasure
-        import re
 
         DISTANCE_THRESHOLD = 0.50
         retrieval_catalog = []
 
         lines = [line.strip() for line in user_question.split('\n') if line.strip()]
         print("🌐 [Firebase Line-by-Line RAG] Querying cloud independently per requirement row...")
-        collection_ref = db.collection("catalog")
         category_counts = {}
 
         for line in lines:
@@ -249,71 +249,18 @@ class DecisionMakingAgent:
             "b2b_proposal_report": reasoning
         }
     
-user_requirement_warehouse = {
-    "system_requirements": [
-        {
-            "category": "CCTV Camera",
-            "quantity": 9,
-            "features": ["indoor", "dome", "8MP (4K) resolution", "discreet monitoring", "up to 60m IR night vision"],
-            "allocated_budget": 2000.00
-        },
-        {
-            "category": "CCTV Camera",
-            "quantity": 2,
-            "features": ["outdoor", "bullet camera", "4MP resolution", "IP67 weatherproof", "long-range viewing"],
-            "allocated_budget": 1500.00
-        },
-        {
-            "category": "Recorder",
-            "quantity": 3,
-            "features": ["NVR", "recording backend server", "PoE ports onboard", "4K playback"],
-            "allocated_budget": 1000.00
-        },
-        {
-            "category": "Hard Drive",
-            "quantity": 1,
-            "features": ["surveillance hard drive", "24/7 duty cycle", "high capacity storage data disk"],
-            "allocated_budget": 1300.00
-        },
-        {
-            "category": "Switches",
-            "quantity": 1,
-            "features": ["8GE PoE + 2GE", "Gigabit uplink", "cloud managed smart networking"],
-            "allocated_budget": 700.00
-        },
-        {
-            "category": "Cable",
-            "quantity": 1,
-            "features": [],
-            "allocated_budget": 5.00
-        }
-    ],
-    "total_budget": 10000.00,
-    "current_plan": None
-}
-    
-def main():
-    search_text = ""
-
+@app.post("/planning", response_model=PlanningResponse)
+async def planning(request: PlanningRequest) -> PlanningResponse:
     print("📋 [Requirement Parser] Starting parsing of primitive requirements across all hardware categories...")
-
-    for index, item_req in enumerate(user_requirement_warehouse.get("system_requirements", [])):
-        category = item_req.get("category", "Hardware Component")
-        quantity = item_req.get("quantity", 1)
-        features_text = ", ".join(item_req.get("features", []))
-        search_text += f"Category: {category}. Quantity needed: {quantity}. Looking for features: {features_text}.\n"
-
-    print("\n💡 Compiled RAG Global Vector Feature Search Terms:")
-    print(search_text)
 
     # Initialize agent proxy controllers
     decisionMaker = DecisionMakingAgent(llm)
 
     # Execute Cloud RAG Vector Search
-    retrieval_catalog = decisionMaker.get_relevant_product(search_text)
+    retrieval_catalog = decisionMaker.get_relevant_product(request.requirement)
 
     # Drive Multi-Agent Iteration Streams
-    output_result = decisionMaker.run(user_requirement_warehouse, retrieval_catalog)
+    output_result = decisionMaker.run(request.requirement, retrieval_catalog)
 
     # Unpack and map final structures onto console interfaces
     final_plan = output_result["final_data_structure"]
@@ -342,6 +289,3 @@ def main():
     print("\n=======================================================")
     print("[SYSTEM EXECUTION CYCLE CONCLUDED SUCCESSFULLY]")
     print("=======================================================")
-
-# Run the updated system driver pipeline
-main()

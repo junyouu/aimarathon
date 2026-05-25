@@ -1,18 +1,8 @@
-import os
 import re
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 
-from dotenv import load_dotenv
-
-try:
-    load_dotenv(override=True, encoding='utf-8')
-except Exception as e:
-    print(f"Warning: Could not load .env file: {e}")
-    
-api_key = os.getenv("CHUTES_API_KEY")
-if not api_key:
-    raise ValueError("CHUTES_API_KEY not set in .env")
+from general import (api_key)
 
 class LLM:
   def __init__(self):
@@ -30,7 +20,9 @@ class LLM:
           model="Qwen/Qwen3-32B-TEE",
           messages=[
               {"role": "user", "content": prompt}
-          ]
+          ],
+          max_tokens=max_tokens,
+          temperature=temperature
       )
 
       cleaned = re.sub(r"<think>.*?</think>", "", response.choices[0].message.content, flags=re.DOTALL)
