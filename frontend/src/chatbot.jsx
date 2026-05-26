@@ -210,6 +210,12 @@ export default function Chatbot() {
         timestamp: new Date()
       }]);
 
+      if (response.optimization_summary) {
+        handleImageGeneration(response.optimization_summary, floorPlan);
+        if (floorPlan) {
+          // Pass freshRequirements directly — React state may not have updated yet
+          handleFloorPlanAnalysis(floorPlan, freshRequirements);
+        }
       await Promise.all([
         fetchDecision(response.summary),
 
@@ -271,6 +277,34 @@ export default function Chatbot() {
       }]);
     }
     setDecisionLoading(false);
+  };
+
+  const handleFloorPlanAnalysis = async (floorPlanData, knownRequirements) => {
+    const reqs = knownRequirements || requirements;
+    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+    try {
+      const res = await fetch(`${backendURL}/analyze-floor-plan`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          floor_plan_b64: floorPlanData.data,
+          ...(reqs?.camera_arrangement ? { camera_arrangement: reqs.camera_arrangement } : {}),
+          ...(reqs?.camera_count       ? { camera_count: reqs.camera_count }             : {}),
+        }),
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      setMessages((prev) => [...prev, {
+        id: prev.length,
+        type: 'floor-plan-analysis',
+        floorPlanSrc: floorPlanData.data,
+        rooms: data.rooms,
+        cameras: data.cameras,
+        timestamp: new Date(),
+      }]);
+    } catch (err) {
+      console.error('[handleFloorPlanAnalysis] failed:', err);
+    }
   };
 
   const handleImageGeneration = async (optimisationSummary, floorPlanData) => {
@@ -474,6 +508,69 @@ export default function Chatbot() {
                     color: 'var(--color-text-secondary)', background: 'var(--color-background-secondary)',
                   }}>
                     {msg.fileName}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          if (msg.type === 'floor-plan-analysis') {
+            return (
+              <div key={msg.id} style={{ width: '100%' }}>
+                <div style={{
+                  border: '1px solid var(--color-border-tertiary)',
+                  borderRadius: 'var(--border-radius-md)',
+                  overflow: 'hidden',
+                }}>
+                  <div style={{
+                    padding: '0.6rem 1rem',
+                    background: 'var(--color-background-info)',
+                    color: 'var(--color-text-info)',
+                    fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+                  }}>
+                    Camera Placement Map — {msg.cameras.length} camera{msg.cameras.length !== 1 ? 's' : ''} across {msg.rooms.length} zone{msg.rooms.length !== 1 ? 's' : ''}
+                  </div>
+                  <div style={{ position: 'relative' }}>
+                    <img
+                      src={msg.floorPlanSrc}
+                      alt="Floor plan with camera markers"
+                      style={{ display: 'block', width: '100%' }}
+                    />
+                    {msg.rooms.map((room, i) => (
+                      <div key={i} style={{
+                        position: 'absolute',
+                        left: `${room.x * 100}%`,
+                        top: `${room.y * 100}%`,
+                        transform: 'translate(-50%, -50%)',
+                        fontSize: '9px', fontWeight: 600,
+                        color: 'white',
+                        background: 'rgba(0,0,0,0.65)',
+                        padding: '2px 5px',
+                        borderRadius: '3px',
+                        whiteSpace: 'nowrap',
+                        pointerEvents: 'none',
+                      }}>
+                        {room.name}
+                      </div>
+                    ))}
+                    {msg.cameras.map((cam) => (
+                      <div key={cam.id} title={`Cam ${cam.id} · ${cam.zone}: ${cam.purpose}`} style={{
+                        position: 'absolute',
+                        left: `${cam.x * 100}%`,
+                        top: `${cam.y * 100}%`,
+                        transform: 'translate(-50%, -50%)',
+                        width: '14px', height: '14px',
+                        borderRadius: '50%',
+                        background: '#EF4444',
+                        border: '2px solid white',
+                        boxShadow: '0 1px 4px rgba(0,0,0,0.5)',
+                        cursor: 'pointer',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        fontSize: '8px', color: 'white', fontWeight: 700,
+                      }}>
+                        {cam.id}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
