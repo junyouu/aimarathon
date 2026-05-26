@@ -210,17 +210,15 @@ export default function Chatbot() {
         timestamp: new Date()
       }]);
 
-      if (response.optimization_summary) {
-        handleImageGeneration(response.optimization_summary, floorPlan);
-        if (floorPlan) {
-          // Pass freshRequirements directly — React state may not have updated yet
-          handleFloorPlanAnalysis(floorPlan, freshRequirements);
-        }
       await Promise.all([
         fetchDecision(response.summary),
 
         response.optimization_summary
           ? handleImageGeneration(response.optimization_summary, floorPlan)
+          : Promise.resolve(),
+        
+        response.optimization_summary && floorPlan
+          ? handleFloorPlanAnalysis(floorPlan, freshRequirements)
           : Promise.resolve()
       ]);
     }
@@ -338,6 +336,34 @@ export default function Chatbot() {
     }
     setImageLoading(false);
   };
+
+  
+  const handleFloorPlanAnalysis = async (floorPlanData, knownRequirements) => {
+    const reqs = knownRequirements || requirements;
+    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+    try {
+      const res = await fetch(`${backendURL}/analyze-floor-plan`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          floor_plan_b64: floorPlanData.data,
+          ...(reqs?.camera_arrangement ? { camera_arrangement: reqs.camera_arrangement } : {}),
+          ...(reqs?.camera_count       ? { camera_count: reqs.camera_count }             : {}),
+        }),
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      setMessages((prev) => [...prev, {
+        id: prev.length,
+        type: 'floor-plan-analysis',
+        floorPlanSrc: floorPlanData.data,
+        rooms: data.rooms,
+        cameras: data.cameras,
+        timestamp: new Date(),
+      }]);
+    } catch (err) {
+      console.error('[handleFloorPlanAnalysis] failed:', err);
+    }
 
   const callBackendAPI = async (message, history, signal, floorPlanData) => {
     try {
