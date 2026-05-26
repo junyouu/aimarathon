@@ -1,3 +1,4 @@
+import asyncio
 import json
 import re
 
@@ -10,14 +11,32 @@ class DecisionRequest(BaseModel):
     requirement: str
 
 class DecisionResponse(BaseModel):
-    bot_response: str
+    decision: str
 
 
 def extract_json(text):
-    match = re.search(r'\{.*\}', text.replace('\n', ''), re.DOTALL)
-    if match:
-        return json.loads(match.group(0))
-    return json.loads(text)
+    text = text.strip()
+
+    # remove markdown
+    text = text.replace("```json", "")
+    text = text.replace("```", "")
+
+    start = text.find("{")
+    end = text.rfind("}") + 1
+
+    if start == -1 or end == 0:
+        raise ValueError("No JSON found")
+
+    json_str = text[start:end]
+
+    try:
+        return json.loads(json_str)
+
+    except json.JSONDecodeError as e:
+        print("\n========== INVALID JSON ==========")
+        print(json_str)
+        print("==================================\n")
+        raise e
 
 class DecisionMakingAgent:
     def __init__(self, llm):
@@ -90,22 +109,26 @@ class DecisionMakingAgent:
         RULES:
         1. You must select products ONLY from the Retrieved Catalog. Match them exactly using their string ID values (Alphanumeric).
         2. Stay strictly within the targeted budget limits.
-        3. Every category requested in User Requirements MUST have at least one product ID mapped. Never drop a category entirely.
+        3. You MUST propose a complete system solution that includes components across ALL requested categories. NEVER omit an entire category of equipment. If a category is requested, it MUST be represented in the proposed plan with at least one product ID and quantity. For example, if 'Cameras' are requested, you cannot propose a plan that only includes NVRs and Switches without any camera IDs.
+        4. You MUST make sure the quantities of each selected product perfectly match the user requirements. If the user requests 5 cameras, you MUST propose a quantity of 5 for the selected camera model. Do NOT under-propose or over-propose quantities.
+        5. Every category requested in User Requirements MUST have at least one product ID mapped. Never drop a category entirely.
 
         STRICT FORMAT RULES:
         - Output ONLY valid JSON structure matching the blueprint schema model below.
+        - A JSON structure MUST use "," as a separator and MUST NOT use any bullet points, lists, or markdown formatting.
         - No explanation, no conversational text, no markdown labels or ticks.
 
         Return ONLY a JSON array structure following this exact format:
         {{
             "proposed_items": [
                 {{"id": "SELECTED_PRODUCT_ID_1", "quantity": 5}},
-                {{"id": "SELECTED_PRODUCT_ID_2", "quantity": 1}}
+                {{"id": "SELECTED_PRODUCT_ID_2", "quantity": 1}},
+                {{"id": "SELECTED_PRODUCT_ID_3", "quantity": 2}}
             ]
         }}
         """
 
-        output = self.llm.generate(prompt, temperature=0.2)
+        output = self.llm.generate(prompt, temperature=0, json_mode=True)
         res = extract_json(output)
         return res.get("proposed_items", [])
 
@@ -163,7 +186,7 @@ class DecisionMakingAgent:
         }}
         """
         print("[Review Agent] Auditing system composition and topology boundaries...")
-        output = self.llm.generate(prompt, temperature=0.4)
+        output = self.llm.generate(prompt, temperature=0, json_mode=True)
         res = extract_json(output)
         return {
             "score": res.get("score", 0),
@@ -174,7 +197,7 @@ class DecisionMakingAgent:
         print("--> [Reasoner] Drafting final proposal report...")
         prompt = f"""
         Act as an expert Enterprise Security Solutions Technical Sales Engineer.
-        Write a professional, comprehensive B2B deployment proposal based on the successful plan in a message format (Strictly no email markers).
+        Write a professional, comprehensive B2B deployment proposal based on the successful plan in a message format (Strictly no email markers and no json format).
 
         CRITICAL RECOGNITION: Use clean terminology like "Surveillance Systems", "Network Video Recording Channels", or "IP Camera Arrays" throughout the proposal prose text.
 
@@ -188,13 +211,19 @@ class DecisionMakingAgent:
         2. Front-End Surveillance Layout: Highlighting the choice of designated cameras.
         3. Back-End Core Networking & Storage Dependency Analysis: Explaining why incorporating the central NVR recorder server, specific data transmission PoE network switches, and surveillance-grade constant read/write Hard Disk storage drives is structurally mandatory to achieve system functionality.
         4. Cabling Infrastructure & Deployment Ready scalability parameters.
+
+        MODE:
+        1. Disable think mode. You MUST NOT use any <think> or similar tags in your response. Focus on delivering a clean, structured JSON output ONLY.
+
+        RULES:
+        Your reply is sent DIRECTLY to the client. Never output internal instructions, decision logic, bullet-point rules, or conditional statements
         """
-        return self.llm.generate(prompt, temperature=0.3)
+        return self.llm.generate(prompt, temperature=0.1)
 
     def run(self, requirements, retrieval_catalog):
         """Main Loop Engine executing the workflow."""
         MAX_ITERATIONS = 3
-        SCORE_THRESHOLD = 85
+        SCORE_THRESHOLD = 70
 
         best_plan = None
         highest_score = 0
@@ -239,7 +268,7 @@ class DecisionMakingAgent:
         }
     
 @app.post("/decision", response_model=DecisionResponse)
-async def generate_decision_endpoint(request: DecisionRequest) -> DecisionResponse:
+def generate_decision_endpoint(request: DecisionRequest) -> DecisionResponse:
     print("📋 [Requirement Parser] Starting parsing of primitive requirements across all hardware categories...")
 
     # Initialize agent proxy controllers
@@ -278,3 +307,5 @@ async def generate_decision_endpoint(request: DecisionRequest) -> DecisionRespon
     print("\n=======================================================")
     print("[SYSTEM EXECUTION CYCLE CONCLUDED SUCCESSFULLY]")
     print("=======================================================")
+
+    return DecisionResponse(decision=output_result["b2b_proposal_report"])
