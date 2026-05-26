@@ -1,3 +1,4 @@
+import asyncio
 import json
 import re
 
@@ -278,3 +279,10 @@ async def generate_decision_endpoint(request: DecisionRequest) -> DecisionRespon
     print("\n=======================================================")
     print("[SYSTEM EXECUTION CYCLE CONCLUDED SUCCESSFULLY]")
     print("=======================================================")
+
+    return DecisionResponse(bot_response=output_result["b2b_proposal_report"])
+
+# For testing purposes, you can run this endpoint with a sample requirement string like below:
+# asyncio.run(generate_decision_endpoint(DecisionRequest(requirement="""
+
+# """)))
