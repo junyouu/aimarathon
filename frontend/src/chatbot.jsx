@@ -19,7 +19,6 @@ export default function Chatbot() {
   const [summary, setSummary] = useState(null);
   const [progress, setProgress] = useState(0);
   const [decisionLoading, setDecisionLoading] = useState(false);
-  const [imageLoading, setImageLoading] = useState(false);
   const summaryFetched = useRef(false);
   const conversationComplete = useRef(false); // stays true once stage hits complete
 
@@ -213,10 +212,6 @@ export default function Chatbot() {
       await Promise.all([
         fetchDecision(response.summary),
 
-        response.optimization_summary
-          ? handleImageGeneration(response.optimization_summary, floorPlan)
-          : Promise.resolve(),
-        
         response.optimization_summary && floorPlan
           ? handleFloorPlanAnalysis(floorPlan, freshRequirements)
           : Promise.resolve()
@@ -305,65 +300,6 @@ export default function Chatbot() {
     }
   };
 
-  const handleImageGeneration = async (optimisationSummary, floorPlanData) => {
-    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-    setImageLoading(true);
-
-    // Strip the "data:image/...;base64," prefix — the API expects raw base64.
-    const rawB64 = floorPlanData?.data
-      ? floorPlanData.data.replace(/^data:[^;]+;base64,/, '')
-      : null;
-
-    try {
-      const imgRes = await fetch(`${backendURL}/generate-image`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          optimisation_summary: optimisationSummary,
-          ...(rawB64 && { floor_plan_b64: rawB64 }),
-        }),
-      });
-      if (imgRes.ok) {
-        const imgData = await imgRes.json();
-        if (imgData.image_b64) {
-          setMessages((prev) => [...prev, {
-            id: prev.length, type: 'ai-image', content: imgData.image_b64, timestamp: new Date(),
-          }]);
-        }
-      }
-    } catch (err) {
-      console.error('[handleImageGeneration] failed:', err);
-    }
-    setImageLoading(false);
-  };
-
-  
-  const handleFloorPlanAnalysis = async (floorPlanData, knownRequirements) => {
-    const reqs = knownRequirements || requirements;
-    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-    try {
-      const res = await fetch(`${backendURL}/analyze-floor-plan`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          floor_plan_b64: floorPlanData.data,
-          ...(reqs?.camera_arrangement ? { camera_arrangement: reqs.camera_arrangement } : {}),
-          ...(reqs?.camera_count       ? { camera_count: reqs.camera_count }             : {}),
-        }),
-      });
-      if (!res.ok) return;
-      const data = await res.json();
-      setMessages((prev) => [...prev, {
-        id: prev.length,
-        type: 'floor-plan-analysis',
-        floorPlanSrc: floorPlanData.data,
-        rooms: data.rooms,
-        cameras: data.cameras,
-        timestamp: new Date(),
-      }]);
-    } catch (err) {
-      console.error('[handleFloorPlanAnalysis] failed:', err);
-    }
 
   const callBackendAPI = async (message, history, signal, floorPlanData) => {
     try {
@@ -603,32 +539,6 @@ export default function Chatbot() {
             );
           }
 
-          if (msg.type === 'ai-image') {
-            return (
-              <div key={msg.id} style={{ width: '100%' }}>
-                <div style={{
-                  border: '1px solid var(--color-border-tertiary)',
-                  borderRadius: 'var(--border-radius-md)',
-                  overflow: 'hidden',
-                }}>
-                  <div style={{
-                    padding: '0.6rem 1rem',
-                    background: 'var(--color-background-info)',
-                    color: 'var(--color-text-info)',
-                    fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
-                  }}>
-                    System Visualisation
-                  </div>
-                  <img
-                    src={`data:image/png;base64,${msg.content}`}
-                    alt="Generated system visualisation"
-                    style={{ display: 'block', width: '100%', maxHeight: '400px', objectFit: 'contain' }}
-                  />
-                </div>
-              </div>
-            );
-          }
-
           if (msg.type === 'summary') {
             return (
               <div key={msg.id} style={{ width: '100%' }}>
@@ -724,40 +634,6 @@ export default function Chatbot() {
                   }} />
                 ))}
                 <span style={{ marginLeft: '4px' }}>Analyzing summary to generate decision...</span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {imageLoading && (
-          <div style={{ width: '100%' }}>
-            <div style={{
-              border: '1px solid var(--color-border-tertiary)',
-              borderRadius: 'var(--border-radius-md)',
-              overflow: 'hidden',
-            }}>
-              <div style={{
-                padding: '0.6rem 1rem',
-                background: 'var(--color-background-info)',
-                color: 'var(--color-text-info)',
-                fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
-              }}>
-                Generating System Visualisation...
-              </div>
-              <div style={{
-                padding: '1rem',
-                background: 'var(--color-background-secondary)',
-                display: 'flex', gap: '6px', alignItems: 'center',
-                fontSize: '13px', color: 'var(--color-text-secondary)',
-              }}>
-                {[0, 0.2, 0.4].map((delay, i) => (
-                  <div key={i} style={{
-                    width: '8px', height: '8px', borderRadius: '50%',
-                    background: 'var(--color-text-secondary)',
-                    animation: `pulse 1.4s infinite ${delay}s`,
-                  }} />
-                ))}
-                <span style={{ marginLeft: '4px' }}>Rendering your CCTV deployment visualisation...</span>
               </div>
             </div>
           </div>
