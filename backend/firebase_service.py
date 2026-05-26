@@ -284,6 +284,6 @@ class FirebaseService:
             vector_field="embedding_vector",
             query_vector=Vector(line_vector),
             distance_measure=DistanceMeasure.COSINE,
-            limit=100,
+            limit=50,
             distance_result_field="vector_distance"
         )
