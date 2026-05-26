@@ -1,5 +1,6 @@
 import json
 import re
+
 from model import llm
 from firebase_service import FirebaseService
 from pydantic import BaseModel
@@ -52,15 +53,14 @@ class DecisionMakingAgent:
                         "Features": data.get("features", []),
                         "Price": float(data.get("price", 0.0)),
                         "Description": data.get("description", ""),
-                        "Category": item_category,
-                        "vector_distance": round(distance, 4)
+                        "Category": item_category
                     })
 
         retrieval_catalog.sort(key=lambda x: x.get("vector_distance", 1.0))
 
         print(f"\n[Success] Cloud RAG compiled. Pooled {len(retrieval_catalog)} targeted components safely.")
 
-        context_string = "\n\n---\n\n".join(str(item) for item in retrieval_catalog)
+        context_string = "\n---\n".join(str(item) for item in retrieval_catalog)
         return {
             "retrieval_catalog_string": context_string,
             "retrieval_catalog_json": retrieval_catalog
@@ -84,6 +84,9 @@ class DecisionMakingAgent:
         Retrieved Catalog (Valid Options Map): {retrieval_catalog_str}
         Previous Review Feedback (if any, please FIX these issues but NEVER delete required category items): {previous_feedback}
 
+        MODE:
+        1. Disable think mode. You MUST NOT use any <think> or similar tags in your response. Focus on delivering a clean, structured JSON output ONLY.
+
         RULES:
         1. You must select products ONLY from the Retrieved Catalog. Match them exactly using their string ID values (Alphanumeric).
         2. Stay strictly within the targeted budget limits.
@@ -101,6 +104,7 @@ class DecisionMakingAgent:
             ]
         }}
         """
+
         output = self.llm.generate(prompt, temperature=0.2)
         res = extract_json(output)
         return res.get("proposed_items", [])
@@ -143,6 +147,9 @@ class DecisionMakingAgent:
         User Requirements: {json.dumps(requirements, indent=2)}
         Proposed Plan: {json.dumps(plan, indent=2)}
 
+        MODE:
+        1. Disable think mode. You MUST NOT use any <think> or similar tags in your response. Focus on delivering a clean, structured JSON output ONLY.
+
         CRITICAL EVALUATION AUDITS (PRIORITIZE SPECS & FEATURES OVER BUDGET MAXIMIZATION):
         1. System Completeness & Quantities: Verify if the plan spans across a complete turnkey operational infrastructure. It MUST include front-end Surveillance Cameras, a Central Recorder (NVR), data storage Hard Drives, network PoE Switches, and Cable accessories. Ensure the requested item quantities match perfectly. Deduct score heavily (score < 40) if any core category is missing.
         2. Technical Specifications & Feature Fit (Highest Priority): Audit how accurately the chosen item specifications fulfill the explicit feature requirements requested by the user (e.g., matching 8MP/4K resolutions, specific housing styles like dome/bullet, weatherproofing parameters, and night vision IR ranges).
@@ -172,7 +179,7 @@ class DecisionMakingAgent:
         CRITICAL RECOGNITION: Use clean terminology like "Surveillance Systems", "Network Video Recording Channels", or "IP Camera Arrays" throughout the proposal prose text.
 
         Proposed Turnkey Bill of Materials (BOM): {json.dumps(plan['selected_items'], indent=2)}.
-        Total Combined System Cost: ${plan['total_cost']} (Allocated Client Budget Margin: ${requirements['total_budget']}).
+        Total Combined System Cost: ${plan['total_cost']}.
         Proposed Plan Audit Logs: {json.dumps(plan["review_feedback"], indent=2)}.
         User System Requirements Specification: {json.dumps(requirements, indent=2)}.
 

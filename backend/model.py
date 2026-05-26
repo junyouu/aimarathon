@@ -15,7 +15,7 @@ class LLM:
           "BAAI/bge-base-en-v1.5"
       )
 
-  def generate(self, prompt, max_tokens=512, temperature=0.1):
+  def generate(self, prompt, max_tokens=1024, temperature=0.1):
       response = self.client.chat.completions.create(
           model="Qwen/Qwen3-32B-TEE",
           messages=[
