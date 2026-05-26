@@ -18,8 +18,8 @@ export default function Chatbot() {
   const [floorPlan, setFloorPlan] = useState(null);
   const [summary, setSummary] = useState(null);
   const [progress, setProgress] = useState(0);
-  const [imageLoading, setImageLoading] = useState(false);
   const [decisionLoading, setDecisionLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(false);
   const summaryFetched = useRef(false);
   const conversationComplete = useRef(false); // stays true once stage hits complete
 
@@ -103,223 +103,6 @@ export default function Chatbot() {
     }]);
   };
 
-  const callBackendAPI = async (message, history, signal, floorPlanData) => {
-    try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-
-      const body = {
-        message,
-        conversation_history: history,
-      };
-
-      if (projectId) body.project_id = projectId;
-      if (conversationId) body.conversation_id = conversationId;
-      // Pass last known requirements so backend can keep stage stable on skipped extraction turns
-      if (requirements) body.cached_requirements = requirements;
-
-      if (floorPlanData) {
-        body.floor_plan = {
-          name: floorPlanData.name,
-          type: floorPlanData.type,
-          data: floorPlanData.data,
-        };
-      }
-
-      const response = await fetch(`${backendURL}/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-        signal,
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        console.error('Backend error:', response.status, errorData);
-        return null;
-      }
-
-      return await response.json();
-    } catch (error) {
-      if (error.name === 'AbortError') return 'aborted';
-      console.error('Error calling backend:', error);
-      return null;
-    }
-  };
-
-  const fetchSummary = async (history, projId, latestRequirements) => {
-    if (summaryFetched.current) {
-      console.log('[fetchSummary] Skipped — already fetched (summaryFetched.current = true)');
-      return;
-    }
-    console.log('[fetchSummary] Starting summary generation', {
-      historyLength: history?.length,
-      projectId: projId,
-      hasRequirements: !!latestRequirements,
-    });
-    summaryFetched.current = true;
-    setSummaryLoading(true);
-    try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-      console.log('[fetchSummary] POST', `${backendURL}/generate-summary`);
-      const res = await fetch(`${backendURL}/generate-summary`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          conversation_history: history,
-          project_id: projId || null,
-          cached_requirements: latestRequirements || null,
-        }),
-      });
-      console.log('[fetchSummary] HTTP status:', res.status, res.statusText);
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        console.error('[fetchSummary] Server error:', res.status, err.detail ?? err);
-        summaryFetched.current = false;
-        setSummaryLoading(false);
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'bot',
-          content: "I had trouble generating your brief. Send any message to try again.",
-          timestamp: new Date(),
-        }]);
-        return;
-      }
-      const data = await res.json();
-      console.log('[fetchSummary] Response data:', {
-        hasSummary: !!data.summary,
-        summaryLength: data.summary?.length ?? 0,
-        error: data.error ?? null,
-        hasRequirements: !!data.requirements,
-      });
-      if (data.summary) {
-        console.log('[fetchSummary] Summary received successfully');
-        setSummary(data.summary);
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'summary',
-          content: data.summary,
-          timestamp: new Date(),
-        }]);
-
-        fetchDecision(data.summary);
-      } else {
-        console.warn('[fetchSummary] No summary in response — will allow retry. Backend error:', data.error);
-        summaryFetched.current = false; // allow retry
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'bot',
-          content: "I wasn't able to compile the full brief right now. Please send any message to try again.",
-          timestamp: new Date(),
-        }]);
-      }
-    } catch (err) {
-      console.error('[fetchSummary] Network/fetch error:', err);
-      summaryFetched.current = false;
-      setMessages((prev) => [...prev, {
-        id: prev.length,
-        type: 'bot',
-        content: "Sorry, I had trouble generating your requirements brief. Please try again.",
-        timestamp: new Date(),
-      }]);
-    }
-    setSummaryLoading(false);
-    console.log('[fetchSummary] Done. summaryFetched.current =', summaryFetched.current);
-  };
-
-  const fetchDecision = async (summaryText) => {
-    setDecisionLoading(true);
-    try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-      console.log('[fetchDecision] POST', `${backendURL}/decision`);
-      
-      const res = await fetch(`${backendURL}/decision`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          requirement: summaryText
-        }),
-      });
-
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        console.error('[fetchDecision] Server error:', res.status, err);
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'bot',
-          content: "I had trouble generating the final decision based on the summary.",
-          timestamp: new Date(),
-        }]);
-        setDecisionLoading(false);
-        return;
-      }
-
-      const data = await res.json();
-      // Assuming the backend returns the markdown text inside `decision`
-      const decisionContent = data.decision || data.output; 
-
-      if (decisionContent) {
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'decision',
-          content: decisionContent,
-          timestamp: new Date(),
-        }]);
-      }
-    } catch (err) {
-      console.error('[fetchDecision] Network/fetch error:', err);
-      setMessages((prev) => [...prev, {
-        id: prev.length,
-        type: 'bot',
-        content: "Sorry, I had trouble reaching the decision endpoint.",
-        timestamp: new Date(),
-      }]);
-    }
-    setDecisionLoading(false);
-  };
-
-  const handleResponse = (response, userMessage, history) => {
-    if (!response) return;
-
-    addMessage('bot', response.bot_response);
-    if (response.clarifying_question) {
-      addMessage('bot', response.clarifying_question);
-    }
-    // Capture fresh requirements from this response before any async state update
-    const freshRequirements =
-      response.requirements && Object.keys(response.requirements).length > 0
-        ? response.requirements
-        : null;
-
-    if (freshRequirements) setRequirements(freshRequirements);
-    if (response.stage) setStage(response.stage);
-    if (typeof response.progress === 'number') setProgress(response.progress);
-
-    const updatedHistory = [
-      ...history,
-      { role: 'user', content: userMessage },
-      {
-        role: 'assistant',
-        content: response.bot_response +
-          (response.clarifying_question ? '\n\n' + response.clarifying_question : ''),
-      },
-    ];
-    setConversationHistory(updatedHistory);
-
-    // Mark conversation complete permanently once stage first hits complete
-    if (response.stage === 'complete') conversationComplete.current = true;
-
-    console.log('[handleResponse] stage:', response.stage, '| progress:', response.progress, '| historyLen:', updatedHistory.length, '| conversationComplete:', conversationComplete.current, '| summaryFetched:', summaryFetched.current);
-
-    // Trigger summary if conversation is complete (now or was previously) and not yet fetched.
-    // Pass freshRequirements directly — avoids reading stale React state inside fetchSummary.
-    if (conversationComplete.current && !summaryFetched.current) {
-      console.log('[handleResponse] Conversation complete — triggering fetchSummary');
-      fetchSummary(updatedHistory, projectId, freshRequirements);
-    } else if (conversationComplete.current && summaryFetched.current) {
-      console.log('[handleResponse] Conversation complete but summary already fetched — skipping');
-    }
-  };
-
   const handleFloorPlanUpload = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -392,10 +175,11 @@ export default function Chatbot() {
       return;
     }
 
-    handleResponse(response, userMessage, conversationHistory);
+    await handleResponse(response, userMessage, conversationHistory);
     setIsLoading(false);
   };
-  const handleResponse = (response, userMessage, history) => {
+
+  const handleResponse = async (response, userMessage, history) => {
     if (!response) return;
 
     addMessage('bot', response.bot_response);
@@ -420,13 +204,73 @@ export default function Chatbot() {
       summaryFetched.current = true;
       setSummary(response.summary);
       setMessages((prev) => [...prev, {
-        id: prev.length, type: 'summary', content: response.summary, timestamp: new Date(),
+        id: prev.length, 
+        type: 'summary', 
+        content: response.summary, 
+        timestamp: new Date()
       }]);
 
-      if (response.optimization_summary) {
-        handleImageGeneration(response.optimization_summary, floorPlan);
-      }
+      await Promise.all([
+        fetchDecision(response.summary),
+
+        response.optimization_summary
+          ? handleImageGeneration(response.optimization_summary, floorPlan)
+          : Promise.resolve()
+      ]);
     }
+  };
+
+  const fetchDecision = async (summaryText) => {
+    setDecisionLoading(true);
+    try {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      console.log('[fetchDecision] POST', `${backendURL}/decision`);
+      
+      const res = await fetch(`${backendURL}/decision`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          requirement: summaryText
+        }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        console.error('[fetchDecision] Server error:', res.status, err);
+        setMessages((prev) => [...prev, {
+          id: prev.length,
+          type: 'bot',
+          content: "I had trouble generating the final decision based on the summary.",
+          timestamp: new Date(),
+        }]);
+        setDecisionLoading(false);
+        return;
+      }
+
+      const data = await res.json();
+      // Assuming the backend returns the markdown text inside `decision`
+      const decisionContent = data.decision || data.output; 
+
+      console.log('[fetchDecision] Received decision content:', decisionContent);
+
+      if (decisionContent) {
+        setMessages((prev) => [...prev, {
+          id: prev.length,
+          type: 'decision',
+          content: decisionContent,
+          timestamp: new Date(),
+        }]);
+      }
+    } catch (err) {
+      console.error('[fetchDecision] Network/fetch error:', err);
+      setMessages((prev) => [...prev, {
+        id: prev.length,
+        type: 'bot',
+        content: "Sorry, I had trouble reaching the decision endpoint.",
+        timestamp: new Date(),
+      }]);
+    }
+    setDecisionLoading(false);
   };
 
   const handleImageGeneration = async (optimisationSummary, floorPlanData) => {
@@ -662,8 +506,31 @@ export default function Chatbot() {
             );
           }
 
-          if (msg.type === 'summary' || msg.type === 'decision') {
-            const isDecision = msg.type === 'decision';
+          if (msg.type === 'summary') {
+            return (
+              <div key={msg.id} style={{ width: '100%' }}>
+                <div style={{
+                  border: '1px solid var(--color-border-tertiary)',
+                  borderRadius: 'var(--border-radius-md)', overflow: 'hidden',
+                }}>
+                  <div style={{
+                    padding: '0.6rem 1rem', background: 'var(--color-background-info)',
+                    color: 'var(--color-text-info)', fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+                  }}>
+                    Requirements Summary
+                  </div>
+                  <div style={{
+                    padding: '1rem', background: 'var(--color-background-secondary)',
+                    fontSize: '13px', lineHeight: '1.8', color: 'var(--color-text-primary)', wordBreak: 'break-word',
+                  }}>
+                    {renderMarkdown(msg.content)}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          if (msg.type === 'decision') {
             return (
               <div key={msg.id} style={{ width: '100%' }}>
                 <div style={{
@@ -673,11 +540,11 @@ export default function Chatbot() {
                   <div style={{
                     padding: '0.6rem 1rem', 
                     // Differentiate the header color slightly for the decision
-                    background: isDecision ? '#10B98120' : 'var(--color-background-info)',
-                    color: isDecision ? '#10B981' : 'var(--color-text-info)', 
+                    background: '#10B98120',
+                    color: '#10B981', 
                     fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
                   }}>
-                    {isDecision ? 'System Decision' : 'Requirements Summary'}
+                    {'System Decision'}
                   </div>
                   <div style={{
                     padding: '1rem', background: 'var(--color-background-secondary)',
@@ -705,6 +572,39 @@ export default function Chatbot() {
           );
         })}
 
+        {decisionLoading && (
+          <div style={{ width: '100%' }}>
+            <div style={{
+              border: '1px solid var(--color-border-tertiary)',
+              borderRadius: 'var(--border-radius-md)',
+              overflow: 'hidden',
+            }}>
+              <div style={{
+                padding: '0.6rem 1rem',
+                background: '#10B98120',
+                color: '#10B981',
+                fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+              }}>
+                Generating System Decision...
+              </div>
+              <div style={{
+                padding: '1rem',
+                background: 'var(--color-background-secondary)',
+                display: 'flex', gap: '6px', alignItems: 'center',
+                fontSize: '13px', color: 'var(--color-text-secondary)',
+              }}>
+                {[0, 0.2, 0.4].map((delay, i) => (
+                  <div key={i} style={{
+                    width: '8px', height: '8px', borderRadius: '50%',
+                    background: 'var(--color-text-secondary)',
+                    animation: `pulse 1.4s infinite ${delay}s`,
+                  }} />
+                ))}
+                <span style={{ marginLeft: '4px' }}>Analyzing summary to generate decision...</span>
+              </div>
+            </div>
+          </div>
+        )}
 
         {imageLoading && (
           <div style={{ width: '100%' }}>
@@ -720,40 +620,6 @@ export default function Chatbot() {
                 fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
               }}>
                 Generating System Visualisation...
-              </div>
-              <div style={{
-                padding: '1rem',
-                background: 'var(--color-background-secondary)',
-                display: 'flex', gap: '6px', alignItems: 'center',
-                fontSize: '13px', color: 'var(--color-text-secondary)',
-              }}>
-                {[0, 0.2, 0.4].map((delay, i) => (
-                  <div key={i} style={{
-                    width: '8px', height: '8px', borderRadius: '50%',
-                    background: 'var(--color-text-secondary)',
-                    animation: `pulse 1.4s infinite ${delay}s`,
-                  }} />
-                ))}
-                <span style={{ marginLeft: '4px' }}>Rendering your CCTV deployment visualisation...</span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {decisionLoading && (
-          <div style={{ width: '100%' }}>
-            <div style={{
-              border: '1px solid var(--color-border-tertiary)',
-              borderRadius: 'var(--border-radius-md)',
-              overflow: 'hidden',
-            }}>
-              <div style={{
-                padding: '0.6rem 1rem',
-                background: '#10B98120',
-                color: '#10B981',
-                fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
-              }}>
-                Generating System Decision...
               </div>
               <div style={{
                 padding: '1rem',
