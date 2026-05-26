@@ -631,8 +631,6 @@ async def chat(request: RequirementRequest) -> RequirementResponse:
         known_requirements=request.cached_requirements,
     )
 
-    print(f"history: {request.conversation_history}\nuser_message: {request.message}\ncached_requirements: {request.cached_requirements}")
-
     try:
         raw_response = _complete(messages, model=model)
     except Exception as e:

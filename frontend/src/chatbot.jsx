@@ -18,6 +18,7 @@ export default function Chatbot() {
   const [floorPlan, setFloorPlan] = useState(null);
   const [summary, setSummary] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [decisionLoading, setDecisionLoading] = useState(false);
   const [imageLoading, setImageLoading] = useState(false);
   const summaryFetched = useRef(false);
   const conversationComplete = useRef(false); // stays true once stage hits complete
@@ -174,10 +175,11 @@ export default function Chatbot() {
       return;
     }
 
-    handleResponse(response, userMessage, conversationHistory);
+    await handleResponse(response, userMessage, conversationHistory);
     setIsLoading(false);
   };
-  const handleResponse = (response, userMessage, history) => {
+
+  const handleResponse = async (response, userMessage, history) => {
     if (!response) return;
 
     addMessage('bot', response.bot_response);
@@ -202,45 +204,77 @@ export default function Chatbot() {
       summaryFetched.current = true;
       setSummary(response.summary);
       setMessages((prev) => [...prev, {
-        id: prev.length, type: 'summary', content: response.summary, timestamp: new Date(),
+        id: prev.length, 
+        type: 'summary', 
+        content: response.summary, 
+        timestamp: new Date()
       }]);
 
-      if (response.optimization_summary) {
-        handleImageGeneration(response.optimization_summary, floorPlan);
-        if (floorPlan) {
-          // Pass freshRequirements directly — React state may not have updated yet
-          handleFloorPlanAnalysis(floorPlan, freshRequirements);
-        }
-      }
+      await Promise.all([
+        fetchDecision(response.summary),
+
+        response.optimization_summary
+          ? handleImageGeneration(response.optimization_summary, floorPlan)
+          : Promise.resolve(),
+        
+        response.optimization_summary && floorPlan
+          ? handleFloorPlanAnalysis(floorPlan, freshRequirements)
+          : Promise.resolve()
+      ]);
     }
   };
 
-  const handleFloorPlanAnalysis = async (floorPlanData, knownRequirements) => {
-    const reqs = knownRequirements || requirements;
-    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+  const fetchDecision = async (summaryText) => {
+    setDecisionLoading(true);
     try {
-      const res = await fetch(`${backendURL}/analyze-floor-plan`, {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      console.log('[fetchDecision] POST', `${backendURL}/decision`);
+      
+      const res = await fetch(`${backendURL}/decision`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          floor_plan_b64: floorPlanData.data,
-          ...(reqs?.camera_arrangement ? { camera_arrangement: reqs.camera_arrangement } : {}),
-          ...(reqs?.camera_count       ? { camera_count: reqs.camera_count }             : {}),
+          requirement: summaryText
         }),
       });
-      if (!res.ok) return;
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        console.error('[fetchDecision] Server error:', res.status, err);
+        setMessages((prev) => [...prev, {
+          id: prev.length,
+          type: 'bot',
+          content: "I had trouble generating the final decision based on the summary.",
+          timestamp: new Date(),
+        }]);
+        setDecisionLoading(false);
+        return;
+      }
+
       const data = await res.json();
+      // Assuming the backend returns the markdown text inside `decision`
+      const decisionContent = data.decision || data.output; 
+
+      console.log('[fetchDecision] Received decision content:', decisionContent);
+
+      if (decisionContent) {
+        setMessages((prev) => [...prev, {
+          id: prev.length,
+          type: 'decision',
+          content: decisionContent,
+          timestamp: new Date(),
+        }]);
+      }
+    } catch (err) {
+      console.error('[fetchDecision] Network/fetch error:', err);
       setMessages((prev) => [...prev, {
         id: prev.length,
-        type: 'floor-plan-analysis',
-        floorPlanSrc: floorPlanData.data,
-        rooms: data.rooms,
-        cameras: data.cameras,
+        type: 'bot',
+        content: "Sorry, I had trouble reaching the decision endpoint.",
         timestamp: new Date(),
       }]);
-    } catch (err) {
-      console.error('[handleFloorPlanAnalysis] failed:', err);
     }
+    setDecisionLoading(false);
   };
 
   const handleImageGeneration = async (optimisationSummary, floorPlanData) => {
@@ -274,6 +308,34 @@ export default function Chatbot() {
     }
     setImageLoading(false);
   };
+
+  
+  const handleFloorPlanAnalysis = async (floorPlanData, knownRequirements) => {
+    const reqs = knownRequirements || requirements;
+    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+    try {
+      const res = await fetch(`${backendURL}/analyze-floor-plan`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          floor_plan_b64: floorPlanData.data,
+          ...(reqs?.camera_arrangement ? { camera_arrangement: reqs.camera_arrangement } : {}),
+          ...(reqs?.camera_count       ? { camera_count: reqs.camera_count }             : {}),
+        }),
+      });
+      if (!res.ok) return;
+      const data = await res.json();
+      setMessages((prev) => [...prev, {
+        id: prev.length,
+        type: 'floor-plan-analysis',
+        floorPlanSrc: floorPlanData.data,
+        rooms: data.rooms,
+        cameras: data.cameras,
+        timestamp: new Date(),
+      }]);
+    } catch (err) {
+      console.error('[handleFloorPlanAnalysis] failed:', err);
+    }
 
   const callBackendAPI = async (message, history, signal, floorPlanData) => {
     try {
@@ -563,6 +625,33 @@ export default function Chatbot() {
             );
           }
 
+          if (msg.type === 'decision') {
+            return (
+              <div key={msg.id} style={{ width: '100%' }}>
+                <div style={{
+                  border: '1px solid var(--color-border-tertiary)',
+                  borderRadius: 'var(--border-radius-md)', overflow: 'hidden',
+                }}>
+                  <div style={{
+                    padding: '0.6rem 1rem', 
+                    // Differentiate the header color slightly for the decision
+                    background: '#10B98120',
+                    color: '#10B981', 
+                    fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+                  }}>
+                    {'System Decision'}
+                  </div>
+                  <div style={{
+                    padding: '1rem', background: 'var(--color-background-secondary)',
+                    fontSize: '13px', lineHeight: '1.8', color: 'var(--color-text-primary)', wordBreak: 'break-word',
+                  }}>
+                    {renderMarkdown(msg.content)}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
           return (
             <div key={msg.id} style={{ display: 'flex', justifyContent: msg.type === 'bot' ? 'flex-start' : 'flex-end' }}>
               <div style={{
@@ -578,6 +667,39 @@ export default function Chatbot() {
           );
         })}
 
+        {decisionLoading && (
+          <div style={{ width: '100%' }}>
+            <div style={{
+              border: '1px solid var(--color-border-tertiary)',
+              borderRadius: 'var(--border-radius-md)',
+              overflow: 'hidden',
+            }}>
+              <div style={{
+                padding: '0.6rem 1rem',
+                background: '#10B98120',
+                color: '#10B981',
+                fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+              }}>
+                Generating System Decision...
+              </div>
+              <div style={{
+                padding: '1rem',
+                background: 'var(--color-background-secondary)',
+                display: 'flex', gap: '6px', alignItems: 'center',
+                fontSize: '13px', color: 'var(--color-text-secondary)',
+              }}>
+                {[0, 0.2, 0.4].map((delay, i) => (
+                  <div key={i} style={{
+                    width: '8px', height: '8px', borderRadius: '50%',
+                    background: 'var(--color-text-secondary)',
+                    animation: `pulse 1.4s infinite ${delay}s`,
+                  }} />
+                ))}
+                <span style={{ marginLeft: '4px' }}>Analyzing summary to generate decision...</span>
+              </div>
+            </div>
+          </div>
+        )}
 
         {imageLoading && (
           <div style={{ width: '100%' }}>
