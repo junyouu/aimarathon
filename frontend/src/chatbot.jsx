@@ -18,7 +18,7 @@ export default function Chatbot() {
   const [floorPlan, setFloorPlan] = useState(null);
   const [summary, setSummary] = useState(null);
   const [progress, setProgress] = useState(0);
-  const [summaryLoading, setSummaryLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(false);
   const [decisionLoading, setDecisionLoading] = useState(false);
   const summaryFetched = useRef(false);
   const conversationComplete = useRef(false); // stays true once stage hits complete
@@ -395,6 +395,116 @@ export default function Chatbot() {
     handleResponse(response, userMessage, conversationHistory);
     setIsLoading(false);
   };
+  const handleResponse = (response, userMessage, history) => {
+    if (!response) return;
+
+    addMessage('bot', response.bot_response);
+
+    const freshRequirements =
+      response.requirements && Object.keys(response.requirements).length > 0
+        ? response.requirements : null;
+
+    if (freshRequirements) setRequirements(freshRequirements);
+    if (response.stage) setStage(response.stage);
+    if (typeof response.progress === 'number') setProgress(response.progress);
+
+    const updatedHistory = [
+      ...history,
+      { role: 'user', content: userMessage },
+      { role: 'assistant', content: response.bot_response },
+    ];
+    setConversationHistory(updatedHistory);
+
+    // Summary comes inline from /chat when stage === 'complete'
+    if (response.summary && !summaryFetched.current) {
+      summaryFetched.current = true;
+      setSummary(response.summary);
+      setMessages((prev) => [...prev, {
+        id: prev.length, type: 'summary', content: response.summary, timestamp: new Date(),
+      }]);
+
+      if (response.optimization_summary) {
+        handleImageGeneration(response.optimization_summary, floorPlan);
+      }
+    }
+  };
+
+  const handleImageGeneration = async (optimisationSummary, floorPlanData) => {
+    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+    setImageLoading(true);
+
+    // Strip the "data:image/...;base64," prefix — the API expects raw base64.
+    const rawB64 = floorPlanData?.data
+      ? floorPlanData.data.replace(/^data:[^;]+;base64,/, '')
+      : null;
+
+    try {
+      const imgRes = await fetch(`${backendURL}/generate-image`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          optimisation_summary: optimisationSummary,
+          ...(rawB64 && { floor_plan_b64: rawB64 }),
+        }),
+      });
+      if (imgRes.ok) {
+        const imgData = await imgRes.json();
+        if (imgData.image_b64) {
+          setMessages((prev) => [...prev, {
+            id: prev.length, type: 'ai-image', content: imgData.image_b64, timestamp: new Date(),
+          }]);
+        }
+      }
+    } catch (err) {
+      console.error('[handleImageGeneration] failed:', err);
+    }
+    setImageLoading(false);
+  };
+
+  const callBackendAPI = async (message, history, signal, floorPlanData) => {
+    try {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+
+      const body = {
+        message,
+        conversation_history: history
+      };
+
+      if (projectId) body.project_id = projectId;
+      if (conversationId) body.conversation_id = conversationId;
+      // Pass last known requirements so backend can keep stage stable on skipped extraction turns
+      if (requirements) body.cached_requirements = requirements;
+
+      if (floorPlanData) {
+        body.floor_plan = {
+          name: floorPlanData.name,
+          type: floorPlanData.type,
+          data: floorPlanData.data,
+        };
+      }
+
+      const response = await fetch(`${backendURL}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        signal,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Backend error:', response.status, errorData);
+        return null;
+      }
+
+      return await response.json();
+    } catch (error) {
+      if (error.name === 'AbortError') return 'aborted';
+      console.error('Error calling backend:', error);
+      return null;
+    }
+  };
+
+
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -526,9 +636,34 @@ export default function Chatbot() {
             );
           }
 
+          if (msg.type === 'ai-image') {
+            return (
+              <div key={msg.id} style={{ width: '100%' }}>
+                <div style={{
+                  border: '1px solid var(--color-border-tertiary)',
+                  borderRadius: 'var(--border-radius-md)',
+                  overflow: 'hidden',
+                }}>
+                  <div style={{
+                    padding: '0.6rem 1rem',
+                    background: 'var(--color-background-info)',
+                    color: 'var(--color-text-info)',
+                    fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+                  }}>
+                    System Visualisation
+                  </div>
+                  <img
+                    src={`data:image/png;base64,${msg.content}`}
+                    alt="Generated system visualisation"
+                    style={{ display: 'block', width: '100%', maxHeight: '400px', objectFit: 'contain' }}
+                  />
+                </div>
+              </div>
+            );
+          }
+
           if (msg.type === 'summary' || msg.type === 'decision') {
             const isDecision = msg.type === 'decision';
-            
             return (
               <div key={msg.id} style={{ width: '100%' }}>
                 <div style={{
@@ -570,7 +705,8 @@ export default function Chatbot() {
           );
         })}
 
-        {summaryLoading && (
+
+        {imageLoading && (
           <div style={{ width: '100%' }}>
             <div style={{
               border: '1px solid var(--color-border-tertiary)',
@@ -583,7 +719,7 @@ export default function Chatbot() {
                 color: 'var(--color-text-info)',
                 fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
               }}>
-                Generating Requirements Brief...
+                Generating System Visualisation...
               </div>
               <div style={{
                 padding: '1rem',
@@ -598,7 +734,7 @@ export default function Chatbot() {
                     animation: `pulse 1.4s infinite ${delay}s`,
                   }} />
                 ))}
-                <span style={{ marginLeft: '4px' }}>Compiling your CCTV requirements brief...</span>
+                <span style={{ marginLeft: '4px' }}>Rendering your CCTV deployment visualisation...</span>
               </div>
             </div>
           </div>
@@ -632,7 +768,7 @@ export default function Chatbot() {
                     animation: `pulse 1.4s infinite ${delay}s`,
                   }} />
                 ))}
-                <span style={{ marginLeft: '4px' }}>Analyzing summary to generate decision...</span>
+                <span style={{ marginLeft: '4px' }}>Rendering your CCTV deployment visualisation...</span>
               </div>
             </div>
           </div>
