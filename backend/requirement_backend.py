@@ -7,6 +7,7 @@ import time
 from openai import OpenAI
 from general import (app, firebase)
 from config import api_key
+import optimisation_backend  # noqa: F401 — registers /generate-image route on the shared app
 
 client = OpenAI(base_url="https://llm.chutes.ai/v1", api_key=api_key)
 
@@ -21,8 +22,9 @@ TRACKED_FIELDS = [
     "site_type", "location", "size",
     "coverage_areas", "resolution",
     "night_vision", "retention_days", "remote_viewing",
-    "budget", "installation", "connectivity",
-]  # 11 fields — 72% threshold = 8 fields needed
+    "budget", "connectivity",
+    "camera_count",
+]  # 12 fields — 72% threshold = ~9 fields needed
 
 # ============================================================================
 # Data Models
@@ -48,12 +50,12 @@ class GenerateSummaryRequest(BaseModel):
 
 class RequirementResponse(BaseModel):
     bot_response: str
-    clarifying_question: Optional[str] = None
     requirements: Optional[Dict] = None
     stage: str
     summary: Optional[str] = None
-    progress: int = 0           # NEW: 0–100
-    inferred_fields: List[str] = []  # NEW: what we inferred without asking
+    optimization_summary: Optional[str] = None
+    progress: int = 0
+    inferred_fields: List[str] = []
 
 class ProjectData(BaseModel):
     """Project creation/update."""
@@ -89,6 +91,10 @@ Do NOT ask multiple questions. Do NOT use [QUESTION] tags or any special markers
 
 TEXT_SYSTEM_PROMPT = """You are a CCTV requirements consultant. Your only job is to gather the client's security requirements accurately and hand off cleanly. You are NOT a salesperson, procurement agent, or product recommender.
 
+OUTPUT RULES — CRITICAL:
+- Your reply is sent DIRECTLY to the client. Never output internal instructions, decision logic, bullet-point rules, or conditional statements (e.g. "If the client says X, reply with Y"). Those are your private instructions — never echo them.
+- Write only what the client should actually read.
+
 ASKING QUESTIONS:
 - Ask ONE question per reply — the single most critical missing detail.
 - Keep replies to 1–3 short sentences before the question.
@@ -105,7 +111,6 @@ WHAT TO COLLECT (any order, skip what is already clear):
 - Remote viewing needed
 - Budget range in RM
 - Location / state in Malaysia
-- Installation preference (self or professional)
 
 STRICT LIMITS — never do any of these:
 - Do not name specific camera brands, models, or products.
@@ -122,10 +127,16 @@ CLOSING: Only use the closing message when ALL of the following have been collec
 (5) at least one feature preference — resolution, night vision, OR remote viewing
 (6) confirmed camera quantity (how many cameras the client wants)
 (7) connectivity preference — wired OR wireless
+(8) recording retention period (how many days of footage to keep)
 
-If any of these are still missing, ask for the missing one instead of closing. Priority order to ask: budget → location → features → camera quantity → connectivity. When all are present, say exactly:
+If any of these are still missing, ask for the missing one instead of closing. Priority order to ask: budget → location → features → camera quantity → connectivity → retention. When all are present, say exactly:
 "Thank you — I've captured your requirements. A consultant will follow up with suitable recommendations for your budget and location."
-Then stop asking questions."""
+Then stop asking questions.
+
+STATUS FLAG — append this on a new line at the very end of EVERY reply, no exceptions:
+- If you are still gathering (any of the 9 items above are missing): <status>gathering</status>
+- If you have said the closing message above: <status>complete</status>
+Do not explain the tag. Do not skip it."""
 
 PARSE_PROMPT = """/no_think
 Extract CCTV security requirements from the conversation into one JSON object.
@@ -140,7 +151,6 @@ PROPERTY FIELDS (include if discussed):
   budget       : as stated (e.g. "RM 5,000" or "RM 3,000–5,000")
   budget_tier  : "low" (under RM 3k) | "mid-range" (RM 3k–8k) | "premium" (above RM 8k)
   timeline     : when they want it installed
-  installation : "self-installed" | "professional"
   connectivity : "wireless" | "wired"
 
 COVERAGE FIELDS (include if discussed):
@@ -229,7 +239,6 @@ Use this format:
 - NVR / DVR Recommendation:
 - Storage Required:
 - Connectivity (wired / wireless):
-- Installation Type:
 
 ### Recording & Access
 - Retention Period:
@@ -239,7 +248,6 @@ Use this format:
 ### Budget & Timeline
 - Budget:
 - Budget Tier:
-- Installation Timeline:
 
 ### Compatibility & Flags
 Note every compatibility consideration, inferred value, missing field, or constraint the matching model should be aware of."""
@@ -310,7 +318,18 @@ def _to_storage_summary(markdown: str) -> str:
 
 def _build_messages(history: List[Dict], user_message: str,
                     floor_plan: Optional[FloorPlanData] = None,
-                    system: str = TEXT_SYSTEM_PROMPT) -> List[Dict]:
+                    system: str = TEXT_SYSTEM_PROMPT,
+                    known_requirements: Optional[Dict] = None) -> List[Dict]:
+    if known_requirements:
+        # Summarise confirmed fields so the LLM doesn't re-ask for them.
+        confirmed = {k: v for k, v in known_requirements.items()
+                     if v is not None and not k.startswith("_") and k not in ("features", "keywords")}
+        if confirmed:
+            context_block = (
+                "\n\nALREADY CONFIRMED — do NOT ask about these again:\n"
+                + "\n".join(f"  {k}: {v}" for k, v in confirmed.items())
+            )
+            system = system + context_block
     messages = [{"role": "system", "content": system}]
     for msg in history:
         messages.append({
@@ -335,6 +354,21 @@ def _strip_thinking(text: str) -> str:
     return text.strip()
 
 
+def _strip_leaked_instructions(text: str) -> str:
+    """Remove lines where the model echoed internal conditional logic."""
+    lines = text.splitlines()
+    cleaned = []
+    for line in lines:
+        stripped = line.strip()
+        # Drop lines that look like leaked system-prompt instructions
+        if re.match(r'^-\s+If (the client|they|user)', stripped, re.IGNORECASE):
+            continue
+        if re.match(r'^-\s+If .+(say|says|confirms?|respond)', stripped, re.IGNORECASE):
+            continue
+        cleaned.append(line)
+    return '\n'.join(cleaned).strip()
+
+
 def _complete(messages: List[Dict], model: str = TEXT_MODEL,
               temperature: float = 0.7, max_tokens: int = 1500,
               retries: int = 2) -> str:
@@ -347,7 +381,7 @@ def _complete(messages: List[Dict], model: str = TEXT_MODEL,
                 temperature=temperature,
                 max_tokens=max_tokens,
             )
-            return _strip_thinking(response.choices[0].message.content)
+            return _strip_leaked_instructions(_strip_thinking(response.choices[0].message.content))
         except Exception as e:
             last_exc = e
             if attempt < retries:
@@ -461,17 +495,13 @@ def extract_requirements(history: List[Dict]) -> Dict:
         result = json.loads(json_str.strip())
         if floor_plan_shared:
             result["has_floor_plan"] = True
-        tracked_filled = [f for f in TRACKED_FIELDS if result.get(f)]
-        print(f"[extract_requirements] OK — {len(tracked_filled)} tracked fields: {tracked_filled}")
         return result
     except Exception as e:
-        print(f"Warning: [extract_requirements] failed — {type(e).__name__}: {e}")
-        print(f"[extract_requirements] Raw output (first 500 chars): {json_str[:500] if json_str else 'empty'}")
+        print(f"[extract_requirements] failed — {type(e).__name__}: {e}")
         return {}
 
 
 def generate_summary(history: List[Dict], requirements: Dict) -> str:
-    print(f"[generate_summary] Called with {len(history)} history messages, {len(requirements)} requirement fields")
     conversation_text = ""
     for msg in history:
         role = "User" if msg.get("role") == "user" else "Assistant"
@@ -485,9 +515,8 @@ def generate_summary(history: List[Dict], requirements: Dict) -> str:
         f"Extracted requirements JSON:\n{json.dumps(requirements, indent=2)}\n\n"
         f"Now write the full requirements summary."
     )
-    print(f"[generate_summary] Prompt length: {len(prompt)} chars. Calling LLM...")
     try:
-        result = _complete(
+        return _complete(
             [
                 {"role": "system", "content": SUMMARY_PROMPT},
                 {"role": "user", "content": prompt},
@@ -495,18 +524,13 @@ def generate_summary(history: List[Dict], requirements: Dict) -> str:
             temperature=0.3,
             max_tokens=3000,
         )
-        print(f"[generate_summary] LLM returned {len(result)} chars")
-        if not result.strip():
-            print("Warning: [generate_summary] LLM returned empty/whitespace-only content")
-        return result
     except Exception as e:
-        print(f"Warning: [generate_summary] LLM call failed — {type(e).__name__}: {e}")
+        print(f"[generate_summary] LLM call failed — {type(e).__name__}: {e}")
         return ""
 
 
 def generate_optimization_summary(requirements: Dict) -> str:
     """Generate a one-paragraph plain-text description for the CCTV placement optimisation model."""
-    print(f"[generate_optimization_summary] Building optimisation paragraph from {len(requirements)} fields")
     try:
         result = _complete(
             [
@@ -516,10 +540,9 @@ def generate_optimization_summary(requirements: Dict) -> str:
             temperature=0.1,
             max_tokens=400,
         )
-        print(f"[generate_optimization_summary] OK — {len(result)} chars")
         return result.strip()
     except Exception as e:
-        print(f"Warning: [generate_optimization_summary] failed — {type(e).__name__}: {e}")
+        print(f"[generate_optimization_summary] failed — {type(e).__name__}: {e}")
         return ""
 
 
@@ -547,34 +570,34 @@ def identify_missing_fields(requirements: Dict) -> List[str]:
     return missing
 
 
-# Fields that must be explicitly present before a conversation can be "complete".
+# Fields that must ALL be explicitly present before a conversation can be "complete".
 # Feature gate: at least one of resolution/night_vision/remote_viewing must be set.
-REQUIRED_FIELDS = {"location", "budget", "coverage_areas", "site_type"}
+REQUIRED_FIELDS = {
+    "location", "budget", "coverage_areas", "site_type",
+    "camera_count", "connectivity",        # added — map to closing conditions 6 & 7
+    "retention_days",      # added — closing conditions 8 & 9
+}
 REQUIRED_FEATURES = {"resolution", "night_vision", "remote_viewing"}
 
-def determine_stage(requirements: Dict, user_turns: int = 0) -> str:
+def determine_stage(requirements: Dict, user_turns: int = 0, chat_status: str = "gathering") -> str:
+    # chat_status is the <status> tag extracted from the TEXT_PROMPT response.
+    # It is the authoritative signal — PARSE field counts are used only for
+    # progress display, not for deciding when the conversation is complete.
+    if chat_status == "complete":
+        return "complete"
+
     if not requirements:
         return "gathering"
-    progress = get_progress(requirements)
-    has_required = all(requirements.get(f) for f in REQUIRED_FIELDS)
+
+    missing_required = [f for f in REQUIRED_FIELDS if not requirements.get(f)]
+    if missing_required:
+        return "clarifying" if get_progress(requirements) >= 40 else "gathering"
+
     has_feature = any(requirements.get(f) is not None for f in REQUIRED_FEATURES)
-    has_quantity = bool(requirements.get("camera_count"))
-    has_connectivity = bool(requirements.get("connectivity"))
-    print(f"[determine_stage] turn={user_turns} has_required={has_required} has_feature={has_feature} has_quantity={has_quantity} has_connectivity={has_connectivity} progress={progress}%")
-
-    # Tier 1 — ideal: all gates + good coverage + enough turns
-    if has_required and has_feature and has_quantity and has_connectivity and progress >= 72 and user_turns >= 8:
-        return "complete"
-    # Tier 2 — flexible: all gates met, conversation long enough
-    if has_required and has_feature and has_quantity and has_connectivity and user_turns >= 10:
-        return "complete"
-    # Tier 3 — last resort: enough turns and info even if some fields still missing
-    if progress >= 55 and user_turns >= 12:
-        return "complete"
-
-    if progress >= 40 or has_required:
+    if not has_feature:
         return "clarifying"
-    return "gathering"
+
+    return "clarifying"
 
 
 def _user_text(history: List[Dict]) -> str:
@@ -605,7 +628,10 @@ async def chat(request: RequirementRequest) -> RequirementResponse:
         request.message,
         request.floor_plan,
         system=system,
+        known_requirements=request.cached_requirements,
     )
+
+    print(f"history: {request.conversation_history}\nuser_message: {request.message}\ncached_requirements: {request.cached_requirements}")
 
     try:
         raw_response = _complete(messages, model=model)
@@ -613,66 +639,47 @@ async def chat(request: RequirementRequest) -> RequirementResponse:
         print(f"Error calling {model}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-    # Vision responses are now natural prose — no splitting needed
-    clarifying_question = None
-    bot_response = raw_response or "I'm sorry, I couldn't generate a response. Could you please rephrase or try again?"
+    raw_response = raw_response or "I'm sorry, I couldn't generate a response. Could you please rephrase or try again?"
+
+    # Extract the <status> tag the chat model appended, then strip it from the reply.
+    status_match = re.search(r"<status>(.*?)</status>", raw_response, re.IGNORECASE)
+    chat_status = status_match.group(1).strip().lower() if status_match else "gathering"
+    bot_response = re.sub(r"\s*<status>.*?</status>", "", raw_response, flags=re.IGNORECASE).strip()
 
     user_turn_count = sum(1 for m in request.conversation_history if m.get("role") == "user") + 1
-    should_extract = has_image or (user_turn_count == 1) or (user_turn_count % EXTRACT_EVERY_N_TURNS == 0)
-
     full_history = request.conversation_history + [
         {"role": "user", "content": request.message},
         {"role": "assistant", "content": bot_response},
     ]
 
+    requirements = extract_requirements(full_history)
     inferred_fields: List[str] = []
-    if should_extract:
-        requirements = extract_requirements(full_history)
-        # If extraction failed, fall back to cached requirements from frontend
-        if not requirements and request.cached_requirements:
-            print(f"[chat] Extraction returned empty — using cached_requirements from frontend")
-            requirements = request.cached_requirements
-        requirements, inferred_fields = infer_missing(requirements, _user_text(full_history))
-    else:
-        # Skip LLM extraction this turn; use cached requirements to keep stage stable
-        requirements = request.cached_requirements or {}
-        if requirements:
-            requirements, inferred_fields = infer_missing(requirements, _user_text(full_history))
-            print(f"[chat] Skipped extraction (turn {user_turn_count}) — using cached requirements")
-        else:
-            print(f"[chat] Skipped extraction (turn {user_turn_count}) — no cache available")
+    if not requirements and request.cached_requirements:
+        requirements = request.cached_requirements
+    requirements, inferred_fields = infer_missing(requirements, _user_text(full_history))
 
     progress = get_progress(requirements)
-    stage = determine_stage(requirements, user_turns=user_turn_count)
+    stage = determine_stage(requirements, user_turns=user_turn_count, chat_status=chat_status)
 
-    # If the bot said the closing message, force complete regardless of field checks.
-    # The LLM's judgment that it has enough info takes priority over the structured gate.
-    CLOSING_PHRASE = "A consultant will follow up with suitable recommendations"
-    if CLOSING_PHRASE in bot_response and stage != "complete":
-        print(f"[chat] Bot said closing message but stage={stage} — forcing complete")
-        stage = "complete"
+    print(f"[chat] turn={user_turn_count} stage={stage} progress={progress}% missing={[f for f in REQUIRED_FIELDS if not requirements.get(f)]}")
 
-    print(f"[chat] turn={user_turn_count} extracted={should_extract} stage={stage} progress={progress}% fields={list(requirements.keys())}")
+    summary = None
+    optimization_summary = None
+    if stage == "complete":
+        summary = generate_summary(full_history, requirements)
+        optimization_summary = generate_optimization_summary(requirements)
 
-    # Save to Firebase
     if firebase and request.project_id and request.conversation_id:
         try:
-            firebase.save_message(
-                conversation_id=request.conversation_id,
-                role="user",
-                content=request.message,
-            )
-            firebase.save_message(
-                conversation_id=request.conversation_id,
-                role="assistant",
-                content=bot_response,
-            )
-            if requirements and should_extract:
+            firebase.save_message(conversation_id=request.conversation_id, role="user", content=request.message)
+            firebase.save_message(conversation_id=request.conversation_id, role="assistant", content=bot_response)
+            if requirements:
                 firebase.save_requirements(
                     project_id=request.project_id,
                     requirements=requirements,
                     stage=stage,
-                    summary=None,
+                    summary=_to_storage_summary(summary) if summary else None,
+                    optimization_summary=optimization_summary,
                     progress=progress,
                     inferred_fields=inferred_fields,
                 )
@@ -681,10 +688,10 @@ async def chat(request: RequirementRequest) -> RequirementResponse:
 
     return RequirementResponse(
         bot_response=bot_response,
-        clarifying_question=clarifying_question,
         requirements=requirements,
         stage=stage,
-        summary=None,
+        summary=summary,
+        optimization_summary=optimization_summary,
         progress=progress,
         inferred_fields=inferred_fields,
     )
@@ -760,33 +767,24 @@ async def generate_summary_endpoint(request: GenerateSummaryRequest) -> Dict:
     Called by the frontend after stage reaches 'complete' so the chat response
     stays fast and the summary loads independently.
     """
-    print(f"[/generate-summary] Request received — history messages: {len(request.conversation_history) if request.conversation_history else 0}, project_id: {request.project_id}")
-
     if not request.conversation_history:
-        print("[/generate-summary] FAIL: No conversation history provided")
         raise HTTPException(status_code=400, detail="No conversation history provided")
 
     if request.cached_requirements:
         requirements = request.cached_requirements
         requirements, inferred = infer_missing(requirements, _user_text(request.conversation_history))
-        print(f"[/generate-summary] Using cached requirements — {list(requirements.keys())}")
     else:
         requirements = extract_requirements(request.conversation_history)
         requirements, inferred = infer_missing(requirements, _user_text(request.conversation_history))
-        print(f"[/generate-summary] Re-extracted requirements — {list(requirements.keys())}")
+
+    print(f"[/generate-summary] Generating summary — {len(requirements)} fields, project={request.project_id}")
 
     summary = generate_summary(request.conversation_history, requirements)
     if not summary:
-        print("[/generate-summary] FAIL: generate_summary() returned empty string")
         raise HTTPException(status_code=500, detail="Summary generation failed — LLM returned empty response")
 
-    print(f"[/generate-summary] Summary generated OK ({len(summary)} chars)")
-
     optimization_summary = generate_optimization_summary(requirements)
-    print(f"[/generate-summary] Optimisation summary generated OK — {len(optimization_summary)} chars")
 
-    # Persist to Firebase if we have a project
-    # Store as paragraph prose — structured markdown stays in the API response for display
     if firebase and request.project_id:
         try:
             existing = firebase.get_requirements(request.project_id)
@@ -800,11 +798,9 @@ async def generate_summary_endpoint(request: GenerateSummaryRequest) -> Dict:
                 progress=existing.get("progress", get_progress(requirements)) if existing else get_progress(requirements),
                 inferred_fields=existing.get("inferred_fields", inferred) if existing else inferred,
             )
-            print(f"[/generate-summary] Saved to Firebase for project {request.project_id}")
+            print(f"[/generate-summary] Saved to Firebase — project {request.project_id}")
         except Exception as e:
-            print(f"Warning: [/generate-summary] Could not save summary to Firebase — {type(e).__name__}: {e}")
-    elif request.project_id and not firebase:
-        print("[/generate-summary] Skipped Firebase save — firebase client not initialized")
+            print(f"[/generate-summary] Firebase save failed — {type(e).__name__}: {e}")
 
     # Return full structured markdown to frontend for display
     return {"summary": summary, "optimization_summary": optimization_summary, "requirements": requirements}

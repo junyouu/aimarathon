@@ -18,7 +18,7 @@ export default function Chatbot() {
   const [floorPlan, setFloorPlan] = useState(null);
   const [summary, setSummary] = useState(null);
   const [progress, setProgress] = useState(0);
-  const [summaryLoading, setSummaryLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(false);
   const summaryFetched = useRef(false);
   const conversationComplete = useRef(false); // stays true once stage hits complete
 
@@ -102,170 +102,6 @@ export default function Chatbot() {
     }]);
   };
 
-  const callBackendAPI = async (message, history, signal, floorPlanData) => {
-    try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-
-      const body = {
-        message,
-        conversation_history: history,
-      };
-
-      if (projectId) body.project_id = projectId;
-      if (conversationId) body.conversation_id = conversationId;
-      // Pass last known requirements so backend can keep stage stable on skipped extraction turns
-      if (requirements) body.cached_requirements = requirements;
-
-      if (floorPlanData) {
-        body.floor_plan = {
-          name: floorPlanData.name,
-          type: floorPlanData.type,
-          data: floorPlanData.data,
-        };
-      }
-
-      const response = await fetch(`${backendURL}/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-        signal,
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        console.error('Backend error:', response.status, errorData);
-        return null;
-      }
-
-      return await response.json();
-    } catch (error) {
-      if (error.name === 'AbortError') return 'aborted';
-      console.error('Error calling backend:', error);
-      return null;
-    }
-  };
-
-  const fetchSummary = async (history, projId, latestRequirements) => {
-    if (summaryFetched.current) {
-      console.log('[fetchSummary] Skipped — already fetched (summaryFetched.current = true)');
-      return;
-    }
-    console.log('[fetchSummary] Starting summary generation', {
-      historyLength: history?.length,
-      projectId: projId,
-      hasRequirements: !!latestRequirements,
-    });
-    summaryFetched.current = true;
-    setSummaryLoading(true);
-    try {
-      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
-      console.log('[fetchSummary] POST', `${backendURL}/generate-summary`);
-      const res = await fetch(`${backendURL}/generate-summary`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          conversation_history: history,
-          project_id: projId || null,
-          cached_requirements: latestRequirements || null,
-        }),
-      });
-      console.log('[fetchSummary] HTTP status:', res.status, res.statusText);
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        console.error('[fetchSummary] Server error:', res.status, err.detail ?? err);
-        summaryFetched.current = false;
-        setSummaryLoading(false);
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'bot',
-          content: "I had trouble generating your brief. Send any message to try again.",
-          timestamp: new Date(),
-        }]);
-        return;
-      }
-      const data = await res.json();
-      console.log('[fetchSummary] Response data:', {
-        hasSummary: !!data.summary,
-        summaryLength: data.summary?.length ?? 0,
-        error: data.error ?? null,
-        hasRequirements: !!data.requirements,
-      });
-      if (data.summary) {
-        console.log('[fetchSummary] Summary received successfully');
-        setSummary(data.summary);
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'summary',
-          content: data.summary,
-          timestamp: new Date(),
-        }]);
-      } else {
-        console.warn('[fetchSummary] No summary in response — will allow retry. Backend error:', data.error);
-        summaryFetched.current = false; // allow retry
-        setMessages((prev) => [...prev, {
-          id: prev.length,
-          type: 'bot',
-          content: "I wasn't able to compile the full brief right now. Please send any message to try again.",
-          timestamp: new Date(),
-        }]);
-      }
-    } catch (err) {
-      console.error('[fetchSummary] Network/fetch error:', err);
-      summaryFetched.current = false;
-      setMessages((prev) => [...prev, {
-        id: prev.length,
-        type: 'bot',
-        content: "Sorry, I had trouble generating your requirements brief. Please try again.",
-        timestamp: new Date(),
-      }]);
-    }
-    setSummaryLoading(false);
-    console.log('[fetchSummary] Done. summaryFetched.current =', summaryFetched.current);
-  };
-
-  const handleResponse = (response, userMessage, history) => {
-    if (!response) return;
-
-    addMessage('bot', response.bot_response);
-    if (response.clarifying_question) {
-      addMessage('bot', response.clarifying_question);
-    }
-    // Capture fresh requirements from this response before any async state update
-    const freshRequirements =
-      response.requirements && Object.keys(response.requirements).length > 0
-        ? response.requirements
-        : null;
-
-    if (freshRequirements) setRequirements(freshRequirements);
-    if (response.stage) setStage(response.stage);
-    if (typeof response.progress === 'number') setProgress(response.progress);
-
-    const updatedHistory = [
-      ...history,
-      { role: 'user', content: userMessage },
-      {
-        role: 'assistant',
-        content: response.bot_response +
-          (response.clarifying_question ? '\n\n' + response.clarifying_question : ''),
-      },
-    ];
-    setConversationHistory(updatedHistory);
-
-    // Mark conversation complete permanently once stage first hits complete
-    if (response.stage === 'complete') conversationComplete.current = true;
-
-    console.log('[handleResponse] stage:', response.stage, '| progress:', response.progress, '| historyLen:', updatedHistory.length, '| conversationComplete:', conversationComplete.current, '| summaryFetched:', summaryFetched.current);
-
-    // Trigger summary if conversation is complete (now or was previously) and not yet fetched.
-    // Pass freshRequirements directly — avoids reading stale React state inside fetchSummary.
-    if (conversationComplete.current && !summaryFetched.current) {
-      console.log('[handleResponse] Conversation complete — triggering fetchSummary');
-      fetchSummary(updatedHistory, projectId, freshRequirements);
-    } else if (conversationComplete.current && summaryFetched.current) {
-      console.log('[handleResponse] Conversation complete but summary already fetched — skipping');
-    }
-  };
-
   const handleFloorPlanUpload = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -341,6 +177,116 @@ export default function Chatbot() {
     handleResponse(response, userMessage, conversationHistory);
     setIsLoading(false);
   };
+  const handleResponse = (response, userMessage, history) => {
+    if (!response) return;
+
+    addMessage('bot', response.bot_response);
+
+    const freshRequirements =
+      response.requirements && Object.keys(response.requirements).length > 0
+        ? response.requirements : null;
+
+    if (freshRequirements) setRequirements(freshRequirements);
+    if (response.stage) setStage(response.stage);
+    if (typeof response.progress === 'number') setProgress(response.progress);
+
+    const updatedHistory = [
+      ...history,
+      { role: 'user', content: userMessage },
+      { role: 'assistant', content: response.bot_response },
+    ];
+    setConversationHistory(updatedHistory);
+
+    // Summary comes inline from /chat when stage === 'complete'
+    if (response.summary && !summaryFetched.current) {
+      summaryFetched.current = true;
+      setSummary(response.summary);
+      setMessages((prev) => [...prev, {
+        id: prev.length, type: 'summary', content: response.summary, timestamp: new Date(),
+      }]);
+
+      if (response.optimization_summary) {
+        handleImageGeneration(response.optimization_summary, floorPlan);
+      }
+    }
+  };
+
+  const handleImageGeneration = async (optimisationSummary, floorPlanData) => {
+    const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+    setImageLoading(true);
+
+    // Strip the "data:image/...;base64," prefix — the API expects raw base64.
+    const rawB64 = floorPlanData?.data
+      ? floorPlanData.data.replace(/^data:[^;]+;base64,/, '')
+      : null;
+
+    try {
+      const imgRes = await fetch(`${backendURL}/generate-image`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          optimisation_summary: optimisationSummary,
+          ...(rawB64 && { floor_plan_b64: rawB64 }),
+        }),
+      });
+      if (imgRes.ok) {
+        const imgData = await imgRes.json();
+        if (imgData.image_b64) {
+          setMessages((prev) => [...prev, {
+            id: prev.length, type: 'ai-image', content: imgData.image_b64, timestamp: new Date(),
+          }]);
+        }
+      }
+    } catch (err) {
+      console.error('[handleImageGeneration] failed:', err);
+    }
+    setImageLoading(false);
+  };
+
+  const callBackendAPI = async (message, history, signal, floorPlanData) => {
+    try {
+      const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+
+      const body = {
+        message,
+        conversation_history: history
+      };
+
+      if (projectId) body.project_id = projectId;
+      if (conversationId) body.conversation_id = conversationId;
+      // Pass last known requirements so backend can keep stage stable on skipped extraction turns
+      if (requirements) body.cached_requirements = requirements;
+
+      if (floorPlanData) {
+        body.floor_plan = {
+          name: floorPlanData.name,
+          type: floorPlanData.type,
+          data: floorPlanData.data,
+        };
+      }
+
+      const response = await fetch(`${backendURL}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        signal,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Backend error:', response.status, errorData);
+        return null;
+      }
+
+      return await response.json();
+    } catch (error) {
+      if (error.name === 'AbortError') return 'aborted';
+      console.error('Error calling backend:', error);
+      return null;
+    }
+  };
+
+
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -472,6 +418,32 @@ export default function Chatbot() {
             );
           }
 
+          if (msg.type === 'ai-image') {
+            return (
+              <div key={msg.id} style={{ width: '100%' }}>
+                <div style={{
+                  border: '1px solid var(--color-border-tertiary)',
+                  borderRadius: 'var(--border-radius-md)',
+                  overflow: 'hidden',
+                }}>
+                  <div style={{
+                    padding: '0.6rem 1rem',
+                    background: 'var(--color-background-info)',
+                    color: 'var(--color-text-info)',
+                    fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
+                  }}>
+                    System Visualisation
+                  </div>
+                  <img
+                    src={`data:image/png;base64,${msg.content}`}
+                    alt="Generated system visualisation"
+                    style={{ display: 'block', width: '100%', maxHeight: '400px', objectFit: 'contain' }}
+                  />
+                </div>
+              </div>
+            );
+          }
+
           if (msg.type === 'summary') {
             return (
               <div key={msg.id} style={{ width: '100%' }}>
@@ -511,7 +483,8 @@ export default function Chatbot() {
           );
         })}
 
-        {summaryLoading && (
+
+        {imageLoading && (
           <div style={{ width: '100%' }}>
             <div style={{
               border: '1px solid var(--color-border-tertiary)',
@@ -524,7 +497,7 @@ export default function Chatbot() {
                 color: 'var(--color-text-info)',
                 fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
               }}>
-                Generating Requirements Brief...
+                Generating System Visualisation...
               </div>
               <div style={{
                 padding: '1rem',
@@ -539,7 +512,7 @@ export default function Chatbot() {
                     animation: `pulse 1.4s infinite ${delay}s`,
                   }} />
                 ))}
-                <span style={{ marginLeft: '4px' }}>Compiling your CCTV requirements brief...</span>
+                <span style={{ marginLeft: '4px' }}>Rendering your CCTV deployment visualisation...</span>
               </div>
             </div>
           </div>
